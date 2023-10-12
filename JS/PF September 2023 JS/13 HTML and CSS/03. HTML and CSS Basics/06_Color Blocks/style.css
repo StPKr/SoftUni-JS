@@ -1,0 +1,33 @@
+h1 {
+    color: green;
+    text-align: center;
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: lower-greek;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.site-content {
+    width: 400px;
+    margin: auto;
+}
+
+li:hover {
+    display: hidden;
+}
+
+#best-movie {
+    color: gold;
+}
+a{
+    display: inline-block;
+    background-color: lightcoral;
+}
