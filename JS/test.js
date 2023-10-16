@@ -75,7 +75,8 @@ console.log(arr.join(" ")) */
 //  output += `${number} `;
 // console.log(output);
 
-// let arr = [2, 12, 3, 2, 5, 19]
+let arr = [2, 12, 3, 2, 5, 19]
 // arr = arr.map(x => x * 2 > 10 && x % 3 === 0);
-// console.log(arr);
+arr.splice(1, 0, [5,6])
+console.log(arr);
 
