@@ -1,7 +1,7 @@
 function solve(arr) {
     let newArr = [];
-    while (arr.length != 0) {
-        arr.sort((a, b) => (b - a));
+    arr.sort((a, b) => (b - a));
+    while (arr.length != 0) {        
         newArr.push(arr.shift());
         newArr.push(arr.pop());
     }
