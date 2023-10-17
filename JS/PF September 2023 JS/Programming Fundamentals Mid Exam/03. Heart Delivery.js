@@ -6,7 +6,7 @@ function solve(initialList) {
     while (command !== "Love!") {
         startingPosition += Number(number);
         if (startingPosition > neighborhood.length - 1) {
-            startingPosition = ((neighborhood.length - 1) % startingPosition) - 1;
+            startingPosition = 0;
         }
         if (neighborhood[startingPosition] === 0) {
             console.log(`Place ${startingPosition} already had Valentine's day.`)
