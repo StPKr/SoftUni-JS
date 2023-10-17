@@ -32,6 +32,15 @@ function solve(initialList) {
     } else {
         console.log(`Cupid has failed ${counter} places.`)
     }
+    // if (neighborhood.reduce((a, b) => a + b, 0) === 0) {
+	// 	console.log('Mission was successful.')
+	// } else {
+	// 	let leftHouses = neighborhood.filter(x => {
+	// 		if (x > 0) {
+	// 			return x
+	// 		}
+	// 	}).length 
+    // console.log(`Cupid has failed ${leftHouses} places.`); - alternative
 }
 // solve(["10@10@10@2",
 //     "Jump 1",
