@@ -81,5 +81,6 @@ console.log(arr.join(" ")) */
 // console.log(arr);
 
 // let arr = ["one", "two", "three"];
+// arr.splice(arr.indexOf("two"), 1, "four");
 // arr.splice(arr.indexOf("two"), 1);
 // console.log(arr)
