@@ -1,6 +1,6 @@
 function solve(string) {
     let health = 100;
-    let bitcoins = 100;
+    let bitcoins = 0;
     let roomMap = string.split("|");
     let check = true;
     for (i = 0; i < roomMap.length; i++) {
@@ -9,13 +9,14 @@ function solve(string) {
             number = Number(number);
             switch (command) {
                 case "potion":
-                    health += number;
-                    if (health > 100) {
-                        health = 100;
+                    let heal = number;
+                    if (health + number > 100) {
                         console.log(`You healed for ${100 - health} hp.`);
+                        health = 100;
                     }
                     else {
                         console.log(`You healed for ${number} hp.`);
+                        health += number;
                     }
                     console.log(`Current health: ${health} hp.`)
                     break;
@@ -46,4 +47,4 @@ function solve(string) {
         console.log(`Health: ${health}`);
     }
 }
-solve("rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000")
+solve("cat 10|potion 30|orc 10|chest 10|snake 25|chest 110")
