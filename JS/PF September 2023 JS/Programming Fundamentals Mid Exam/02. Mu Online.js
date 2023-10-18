@@ -9,7 +9,6 @@ function solve(string) {
             number = Number(number);
             switch (command) {
                 case "potion":
-                    let heal = number;
                     if (health + number > 100) {
                         console.log(`You healed for ${100 - health} hp.`);
                         health = 100;
