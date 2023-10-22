@@ -59,7 +59,7 @@
 
 /* let a = 5;
 let b = 5.5;
- 
+
 console.log(a % 1) //=== 0 - Integer
 console.log(b % 1) //!= 0 - Float */
 

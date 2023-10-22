@@ -54,4 +54,4 @@ function spaceTravel(inputArray) {
 }
 spaceTravel(['Travel 10||Enemy 30||Repair 15||Titan',
     '50',
-    '80'])
+    '80']);
