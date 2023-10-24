@@ -101,12 +101,12 @@ console.log(arr.join(" ")) */
 //   }
 //   console.log(countup(5));
 
-function rangeOfNumbers(startNum, endNum) {
-    if (startNum > endNum) {
-        return [];
-    } else {
-        const countArray = rangeOfNumbers(startNum, endNum - 1);
-        countArray.push(endNum);
-        return countArray;
-    }
-}
+// function rangeOfNumbers(startNum, endNum) {
+//     if (startNum > endNum) {
+//         return [];
+//     } else {
+//         const countArray = rangeOfNumbers(startNum, endNum - 1);
+//         countArray.push(endNum);
+//         return countArray;
+//     }
+// }
