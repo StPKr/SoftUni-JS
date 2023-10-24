@@ -89,13 +89,24 @@ console.log(arr.join(" ")) */
 // let a = Math.random()*11;
 // console.log(Math.floor(a))
 
-function countup(n) {
-    if (n < 1) {
-      return [];
+// function countup(n) {
+//     if (n < 1) {
+//       return [];
+//     } else {
+//       const countArray = countup(n - 1);
+//       countArray.unshift(n);
+//     //   countArray.push(n);
+//       return countArray;
+//     }
+//   }
+//   console.log(countup(5));
+
+function rangeOfNumbers(startNum, endNum) {
+    if (startNum > endNum) {
+        return [];
     } else {
-      const countArray = countup(n - 1);
-      countArray.push(n);
-      return countArray;
+        const countArray = rangeOfNumbers(startNum, endNum - 1);
+        countArray.push(endNum);
+        return countArray;
     }
-  }
-  console.log(countup(5));
+}
