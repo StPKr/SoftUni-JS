@@ -85,3 +85,17 @@ console.log(arr.join(" ")) */
 // arr.splice(arr.indexOf("two"), 1, "four");
 // arr.splice(arr.indexOf("two"), 1);
 // console.log(arr)
+
+// let a = Math.random()*11;
+// console.log(Math.floor(a))
+
+function countup(n) {
+    if (n < 1) {
+      return [];
+    } else {
+      const countArray = countup(n - 1);
+      countArray.push(n);
+      return countArray;
+    }
+  }
+  console.log(countup(5));
