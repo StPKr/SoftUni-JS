@@ -1,6 +1,7 @@
 function cityInfo(city) {
-    for (i = 0; i < city.length; i++) {
-        console.log(city[i]);
+    let keys = Object.keys(city);
+    for (let key of keys) {
+        console.log(key, '->', city[key]);
     }
 }
 cityInfo({
