@@ -15,9 +15,10 @@ function solve(inputArr) {
         let employee = new Employee(name, perNum);
         employees.push(employee);
     }
-    for (let el of employees) {
-        el.info();
-    }
+    employees.forEach((x) => console.log(`Name: ${x.name} -- Personal Number: ${x.personalNumber}`));
+    // for (let el of employees) {
+    //     el.info();
+    // }
 }
 solve([
     'Silas Butler',
