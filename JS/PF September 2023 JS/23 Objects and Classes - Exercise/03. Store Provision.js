@@ -6,7 +6,7 @@ function solve(stock, orderedProducts) {
         products[productName] = qty;
     }
 
-    for (let j = 0; j < orderedProducts.lenght; j++) {
+    for (let j = 0; j < orderedProducts.length; j += 2) {
         let productName = orderedProducts[j];
         let qty = Number(orderedProducts[j + 1]);
         if (productName in products) {
