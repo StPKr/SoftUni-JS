@@ -8,7 +8,7 @@ function solve(input) {
         }
     }
     let sortedEntries = Object.entries(list).sort((a, b) => b[1] - a[1]);
-    let sortedObject = Object.fromEntries(sortedEntries)
+    let sortedObject = Object.fromEntries(sortedEntries);
     for (let entry of Object.entries(sortedObject)) {
         console.log(entry[0], "->", entry[1], "times");
     }
