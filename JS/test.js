@@ -110,3 +110,8 @@ console.log(arr.join(" ")) */
 //         return countArray;
 //     }
 // }
+let list = {
+    a: [1, 2, 3]
+}
+list.a.push(4);
+console.log(list.a)

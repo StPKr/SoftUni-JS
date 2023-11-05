@@ -4,8 +4,8 @@ function solve(input) {
         let [name, address] = item.split(':');
         addressBook[name] = address;
     }
-    const sortedKeys = Object.keys(addressBook).sort((a, b) => a.localeCompare(b));
-    const sortedObject = {};
+    let sortedKeys = Object.keys(addressBook).sort((a, b) => a.localeCompare(b));
+    let sortedObject = {};
     for (const key of sortedKeys) {
         sortedObject[key] = addressBook[key];
     }
