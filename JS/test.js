@@ -111,7 +111,10 @@ console.log(arr.join(" ")) */
 //     }
 // }
 let list = {
-    a: [1, 2, 3]
+    a: [1, 2, 3],
+    b: 5
 }
 list.a.push(4);
-console.log(list.a)
+list.b++;
+console.log(list.a);
+console.log(list.b);
