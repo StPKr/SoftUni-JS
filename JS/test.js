@@ -119,7 +119,14 @@ console.log(arr.join(" ")) */
 // console.log(list.a);
 // console.log(list.b);
 
-let arr = [1, 2, 3, 4]
-arr.splice(2, 1)
-console.log(arr)
-console.log(arr.indexOf(1))
+let obj = {
+    "a": ["test"],
+    "b": "lala",
+}
+obj.a.push("boom")
+obj.b += "ping"
+let set = new Set([1, 2, 3]);
+obj.c = set
+console.log(obj.a)
+console.log(obj.b)
+console.log(obj.c)
