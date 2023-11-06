@@ -110,11 +110,16 @@ console.log(arr.join(" ")) */
 //         return countArray;
 //     }
 // }
-let list = {
-    a: [1, 2, 3],
-    b: 5
-}
-list.a.push(4);
-list.b++;
-console.log(list.a);
-console.log(list.b);
+// let list = {
+//     a: [1, 2, 3],
+//     b: 5
+// }
+// list.a.push(4);
+// list.b++;
+// console.log(list.a);
+// console.log(list.b);
+
+let arr = [1, 2, 3, 4]
+arr.splice(2, 1)
+console.log(arr)
+console.log(arr.indexOf(1))

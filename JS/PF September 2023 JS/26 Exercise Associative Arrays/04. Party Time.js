@@ -1,28 +1,27 @@
 function solve(input) {
-    let vipSet = new Set();
-    let regularSet = new Set();
-    for (let el of input) {
-        input.shift();
+    let vipSet = [];
+    let regularSet = [];
+    while (input.length > 0) {
+        let el = input.shift();
         if (el === "PARTY") {
             break;
         }
         if (parseInt(el[0])) {
-            vipSet.add(el);
+            vipSet.push(el);
         } else {
-            regularSet.add(el);
+            regularSet.push(el);
         }
     }
-    input.shift();
     for (let el of input) {
         if (parseInt(el[0])) {
-            vipSet.delete(el);
+            vipSet.splice(vipSet.indexOf(el), 1);
         } else {
-            regularSet.delete(el);
+            regularSet.splice(regularSet.indexOf(el), 1);
         }
     }
-    console.log(vipSet.size + regularSet.size);
-    Array.from(vipSet).forEach(x => console.log(x));
-    Array.from(regularSet).forEach(x => console.log(x));
+    console.log(vipSet.length + regularSet.length);
+    vipSet.forEach(x => console.log(x));
+    regularSet.forEach(x => console.log(x));
 }
 solve(['7IK9Yo0h',
     '9NoBUajQ',
