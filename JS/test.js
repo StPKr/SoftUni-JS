@@ -119,14 +119,18 @@ console.log(arr.join(" ")) */
 // console.log(list.a);
 // console.log(list.b);
 
-let obj = {
-    "a": ["test"],
-    "b": "lala",
-}
-obj.a.push("boom")
-obj.b += "ping"
-let set = new Set([1, 2, 3]);
-obj.c = set
-console.log(obj.a)
-console.log(obj.b)
-console.log(obj.c)
+// let obj = {
+//     "a": ["test"],
+//     "b": "lala",
+// }
+// obj.a.push("boom")
+// obj.b += "ping"
+// let set = new Set([1, 2, 3]);
+// obj.c = set
+// console.log(obj.a)
+// console.log(obj.b)
+// console.log(obj.c)
+
+let string = "one two";
+let [a, b] = string.split(' ');
+console.log(typeof(a))
