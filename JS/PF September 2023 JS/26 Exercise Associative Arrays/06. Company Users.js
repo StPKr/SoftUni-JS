@@ -15,7 +15,7 @@ function solve(inputArray) {
     }
     for (let entry of Object.entries(sortedObject)) {
         console.log(entry[0]);
-        let employees = entry[1].split(" ");
+        let employees = new Set(entry[1].split(" "));
         for (let el of employees) {
             console.log("--", el);
         }
