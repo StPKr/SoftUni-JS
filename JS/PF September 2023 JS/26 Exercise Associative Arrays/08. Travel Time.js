@@ -19,10 +19,26 @@ function solve(inputArray) {
             }
         }
     }
-    for (let country in list) {
-        for (let town in list[country]) {
-            console.log(`${country} -> ${town} -> ${list[country][town]}`);
+    let sortedKeys = Object.keys(list).sort((a, b) => a.localeCompare(b));
+    let sortedObject = {};
+    for (let key of sortedKeys) {
+        sortedObject[key] = list[key];
+    }
+    for (let country in sortedObject) {
+        let superSortedObject = {};
+        let superSortedEntries = Object.entries(sortedObject[country]).sort((a, b) => a[1] - b[1]);
+        for (let [key, value] of superSortedEntries) {
+            superSortedObject[key] = sortedObject[country][key];
         }
+        sortedObject[country] = superSortedObject;
+    }
+    for (let country in sortedObject) {
+        let placeholder = country + " -> ";
+        for (let town in sortedObject[country]) {
+            placeholder += town + " -> ";
+            placeholder += sortedObject[country][town] + " ";
+        }
+        console.log(placeholder);
     }
 }
 solve([

@@ -149,6 +149,3 @@ if ("T" in list["Serbia"]) {
 }
 // list["Serbia"]["Test"].push(50)
 console.log(list["Serbia"]["Town"])
-for (let el in list){
-    console.log(Object.keys(el))
-}
