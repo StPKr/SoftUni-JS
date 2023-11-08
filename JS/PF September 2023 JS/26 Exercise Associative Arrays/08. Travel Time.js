@@ -23,6 +23,8 @@ function solve(inputArray) {
     let sortedObject = {};
     for (let key of sortedKeys) {
         sortedObject[key] = list[key];
+        /*sortedObject[key] = Object.fromEntries(
+            Object.entries(list[key]).sort((a, b) => a[1] - b[1])); //- saves the below check */ 
     }
     for (let country in sortedObject) {
         let superSortedObject = {};
