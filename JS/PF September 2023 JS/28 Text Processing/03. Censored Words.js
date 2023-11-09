@@ -1,9 +1,7 @@
 function solve(text, word) {
-    let replacement = "";
-    for (let i = 0; i < word.length; i++) {
-        replacement += "*";
+    while (text.includes(word)) {
+        text = text.replace(word, '*'.repeat(word.length));
     }
-    let replacedText = text.replace(word, replacement);
-    console.log(replacedText);
+    console.log(text);
 }
 solve('A small sentence with some words', 'small');
