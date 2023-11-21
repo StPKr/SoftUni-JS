@@ -131,21 +131,21 @@ console.log(arr.join(" ")) */
 // console.log(obj.b)
 // console.log(obj.c)
 
-const list = {
-    Bulgaria: {
-        Lukovit: 10,
-        Sofia: 200,
-        Test: 50
-    }
-}
-list["Serbia"] = {
-    "Town": 60
-}
-// list["Serbia"] = {
-//     "Test": [40]
+// const list = {
+//     Bulgaria: {
+//         Lukovit: 10,
+//         Sofia: 200,
+//         Test: 50
+//     }
 // }
-if ("T" in list["Serbia"]) {
-    console.log("True")
-}
-// list["Serbia"]["Test"].push(50)
-console.log(list["Serbia"]["Town"])
+// list["Serbia"] = {
+//     "Town": 60
+// }
+// // list["Serbia"] = {
+// //     "Test": [40]
+// // }
+// if ("T" in list["Serbia"]) {
+//     console.log("True")
+// }
+// // list["Serbia"]["Test"].push(50)
+// console.log(list["Serbia"]["Town"])
