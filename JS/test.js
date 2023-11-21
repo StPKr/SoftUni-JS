@@ -149,3 +149,11 @@ console.log(arr.join(" ")) */
 // }
 // // list["Serbia"]["Test"].push(50)
 // console.log(list["Serbia"]["Town"])
+
+// let string = "1,2,3,4,5,,6";
+// let a = string.split(",");
+// let b = string.split(/,/g);
+// let c = string.split(/,/);
+// console.log(a);
+// console.log(b);
+// console.log(c);
