@@ -10,8 +10,9 @@ function solve(inputArr) {
     }
     let employees = [];
     for (let el of inputArr) {
-        let name = el;
-        let perNum = el.length;
+        // let name = el;
+        // let perNum = el.length;
+        let [name, perNum] = [el, el.length];
         let employee = new Employee(name, perNum);
         employees.push(employee);
     }

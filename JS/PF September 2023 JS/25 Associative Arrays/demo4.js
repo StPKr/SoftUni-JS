@@ -6,6 +6,7 @@ myMap.set('Peter', '+1-555-2934');
 myMap.set('John', '+1-555-0789');
 
 console.log(myMap.get('Peter'));
+console.log(myMap['Peter']);
 console.log(myMap.has('John'));
 
 for (let entry of myMap){

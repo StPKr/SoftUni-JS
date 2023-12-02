@@ -18,7 +18,7 @@ class Person {
         // return this; = hidden again
     }
     sayHello() {
-        console.log('Hello!');
+        console.log(`${this.name} says: Hello!`);
     }
 }
 
