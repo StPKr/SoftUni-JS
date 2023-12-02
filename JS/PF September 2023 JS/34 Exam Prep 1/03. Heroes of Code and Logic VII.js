@@ -67,7 +67,7 @@ function solve(input) {
     for (let name in party) {
         let hero = party[name];
         console.log(name);
-        console.log(`  HP: ${hero.hp}`);
+        console.log(`  HP: ${party[name].hp}`);
         console.log(`  MP: ${hero.mp}`);
 
 
