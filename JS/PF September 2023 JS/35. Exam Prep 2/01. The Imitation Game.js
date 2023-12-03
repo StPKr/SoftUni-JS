@@ -1,6 +1,5 @@
 function solve(input) {
     let encryptedMessage = input.shift();
-    let message = "";
     while (input[0] !== "Decode") {
         let tokens = input.shift().split("|");
         let command = tokens[0];
