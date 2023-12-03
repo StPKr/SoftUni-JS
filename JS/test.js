@@ -168,3 +168,4 @@ let list = {
     }
 }
 console.log(list['London']["pop"]);
+console.log(Object.values(list.London))
