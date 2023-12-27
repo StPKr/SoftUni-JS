@@ -1,41 +1,29 @@
-let fs = require('fs');
-
 let express = require('express');
 let handlebars = require('express-handlebars');
 let bodyParser = require(`body-parser`);
 
-let hbs = handlebars.create((
-    ext
-))
+let homeController = require('../src/controllers/home');
+let catalogController = require('../src/controllers/catalog');
+
+let hbs = handlebars.create({
+    extname: '.hbs'
+});
 
 let app = express();
-app.
+app.engine('.hbs', hbs.engine);
+app.set('view engine', '.hbs');
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
 app.use('/public', express.static('public'));
 
-let counter = 0;
-
-let products = [
-    {
-        name: "Windshiled Wiper",
-        price: 49.90
-    },
-    {
-        name: "Winter Tyres",
-        price: 89.50
-    }
-];
-
 function loadTemplate(body) {
     let template = fs.readFileSync('./public/template.html').toString();
     return template.replace('%%body%%', body);
 };
 
-app.get('/', (req, res) => {
-    counter++;
+app.get('/', homeController.home
     // if (counter >= 10) {
     //     res.redirect('/blocked');
     // }
@@ -43,71 +31,39 @@ app.get('/', (req, res) => {
     //     res.send(`<h1>Hello world!</h1><a href="/about">About page</a><p>You've visited the page ${counter} times.`);
     // }
 
-    let page = loadTemplate(`
-    <h1>Hello world!</h1>
-    <p><a href="/catalog">Catalog</a></p>
-    <p>You've visited the page ${counter} times.</p>
-    `);
-    res.send(page);
+    // let page = loadTemplate(`
+    // <h1>Hello world!</h1>
+    // <p><a href="/catalog">Catalog</a></p>
+    // <p>You've visited the page ${counter} times.</p>
+    // `);
+    // res.send(page); - this without handlebars
 
-});
+);
 
-app.get('/about', (req, res) => {
-    let page = loadTemplate(`
-    <h1>About page</h1>
-    <a href="/">Home page</a>
-    `);
-    res.send(page);
-});
+app.get('/catalog', catalogController.catalog);
+app.get('/catalog/:id', catalogController.details);
+
+// app.get('/about', (req, res) => {
+//     let page = loadTemplate(`
+//     <h1>About page</h1>
+//     <a href="/">Home page</a>
+//     `);
+//     res.send(page);
+// });
 
 // app.get('/blocked', (req, res) => {
 //     res.send('<h1>Blocked</h1><p>You have visited the page too many times!</p>');
 // });
 
-app.get('/catalog', (req, res) => {
-    let page = loadTemplate(`
-    <h1>Catalog</h1>
-    <p><a href="/create">Create Product</a></p>
-    <ul>${products.map((p, i) => `
-    <li>
-    <a href="/catalog/${i}">${p.name}</a>
-    </li>`).join('\n')}
-    </ul>`);
-    res.send(page);
-});
-app.get('/catalog/:id', (req, res) => {
-    let product = products[req.params.id];
-    let page = loadTemplate(`< h1 > Catalog</h1 >
-    <h2>${product.name}</h2>
-    <p>Price: $${product.price.toFixed(2)}</p>
-    <a href="/catalog">Back to list</a>`);
-    res.send(page);
-}); // dynamic method by creating an id param
+
+// dynamic method by creating an id param
 
 // app.get('/catalog/2', (req, res) => {
 //     res.send('<h1>Catalog</h1><h2>Product 2</h2><a href="/">Home page</a>');
 // }); - static method, tedious and bad
 
-app.get('/create', (req, res) => {
-    let page = loadTemplate(`
-    <h1>Create Product</h1>
-    <form action="/create" method="post">
-    <input type="text" name="productName">
-    <input type="number" name="price">
-    <input type="submit" value="Publish">
-    </form>
-    `);
-    res.send(page);
-});
+app.get('/create', catalogController.create);
+app.post('/create', catalogController.createPost);
 
-app.post('/create', (req, res) => {
-    console.log(`Received request to publish data`);
-    console.log(req.body);
-    let product = {
-        name: req.body.productName,
-        price: Number(req.body.price)
-    };
-    products.push(product);
-    res.redirect('/catalog');
-});
+
 app.listen(3000);

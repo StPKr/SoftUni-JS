@@ -1,0 +1,9 @@
+<h1>Catalog</h1>
+<p><a href="/create">Create Product</a></p>
+<ul>
+    {{#each products}}
+    <li>
+        <a href="/catalog/{{@index}}">{{name}}</a>
+    </li>
+    {{/each}}
+</ul>

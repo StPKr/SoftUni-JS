@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Windshiled Wiper",
+        "price": 49.9,
+        "img": "/public/images/wiper.jpg"
+    },
+    {
+        "name": "Winter Tyres",
+        "price": 89.5,
+        "img": "/public/images/winterTire.jpg"
+    },
+    {
+        "name": "Left Mirror",
+        "price": 45
+    },
+    {
+        "name": "Engine Oil",
+        "price": 85
+    },
+    {
+        "name": "Oil Filter",
+        "price": 125
+    },
+    {
+        "name": "Front Bumper",
+        "price": 350,
+        "img": "https://pixabay.com/get/gc6cd0d50980efc8d83182fe9e6623cbbc7f313b5dcefed089115f09213700d503b6eebf09e13139dd6910711c06a9997b9c12015c7ca4a6204e85918d6e81bd6843f8e37edfa4644f5d1ba28cfb61529_640.jpg"
+    }
+]
