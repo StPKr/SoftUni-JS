@@ -4,6 +4,7 @@ function solve(inputArray) {
         let input = inputArray.shift();
         [name, pop] = input.split(" <-> ");
         if (object.hasOwnProperty(name)) {
+            // if (namme in object) - same
             object[name] += Number(pop);
         } else {
             object[name] = Number(pop);
