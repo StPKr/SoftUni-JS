@@ -13,6 +13,7 @@ function solve(inputArray) {
     for (let el in object) {
         console.log(el, ":", object[el]);
     }
+    //   
 };
 solve(['Sofia <-> 1200000',
     'Montana <-> 20000',
