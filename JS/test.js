@@ -157,15 +157,21 @@ console.log(arr.join(" ")) */
 // console.log(a);
 // console.log(b);
 // console.log(c);
-let list = {
-    London: {
-        pop: 1000,
-        gold: 20
-    },
-    Sofia: {
-        pop: 200,
-        gold: 5
-    }
+// let list = {
+//     London: {
+//         pop: 1000,
+//         gold: 20
+//     },
+//     Sofia: {
+//         pop: 200,
+//         gold: 5
+//     }
+// }
+// console.log(list['London']["pop"]);
+// console.log(Object.values(list.London))
+
+function test(...input) {
+    console.log(input[4])
 }
-console.log(list['London']["pop"]);
-console.log(Object.values(list.London))
+test(1, 2, 3)
+test(1, 2, 3, 4, 5, 6)
