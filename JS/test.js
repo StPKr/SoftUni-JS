@@ -81,6 +81,9 @@ console.log(arr.join(" ")) */
 // console.log(arr);
 // console.log(arr.reduce((a, b) => a + b));
 
+
+
+
 // let arr = ["one", "two", "three"];
 // arr.splice(arr.indexOf("two"), 1, "four");
 // arr.splice(arr.indexOf("two"), 1);
@@ -170,8 +173,8 @@ console.log(arr.join(" ")) */
 // console.log(list['London']["pop"]);
 // console.log(Object.values(list.London))
 
-function test(...input) {
-    console.log(input[4])
-}
-test(1, 2, 3)
-test(1, 2, 3, 4, 5, 6)
+// function test(...input) {
+//     console.log(input[4])
+// }
+// test(1, 2, 3)
+// test(1, 2, 3, 4, 5, 6)
