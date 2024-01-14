@@ -7,7 +7,11 @@ function solve(inputArray) {
             case "remove": outputArray.pop(); break;
         }
     }
-    console.log(outputArray.join("\n"));
+    if (outputArray.length > 0){
+        console.log(outputArray.join("\n"));
+    } else {
+        console.log("Empty");
+    }
 }
 solve(['add',
     'add',
