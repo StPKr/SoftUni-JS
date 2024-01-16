@@ -1,8 +1,7 @@
 function solve(inputArray) {
     let object = {};
-    while (inputArray.length > 0) {
-        let input = inputArray.shift();
-        [name, pop] = input.split(" <-> ");
+    for (let line of inputArray) {
+        [name, pop] = line.split(" <-> ");
         if (object.hasOwnProperty(name)) {
             // if (namme in object) - same
             object[name] += Number(pop);
@@ -13,7 +12,6 @@ function solve(inputArray) {
     for (let el in object) {
         console.log(el, ":", object[el]);
     }
-    //   
 };
 solve(['Sofia <-> 1200000',
     'Montana <-> 20000',

@@ -178,3 +178,7 @@ console.log(arr.join(" ")) */
 // }
 // test(1, 2, 3)
 // test(1, 2, 3, 4, 5, 6)
+
+// let a = 5;
+// let b = 12;
+// a < b ? console.log(true) : console.log(false);
