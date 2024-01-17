@@ -5,11 +5,13 @@ const person = {
     name: "Peter",
     age: 24,
     'last name': 'Johnson',
-    sayHi: function() {
-        console.log("Hello!");
+    sayHi() {
+        console.log(`Hello! ${this.name}`);
     },
     sayBye: bye
 };
+
+person.sayHi();
 
 console.log(person['last name']);
 const myFn = person.sayHi;
