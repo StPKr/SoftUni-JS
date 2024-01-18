@@ -183,7 +183,15 @@ console.log(arr.join(" ")) */
 // let b = 12;
 // a < b ? console.log(true) : console.log(false);
 
-let array = ["test", "mest", "best"];
-console.log(array)
-let file = JSON.stringify(array);
-console.log(file)
+// let array = ["test", "mest", "best"];
+// console.log(array)
+// let file = JSON.stringify(array);
+// console.log(file)
+
+// const numbers = [65, 44, 12, 4];
+// numbers.forEach(myFunction)
+
+// function myFunction(item, index, arr) {
+//   arr[index] = item * 10;
+// }
+// console.log(numbers)
