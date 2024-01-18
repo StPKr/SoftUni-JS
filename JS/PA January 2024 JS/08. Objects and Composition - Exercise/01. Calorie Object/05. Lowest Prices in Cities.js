@@ -12,6 +12,9 @@ function solve(inputArray) {
     for (let key in list){
         console.log(`${key} -> ${list[key].price} (${list[key].town})`);
     }
+    // for (let [product, value] of Object.entries(list)) {
+	// 	console.log(`${product} -> ${value.price} (${value.town})`);
+	// }
 }
 solve(['Sample Town | Sample Product | 1000',
     'Sample Town | Orange | 2',
