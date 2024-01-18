@@ -182,3 +182,8 @@ console.log(arr.join(" ")) */
 // let a = 5;
 // let b = 12;
 // a < b ? console.log(true) : console.log(false);
+
+let array = ["test", "mest", "best"];
+console.log(array)
+let file = JSON.stringify(array);
+console.log(file)
