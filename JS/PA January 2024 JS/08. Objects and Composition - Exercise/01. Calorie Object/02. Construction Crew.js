@@ -10,5 +10,4 @@ solve({
     experience: 1,
     levelOfHydrated: 0,
     dizziness: true
-}
-)
+})
