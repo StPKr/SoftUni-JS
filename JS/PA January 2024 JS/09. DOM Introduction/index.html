@@ -5,19 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo</title>
+    <style>
+        .row.first {
+            color: red
+        }
+
+        #title {
+            color: blue
+        }
+
+        button {
+            color: green
+        }
+
+        [name="email"] {
+            color: aqua;
+            border: 1px solid red;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>DOM Demo</h1>
+    <h1 id="title">DOM Demo</h1>
     <button onclick="console.log('Hello!'); console.log('Hi again!'); hello();">Click Me!</button>
     <button onclick="add(3,5)">Sum!</button>
+    <button onclick="changeColor()">Click me too!</button>
+    <button>Count</button>
     <ul>
-        <li>DOM Properties</li>
-        <li>DOM Methods</li>
-        <li>DOM Eventd</li>
+        <li class="row first">DOM Properties</li>
+        <li class="row">DOM Methods</li>
+        <li class="row">DOM Eventd</li>
     </ul>
+    <input type="text" name="color" placeholder="Color">
+    <input type="text" name="name">
+    <input type="text" name="email">
+    <input type="checkbox" name="consent">I agree to the T&C
+
     <script src="./app.js">
-        
+
         // function hello() {
         //     console.log("from inline script");
         //     // alert("ALERT!")
