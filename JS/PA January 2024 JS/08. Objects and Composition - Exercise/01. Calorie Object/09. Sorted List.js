@@ -3,9 +3,9 @@ function createSortedList() {
         list: [],
         size: 0,
         add(n) {
-            result.list.push(n);
-            result.list.sort((a, b) => a - b);
-            result.size = result.list.length;
+            this.list.push(n);
+            this.list.sort((a, b) => a - b);
+            this.size = this.list.length;
         },
         remove(n) {
             if (n >= 0 && n < result.list.length) {
