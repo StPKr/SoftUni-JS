@@ -2,7 +2,7 @@ function createSortedList() {
     let result = {
         list: [],
         size: 0,
-        add(n) {
+        add: function (n) { // can be add(n) { } directly
             this.list.push(n);
             this.list.sort((a, b) => a - b);
             this.size = this.list.length;

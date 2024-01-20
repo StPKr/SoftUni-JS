@@ -195,3 +195,18 @@ console.log(arr.join(" ")) */
 //   arr[index] = item * 10;
 // }
 // console.log(numbers)
+
+// const result = {
+//     add,
+//     remove,
+//     get,
+//     size: 0,
+// };
+
+// function add() {
+// };
+// function remove() {
+// };
+// function get() {
+// };
+// console.log(result)
