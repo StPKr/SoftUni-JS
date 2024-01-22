@@ -10,7 +10,7 @@ function solve(...input) {
         //     case "fillet": n *= 0.8; console.log(n); break;
         // }
         const tester = {
-            chop() { n /= 2; console.log(n) },
+            "chop"() { n /= 2; console.log(n) },
             dice() { n = Math.sqrt(n); console.log(n) },
             spice() { n += 1; console.log(n) },
             bake() { n *= 3; console.log(n) },
