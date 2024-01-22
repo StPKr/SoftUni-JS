@@ -9,10 +9,11 @@ function search() {
 			item.style.textDecoration = "underline";
 			item.style.fontWeight = "bold";
 			count++;
-		} else {
-			item.style.textDecoration = "none";
-			item.style.fontWeight = "normal";
-		}
+		} 
+      // else {
+		// 	item.style.textDecoration = "none";
+		// 	item.style.fontWeight = "normal";
+		// } - is optional
 	}
 	document.getElementById("result").innerText = `${count} matches found`;
 }
