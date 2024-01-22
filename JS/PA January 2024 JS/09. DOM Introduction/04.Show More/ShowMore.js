@@ -1,4 +1,7 @@
 function showText() {
-    document.getElementById('text').style.display = "";
-    document.getElementById('text').style.display = 'none';
+	let hidden = document.getElementById("more");
+	let textToShow = document.getElementById("text");
+
+	textToShow.style.display = "inline";
+	hidden.style.display = "none";
 }
