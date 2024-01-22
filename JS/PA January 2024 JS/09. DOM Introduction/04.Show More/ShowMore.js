@@ -1,3 +1,4 @@
 function showText() {
-    // TODO
+    document.getElementById('text').style.display = "";
+    document.getElementById('text').style.display = 'none';
 }
