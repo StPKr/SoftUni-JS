@@ -34,7 +34,7 @@ function solve() {
    }
 
    function appendBestRestaurantInfo(data) {
-      bestRestaurantInfo.textContent = `Name: ${data[0]} Average Salary: ${data[1].avgSalary.toFixed(2)} Best Salary: ${data[1].bestSalary}`;
+      bestRestaurantInfo.textContent = `Name: ${data[0]} Average Salary: ${data[1].avgSalary.toFixed(2)} Best Salary: ${data[1].bestSalary.toFixed(2)}`;
    }
 
    function findBestRestaurant(restaurants) {
