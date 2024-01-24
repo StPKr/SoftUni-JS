@@ -12,11 +12,32 @@
 </head>
 <body>
     <div id="main">
-
+        <!-- <button onclick="myFunc(event)">Click Me</button> 1st method HTML attributes-->
+        <button id ="my-button1">Click Me 1</button>
+        <button id ="my-button2">Click Me 2</button>
+        <button id ="my-button3">Click Me 3</button>
     </div>
     <script>
-        const element = document.createElement("p");
-        console.log(element)
+        const buttons = document.querySelectorAll("button");
+        for (let button of buttons){
+            button.addEventListener('click', myFunc);
+        }
+        // const element = document.createElement("p");
+        // console.log(element)
+        // const button1 = document.getElementById("my-button1"); 
+        // const button2 = document.getElementById("my-button2"); 
+        // const button3 = document.getElementById("my-button3"); 
+        // button.myFunc = myFunc;  - 2nd method usingg DOM element properties
+        // button1.addEventListener('click', myFunc); 
+        // button2.addEventListener('click', myFunc); 
+        // button3.addEventListener('click', myFunc); 
+        // 3rd method DOM event handler;
+        //function is without () because we want the function itself not the result
+        
+        function myFunc(data){
+            console.log(data.target)
+            // button.removeEventListener('click', myFunc); - will removes the EL after 1st execution
+        }
     </script>
 </body>
 </html>
