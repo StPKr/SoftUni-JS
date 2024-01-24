@@ -28,6 +28,7 @@
         }
 
         function myFunc(data) {
+            console.log(this); // same as data.target
             const btn = data.target;
             const num = Number(btn.textContent.split(" ")[2])
             btn.textContent = `Click Me ${num + 1}`;
