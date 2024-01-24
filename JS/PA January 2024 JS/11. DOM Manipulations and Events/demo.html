@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 32px;
+        }
+
+        .orange {
+            background: orange;
+        }
+
+        .green {
+            background: green;
+        }
+
+        .yellow {
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="orange">
+        <div class="green">
+            <div class="yellow">He-he</div>
+        </div>
+    </div>
+    <a id="link" href=".demo/index.html">Link</a>
+    <script>
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault(); //stops right click menu
+        })
+        document.getElementById('link').addEventListener('click', (event) => {
+            event.preventDefault();
+        });
+        const divElements = document.querySelectorAll("div");
+        function logText(e) {
+            if (this.classList.contains('green')) {
+                e.stopPropagation();
+            }
+            console.log(this, "clicked"); // currentTarget element
+        }
+        divElements.forEach((el) => el.addEventListener("click", logText, { capture: true }));
+    </script>
+</body>
+
+</html>

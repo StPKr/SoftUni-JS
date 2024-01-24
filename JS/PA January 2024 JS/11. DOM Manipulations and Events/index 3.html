@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <!-- <button onclick="myFunc(event)">Click Me</button> 1st method HTML attributes-->
+        <button id="my-button1">Click Me 0</button>
+        <button id="my-button1">Click Me 0</button>
+        <button id="my-button1">Click Me 0</button>
+        <button id="my-button1">Click Me 0</button>
+        <button id="my-button1">Click Me 0</button>
+    </div>
+    <script>
+        const parent = document.getElementById('main');
+        parent.addEventListener('click', myFunc);
+
+        function myFunc(event) {
+            const btn = event.target;
+            if (btn.tagName != 'BUTTON') {
+                console.log('not a button');
+                return
+            }
+            const num = Number(btn.textContent.split(" ")[2]);
+            btn.textContent = `Click Me ${num + 1}`
+        }
+    </script>
+</body>
+
+</html>
