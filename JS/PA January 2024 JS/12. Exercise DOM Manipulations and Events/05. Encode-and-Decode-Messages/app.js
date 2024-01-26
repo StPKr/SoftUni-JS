@@ -1,3 +1,27 @@
 function encodeAndDecodeMessages() {
-    console.log('TODO...')
+    const [encodeTextArea, decodeTextArea] = document.querySelectorAll('textarea');
+    const btns = document.querySelectorAll('button');
+    encodeBtn = btns[0];
+    decodeBtn = btns[1];
+    encodeBtn.addEventListener('click', encode);
+    decodeBtn.addEventListener('click', decode);
+    let placeholder = "";
+
+    function encode() {
+        for (let ch of encodeTextArea.value) {
+            const newChar = String.fromCharCode(ch.charCodeAt(0) + 1);
+            placeholder += newChar;
+        }
+        decodeTextArea.value = placeholder;
+        encodeTextArea.value = "";
+        placeholder = "";
+    }
+    function decode() {
+        for (let ch of decodeTextArea.value) {
+            const newChar = String.fromCharCode(ch.charCodeAt(0) - 1);
+            placeholder += newChar;
+        }
+        decodeTextArea.value = placeholder;
+        placeholder = "";
+    }
 }
