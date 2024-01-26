@@ -1,8 +1,8 @@
 function encodeAndDecodeMessages() {
     const [encodeTextArea, decodeTextArea] = document.querySelectorAll('textarea');
     const btns = document.querySelectorAll('button');
-    encodeBtn = btns[0];
-    decodeBtn = btns[1];
+    const encodeBtn = btns[0];
+    const decodeBtn = btns[1];
     encodeBtn.addEventListener('click', encode);
     decodeBtn.addEventListener('click', decode);
     let placeholder = "";
