@@ -16,6 +16,10 @@ function solve() {
 
   function createRowAndAppend(item) {
     const tr = document.createElement('tr');
+    // const imgTd = document.createElement("td");
+    // const img = document.createElement("img");
+    // imgTd.appendChild(img);
+    // tr.appendChild(imgTd); - вместо с innerHTML, за всяко долу се правят тези
     tr.innerHTML += createTableData(`<img src=${item.img}>`);
     tr.innerHTML += createTableData(`<p>${item.name}</p>`);
     tr.innerHTML += createTableData(`<p>${item.price}</p>`);
