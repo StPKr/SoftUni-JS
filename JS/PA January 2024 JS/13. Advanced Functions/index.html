@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">Click Me</button>
+    <script>
+        const obj = {
+            name: 'Peter',
+            respond() {
+                alert(`${this.name} says hello!`);
+            }
+        }
+        // document.getElementById('btn').addEventListener('click', obj.respond); // we get undefined
+        const respond = obj.respond.bind(obj);
+        document.getElementById('btn').addEventListener('click', respond); // Peter says...
+    </script>
+</body>
+
+</html>
