@@ -213,3 +213,11 @@ console.log(arr.join(" ")) */
 
 // sqr = (x) => (Math.pow(x, 2))
 // console.log(sqr(6))
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// numbers.forEach(function(currentValue, index, array) {
+//     const nextElement = (index < array.length - 1) ? array[index + 1] : null;
+
+//     console.log(`Current: ${currentValue}, Next: ${nextElement}`);
+// });
