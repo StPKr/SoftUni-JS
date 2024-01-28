@@ -210,3 +210,6 @@ console.log(arr.join(" ")) */
 // function get() {
 // };
 // console.log(result)
+
+// sqr = (x) => (Math.pow(x, 2))
+// console.log(sqr(6))
