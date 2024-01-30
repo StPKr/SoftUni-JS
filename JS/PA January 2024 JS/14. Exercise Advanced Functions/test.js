@@ -6,7 +6,7 @@ function solve(arr){
 let myFunc = solve;
 console.log(myFunc);
 console.log(myFunc());
-console.log();
+console.log(); 
 myFunc = solve();
 console.log(myFunc);
 console.log(myFunc());
