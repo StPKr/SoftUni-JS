@@ -8,14 +8,14 @@ function solve(...params) {
 			result[type] = 0;
 		}
 
-		result[type] = result[type] + 1;
+		result[type] += 1;
 	}
 
-	let buff = "";
-	for (let [key, value] of Object.entries(result)) {
-		buff += `${key} = ${value}\n`;
+	let sortResult = Object.entries(result).sort((a, b) => b[1] - a[1]);
+
+	for (let [k, v] of sortResult) {
+		console.log(`${k} = ${v}`);
 	}
-	console.log(buff);
 }
 solve('cat', 42, function () { console.log('Hello world!'); })
-solve({ name: 'bob'}, 3.333, 9.999);
+solve({ name: 'bob' }, 3.333, 9.999);
