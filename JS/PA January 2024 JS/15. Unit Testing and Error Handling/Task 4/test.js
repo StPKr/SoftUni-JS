@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { sum } from './solutions.js';
+import { sum } from './solution.js';
 
 describe('Suite', function () {
     it('works with number array', () => {
