@@ -221,3 +221,9 @@ console.log(arr.join(" ")) */
 
 //     console.log(`Current: ${currentValue}, Next: ${nextElement}`);
 // });
+
+let a = 5;
+
+if (a != 0) {
+    throw new Error(a + ' is not 0!');
+}
