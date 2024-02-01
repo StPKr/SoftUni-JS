@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { sum } from './solution.js';
+import { isSymmetric } from './solution.js';
 
 describe('Suite', function () {
     it('works with number array', () => {

@@ -33,7 +33,7 @@ function printDeckOfCards(cards) {
         }
         return card.toString();
     }
-    console.log(deck.join(" "))
+    return deck.join(" ");
 }
 printDeckOfCards(['AS', '10D', 'KH', '2C']);
 
