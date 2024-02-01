@@ -4,10 +4,10 @@ import { rgbToHexColor } from './solution.js';
 describe("General tests", function () {
     it("should be a function", function () {
         expect(typeof rgbToHexColor).to.equal('function');
-    })
+    });
     it("should be a function", function () {
         expect(typeof rgbToHexColor()).to.equal('string');
-    })
+    });
 });
 
 describe("Value tests", function () {
