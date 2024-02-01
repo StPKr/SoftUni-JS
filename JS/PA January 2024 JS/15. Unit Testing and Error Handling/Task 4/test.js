@@ -4,13 +4,11 @@ import { sum } from './solution.js';
 describe('Suite', function () {
     it('works with number array', () => {
         const arr = [1, 1, 1];
-        const string = "test";
-
         expect(sum(arr)).to.equal(3);
     });
 
     it('throws an error for non-array params', () => {
-        expect(() => sum(string)).to.throw;
+        expect(() => sum()).to.throw;
     });
 
     it('return 0 for empty array', () => {

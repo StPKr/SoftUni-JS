@@ -4,8 +4,6 @@ import { isSymmetric } from './solution.js';
 describe('Suite', function () {
     it('works with number array', () => {
         const arr = [1, 1, 1];
-        const string = "test";
-
         expect(sum(arr)).to.equal(3);
     });
 
