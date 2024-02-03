@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+
+        .border {
+            border: 2px solid black;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">Click Me</button>
+    <div id="main" class="red">
+        <span id="target">
+            Hello
+        </span>
+    </div>
+    <button id="btn2">Action</button>
+    <button id="btn3">Classlist</button>
+
+    <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet <button id="more">More</button><span class="more hidden">consectetur adipisicing elit.
+            Aut
+            eaque laborum
+            voluptate reiciendis! Est eveniet nobis quam! Repellat est explicabo
+            laboriosam dolores architecto, consequatur sunt distinctio nisi adipisci,
+            placeat mollitia.<button id="less">Less</button></span></p>
+
+    <script>
+        const btn = document.getElementById('more');
+        const para = document.querySelector('.more');
+
+        function toggle() {
+            para.classList.toggle('hidden');
+            btn.classList.toggle('hidden');
+        }
+
+        btn.addEventListener('click', toggle);
+
+        document.getElementById('less').addEventListener('click', toggle);
+
+        document.getElementById('btn3').addEventListener('click', () => {
+            const main = document.getElementById('main');
+            console.log(main.classList.contains('red'));
+            console.log(main.classList.contains('border'));
+
+            main.classList.add('border');
+            main.classList.toggle('red');
+        })
+
+        document.querySelector('button').addEventListener('click', () => {
+            const article = document.createElement('article');
+            article.textContent = 'Hello DOM!';
+
+            const span = document.getElementById('target');
+            span.replaceWith(article);
+        });
+
+        document.getElementById('btn2').addEventListener('click', () => {
+            const li = document.createElement('li');
+            li.textContent = "Three and a half";
+
+            const list = document.querySelector('ul');
+            list.children[2].after(li);
+        })
+    </script>
+</body>
+
+</html>
