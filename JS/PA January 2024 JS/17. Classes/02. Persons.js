@@ -20,7 +20,7 @@ function solve() {
 
     }
     let list = [];
-    const anna = new Person('Anna', 'Simpson', 22, 'aana@yahoo.com');
+    const anna = new Person('Anna', 'Simpson', 22, 'anna@yahoo.com');
     list.push(anna);
 
     const softUni = new Person('SoftUni');
