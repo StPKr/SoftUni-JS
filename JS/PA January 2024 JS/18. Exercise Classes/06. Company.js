@@ -6,7 +6,7 @@ class Company {
         salary = Number(salary);
         if (!name || !salary || !position || !department) {
             throw new Error("Invalid input!");
-        } else if (Number(salary) < 0) {
+        } else if (salary < 0) {
             throw new Error("Invalid input!");
         }
 
