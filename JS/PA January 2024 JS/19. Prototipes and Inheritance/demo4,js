@@ -1,0 +1,24 @@
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    sayHello() {
+        console.log(`{this.name} says hi!`);
+    }
+}
+
+Person.prototype.country = 'Bulgaria';
+
+const obj = new Person('Peter', 27);
+
+console.log('constructot', Person.prototype.country);
+console.log('instance', obj.country)
+console.log(obj);
+
+obj.country = 'Spain'; // sets the property on the instance of the class in this case "obj"
+// but the value doesn't travel up the chain, so the prototype remains unchanged
+
+console.log('constructot', Person.prototype.country);
+console.log('instance', obj.country);
+console.log(obj);
