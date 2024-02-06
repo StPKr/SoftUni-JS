@@ -9,7 +9,8 @@ Object.defineProperty(person, 'name', {
     value: 'Peter',
     writable: false, // makes it read only
     enumerable: false, // can't be iterated
-    configurable: false // can't be deleted and can't make other 
+    configurable: false // makes the property non-deletable and locks the other properties of
+    // the property except writable and it can only be changed true -> false 
 });
 
 person.name = 'John';
