@@ -222,8 +222,15 @@ console.log(arr.join(" ")) */
 //     console.log(`Current: ${currentValue}, Next: ${nextElement}`);
 // });
 
-let a = 5;
+// let a = 5;
 
-if (a != 0) {
-    throw new Error(a + ' is not 0!');
-}
+// if (a != 0) {
+//     throw new Error(a + ' is not 0!');
+// }
+
+// let myArray = [1, 2, 3, 4, 5];
+// const elementToRemove = 3;
+
+// myArray = myArray.filter(item => item !== elementToRemove);
+
+// console.log("Updated array:", myArray);
