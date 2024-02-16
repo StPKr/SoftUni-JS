@@ -1,0 +1,17 @@
+{
+  "name": "03.motorcycle-rider--resources",
+  "version": "1.0.0",
+  "description": "",
+  "main": "03.test.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^5.1.0",
+    "mocha": "^10.3.0"
+  }
+}

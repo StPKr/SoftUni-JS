@@ -1,4 +1,4 @@
-const motorcycleRider = {
+export const motorcycleRider = {
   licenseRestriction(category) {
     if (category === "AM") {
       return 'Mopeds with a maximum design speed of 45 km. per hour, engine volume is no more than 50 cubic centimeters, and the minimum age is 16.'
