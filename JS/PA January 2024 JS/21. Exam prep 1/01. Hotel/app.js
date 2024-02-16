@@ -17,8 +17,6 @@ function solve() {
     const confirmList = document.querySelector('.confirm-list');
     const output = document.getElementById('verification');
 
-
-
     function onNextClick(event) {
         event.preventDefault();
 
