@@ -52,10 +52,12 @@ export const planYourTrip = {
   },
 };
 
-console.log(planYourTrip.choosingDestination('Ski Resort', 'Winter', 2024));
-console.log(planYourTrip.estimateExpenses(50,2));
+// console.log(planYourTrip.choosingDestination('Ski Resort', 'Winter', 2024));
+// console.log(planYourTrip.estimateExpenses(50,2));
 
-console.log(planYourTrip.exploreOptions(["Test"], 0));
+// console.log(planYourTrip.exploreOptions(["Test"], 0));
+
+console.log(planYourTrip.estimateExpenses(NaN,));
 
 
 // module.exports = planYourTrip;

@@ -44,6 +44,10 @@ describe('Test', function () {
             expect(planYourTrip.exploreOptions(["Skiing"], 0)).to.equal(``);
         });
 
+        it('happy path', () => {
+            expect(()=> planYourTrip.exploreOptions(["Skiing"], -1)).to.throw(`Invalid Information!`);
+        });
+
         it('invalid array', () => {
             expect(() => planYourTrip.exploreOptions("Winter Hiking", 2)).to.throw(`Invalid Information!`);
         });
@@ -79,6 +83,18 @@ describe('Test', function () {
         it('missing param 3', () => {
             expect(() => planYourTrip.exploreOptions()).to.throw(`Invalid Information!`);
         });
+
+        it('missing param 3', () => {
+            expect(() => planYourTrip.exploreOptions(null, 5)).to.throw(`Invalid Information!`);
+        });
+
+        it('missing param 3', () => {
+            expect(() => planYourTrip.exploreOptions(['Skiing'], null)).to.throw(`Invalid Information!`);
+        });
+
+        it('missing param 3', () => {
+            expect(() => planYourTrip.exploreOptions(NaN, NaN)).to.throw(`Invalid Information!`);
+        });
     });
 
     describe('•	estimateExpenses', function () {
@@ -107,15 +123,15 @@ describe('Test', function () {
         });
 
         it('params are NaN', () => {
-            expect(() => planYourTrip.estimateExpenses("50", 2)).to.throw(`Invalid Information!`);
+            expect(() => planYourTrip.estimateExpenses("gsqgsq", 2)).to.throw(`Invalid Information!`);
         });
 
         it('params are NaN 2', () => {
-            expect(() => planYourTrip.estimateExpenses(50, "2")).to.throw(`Invalid Information!`);
+            expect(() => planYourTrip.estimateExpenses(50, "gasgas")).to.throw(`Invalid Information!`);
         });
 
         it('params are NaN 3', () => {
-            expect(() => planYourTrip.estimateExpenses("five", "2")).to.throw(`Invalid Information!`);
+            expect(() => planYourTrip.estimateExpenses("five", "wrq")).to.throw(`Invalid Information!`);
         });
 
         it('params are negative', () => {
@@ -152,6 +168,18 @@ describe('Test', function () {
 
         it('invalid mix', () => {
             expect(() => planYourTrip.estimateExpenses([10], -2)).to.throw(`Invalid Information!`);
+        });
+
+        it('invalid mix 2', () => {
+            expect(() => planYourTrip.estimateExpenses(null, 2)).to.throw(`Invalid Information!`);
+        });
+
+        it('invalid mix 3', () => {
+            expect(() => planYourTrip.estimateExpenses(120, null)).to.throw(`Invalid Information!`);
+        });
+
+        it('invalid mix 4', () => {
+            expect(() => planYourTrip.estimateExpenses(NaN, NaN)).to.throw(`he estimated cost for the trip is $NaN, plan accordingly.`);
         });
     });
 });
