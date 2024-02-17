@@ -43,7 +43,7 @@ class BookClub {
             throw new Error(`Book "${bookTitle}" not found.`);
         }
 
-        this.books.filter(b => b !== data);
+        this.books = this.books.filter(b => b !== data);
         return `Member ${memberName} has been assigned the book "${bookTitle}" by ${data.author}.`
 
     }
