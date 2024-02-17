@@ -57,7 +57,7 @@ export const planYourTrip = {
 
 // console.log(planYourTrip.exploreOptions(["Test"], 0));
 
-console.log(planYourTrip.estimateExpenses(NaN,));
+// console.log(planYourTrip.exploreOptions());
 
 
 // module.exports = planYourTrip;
