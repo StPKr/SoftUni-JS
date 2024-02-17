@@ -59,6 +59,14 @@ function solve() {
 
         element.appendChild(article);
 
+        /* Can also be done like this instead of apppendChild:
+        element.innerHTML += '<article>'
+        element.innerHTML += `<h3>Name: ${firstName} ${lastName}</h3>`;
+        ...
+        for all other elements too 
+        element.innerHTML += '</article>'
+        */
+
         return element;
     }
 
