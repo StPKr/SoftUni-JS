@@ -149,7 +149,7 @@ function solve() {
 
         bodySec.removeChild(element);
         bodySec.removeChild(backBtn);
-        
+
         appendSec.style.display = 'block';
         infoSec.style.display = 'block';
         confirmSec.style.display = 'block';
@@ -165,6 +165,3 @@ function solve() {
         return element
     }
 }
-
-
-
