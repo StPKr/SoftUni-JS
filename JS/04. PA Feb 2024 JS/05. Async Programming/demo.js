@@ -7,7 +7,7 @@ console.log('there');
 
 function executor(resolve, reject) {
     console.log('executing');
-    setTimeout(reject, 2000, "Bye!");
+    setTimeout(resolve, 2000, "Bye!");
 }
 
 function onSuccess(data) {

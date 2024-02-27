@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="load">Load Repos</button>
+    <div id="res"></div>
+
+    <script>
+        const url = 'https://api.github.com/users/testnakov/repos';
+        const button = document.querySelector("#load");
+        const output = document.getElementById('res');
+        button.addEventListener('click', fetchRepos);
+
+        const result = fetchRepos();
+        console.log(result);
+
+        async function fetchRepos() {
+            fetch(url).then(response => {
+                if (response.ok == false) {
+                    throw response.text();
+                }
+                return response.text()
+            })
+                .then(data => output.textContent = data)
+                .catch(error => output.textContent = `Encountered error: ${error}`);
+        }
+    </script>
+</body>
+
+</html>
