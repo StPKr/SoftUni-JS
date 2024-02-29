@@ -17,3 +17,5 @@ function onSuccess(data) {
 function onError(error) {
     console.log('Encountered Error: ', error);
 }
+
+console.log("test")

@@ -234,3 +234,21 @@ console.log(arr.join(" ")) */
 // myArray = myArray.filter(item => item !== elementToRemove);
 
 // console.log("Updated array:", myArray);
+
+async function example() {
+    console.log("one");
+  
+    // Wrap setTimeout in a Promise
+    const p = () => new Promise(resolve => setTimeout(resolve, 500, "two"));
+  
+    // Use await to wait for the Promise to resolve
+    await p();
+  
+    console.log("three");
+  }
+  
+  // Call the async function
+  example();
+  console.log("two");
+  console.log("two");
+ 

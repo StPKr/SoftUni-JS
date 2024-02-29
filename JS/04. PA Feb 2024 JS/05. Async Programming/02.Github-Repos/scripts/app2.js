@@ -5,7 +5,6 @@ async function loadRepos() {
 	const url = `https://api.github.com/users/${username}/repos`;
 
 	try {
-
 		const response = await fetch(url);
 		if (!response.ok) {
 			const message = await response.json();
