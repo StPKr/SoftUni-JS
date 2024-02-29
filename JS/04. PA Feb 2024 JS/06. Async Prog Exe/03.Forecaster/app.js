@@ -43,9 +43,9 @@ function attachEvents() {
     function createForecastUpcomingSection(data) {
         const container = document.createElement('div');
         container.classList.add('forecast-info');
-        const upcoming1 = generateSpan('upcoming', data.name, data.forecast[0]);
-        const upcoming2 = generateSpan('upcoming', data.name, data.forecast[1]);
-        const upcoming3 = generateSpan('upcoming', data.name, data.forecast[2]);
+        const upcoming1 = generateSpan('upcoming', 'symbol', data.name, data.forecast[0]);
+        const upcoming2 = generateSpan('upcoming', 'symbol', data.name, data.forecast[1]);
+        const upcoming3 = generateSpan('upcoming', 'symbol', data.name, data.forecast[2]);
         container.appendChild(upcoming1);
         container.appendChild(upcoming2);
         container.appendChild(upcoming3);
@@ -53,13 +53,13 @@ function attachEvents() {
         return container;
     }
 
-    function generateSpan(classes, name, data) {
+    function generateSpan(classContainer, classSpan, name, data) {
         const spanContainer = document.createElement('span');
-        spanContainer.classList.add(classes);
+        spanContainer.classList.add(classContainer);
 
         const spanName = document.createElement('span');
         spanName.classList.add('forecast-data');
-        spanName.textContent = name
+        classSpan === "symbol" ? spanName.innerHTML = findSymbol(data.condition) : spanName.textContent = name;
 
         const degree = document.createElement('span');
         degree.classList.add('forecast-data');
@@ -67,7 +67,7 @@ function attachEvents() {
 
         const condition = document.createElement('span');
         condition.classList.add('forecast-data');
-        condition.textContent = data.condition;
+        condition.textContent = data.condition; 
 
         spanContainer.appendChild(spanName);
         spanContainer.appendChild(degree);
@@ -85,7 +85,7 @@ function attachEvents() {
         conditionSpan.innerHTML = findSymbol(data.forecast.condition);
 
         container.appendChild(conditionSpan);
-        const spanContainer = generateSpan('condition', data.name, data.forecast);
+        const spanContainer = generateSpan('condition', 'forecast-data', data.name, data.forecast);
 
         container.appendChild(spanContainer);
         return container;
@@ -98,7 +98,6 @@ function attachEvents() {
             case "Overcast": return '&#x2614';
             case "Rain": return '&#x2600';
             case "Degrees": return '&#176';
-
         }
     }
 
