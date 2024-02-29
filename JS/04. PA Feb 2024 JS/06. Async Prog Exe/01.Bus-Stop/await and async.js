@@ -9,17 +9,19 @@ async function getInfo() {
 
     const url = `http://localhost:3030/jsonstore/bus/businfo/${stopId}`
 
-    const response = fetch(url);
-    response.then(res => {
-        res.json().then(data => {
-            stopNameRef.textContent = data.name;
-            appendChild(Object.entries(data.buses));
-        }).catch(err => {
-            stopNameRef.textContent = "Error";
-        })
-    }).catch(err => {
+    try {
+        const response = await fetch(url);
+        if (response.status === 204) {
+            throw new Error("No content");
+        }
+        const data = await response.json();
+        stopNameRef.textContent = data.name;
+        appendChild(Object.entries(data.buses));
+    } catch (error) {
         stopNameRef.textContent = "Error";
-    })
+    }
+
+
 
     function appendChild(data) {
         for ([bus, time] of data) {
