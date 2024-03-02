@@ -42,8 +42,9 @@ function attachEvents() {
         let li = document.createElement('li');
         li.textContent = `${data.person}: ${data.phone}`;
         let btn = document.createElement('button');
-        btn.textContent = "Delelte";
+        btn.textContent = "Delete";
         btn.dataset.id = data._id;
+        // btn['data-id'] = data._id; - same as above
         btn.addEventListener('click', onDelete);
 
         li.appendChild(btn);
