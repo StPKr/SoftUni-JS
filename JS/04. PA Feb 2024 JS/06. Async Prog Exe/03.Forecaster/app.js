@@ -1,7 +1,5 @@
 function attachEvents() {
-    let submitBtn = document.getElementById('submit');
-    submitBtn.addEventListener('click', getWeather);
-
+    document.getElementById('submit').addEventListener('click', getWeather); //adds EL to the btn
     const forecastSection = document.getElementById('forecast');
     const locationInput = document.getElementById('location');
     const currentSection = document.getElementById('current');
@@ -17,7 +15,7 @@ function attachEvents() {
             forecastSection.style.display = 'block';
             const locationResponse = await fetch(baseLocationUrl);
             const locationData = await locationResponse.json();
-            const currentLocationData = locationData.find(x => x.name == userInput);
+            const currentLocationData = locationData.find(x => x.name === userInput);
             await fillTodayData(currentLocationData.code);
             await fillUpcomingData(currentLocationData.code);
         } catch (e) {
@@ -43,6 +41,7 @@ function attachEvents() {
     function createForecastUpcomingSection(data) {
         const container = document.createElement('div');
         container.classList.add('forecast-info');
+
         const upcoming1 = generateSpan('upcoming', 'symbol', data.name, data.forecast[0]);
         const upcoming2 = generateSpan('upcoming', 'symbol', data.name, data.forecast[1]);
         const upcoming3 = generateSpan('upcoming', 'symbol', data.name, data.forecast[2]);
@@ -58,7 +57,7 @@ function attachEvents() {
         spanContainer.classList.add(classContainer);
 
         const spanName = document.createElement('span');
-        spanName.classList.add('forecast-data');
+        spanName.classList.add(classSpan);
         classSpan === "symbol" ? spanName.innerHTML = findSymbol(data.condition) : spanName.textContent = name;
 
         const degree = document.createElement('span');
@@ -67,7 +66,7 @@ function attachEvents() {
 
         const condition = document.createElement('span');
         condition.classList.add('forecast-data');
-        condition.textContent = data.condition; 
+        condition.textContent = data.condition;
 
         spanContainer.appendChild(spanName);
         spanContainer.appendChild(degree);
