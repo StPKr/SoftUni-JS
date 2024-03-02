@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label>
+            Email
+            <input type="text" name="email">
+        </label>
+        <label>
+            Password
+            <input type="text" name="password">
+        </label>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <button id="authRequest">Make authorized request</button>
+
+    <script>
+        let token;
+        const form = document.querySelector('form');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const { email, password } = Object.fromEntries(formData.entries());
+
+            console.log(email, password);
+
+            const url = 'http://localhost:3030/users/login'
+
+            try {
+                const req = await fetch(url, {
+                    method: 'post',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                if (!req.ok) {
+                    const err = await req.json();
+                    throw new Error(err.message);
+                }
+
+                const data = await req.json();
+                localStorage.setItem('user', JSON.stringify(data));
+
+            } catch (err) {
+                alert(err.message);
+            }
+        });
+        document.getElementById('authRequest').addEventListener('click', async () => {
+            const userData = JSON.parse(localStorage.getItem('user'));
+
+            const url = 'http://localhost:3030/users/me'
+
+            try {
+                if (!userData) {
+                    throw new Error('Please login!');
+                }
+
+                const req = await fetch(url, {
+                    method: 'get',
+                    headers: {
+                        'X-Authorization': userData?.accessToken
+                    }
+                });
+
+                if (!req.ok) {
+                    const err = await req.json();
+                    if (err.code == 403) {
+                        localStorage.clear();
+                    }
+
+                    throw new Error(err.message);
+                }
+
+                const data = await req.json();
+                console.log(data);
+            } catch (err) {
+                alert(err.message);
+            }
+        });
+    </script>
+</body>
+
+</html>
