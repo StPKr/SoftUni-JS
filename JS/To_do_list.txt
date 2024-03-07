@@ -1,0 +1,3 @@
+Check all workshops
+Try to build a basic web page
+Try to write some tests only with playwright (JS Applications 11. Lab)

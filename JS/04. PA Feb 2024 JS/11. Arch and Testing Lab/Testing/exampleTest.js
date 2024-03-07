@@ -15,32 +15,33 @@ let page; // Declare reusable variables, the above typisation is not necessary
 
 describe('E2E tests', async function () {
     this.timeout(30000); // w/o this Mocha throws an error due to 2000ms limitation
-    before(async () => { browser = await chromium.launch(); });
+    before(async () => { browser = await chromium.launch({ headless: false, slowMo: 1500 }); });
     // headless false makes the browser visible
     // slowMo: 500 delays so we can visualise what's happening
     after(async () => { await browser.close(); });
     beforeEach(async () => { page = await browser.newPage(); });
     afterEach(async () => { await page.close(); });
 
-    it('load titles', async () => {
-        await page.goto('http://localhost:5500');
-        await page.waitForLoadState('networkidle');
+    it('works', async () => {
+        await page.goto('http://localhost:5500/example.html');
+        // await page.screenshot({ path: 'example.png' });
+        const content = await page.textContent('h1');
 
-        const titles = await page.$$eval('div.head span', (items) => items.map(i => i.textContent));
+        expect(content).to.contain('Hello, Playwright!');
 
-        expect(titles).to.include('Scalable Vector Graphics')
-
+        console.log(content)
     });
 
-    it('shows more', async () => {
-        await page.goto('http://localhost:5500');
-        await page.click('text=More');
-        await page.waitForLoadState('networkidle');
+    it('has a working button', async () => {
+        await page.goto('http://localhost:5500/example.html');
+        await page.click('text=click me');
 
-        const visible = await page.isVisible('text=Scalable Vector Graphics (SVG) is an Extensible Markup Language (XML)-based vector image format');
+        const content = await page.textContent('h1');
+        expect(content).to.contain('Code from page.')
+
+        const visible = await page.isVisible('text=code from page');
         expect(visible).to.be.true;
 
     });
-
 
 });
