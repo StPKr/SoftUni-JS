@@ -1,3 +1,4 @@
 CMS - content management system, like Wordpress - demonstrates everything and is good for portfollio
 Forum - easier example of the above
 Single page application - maybe a quiz?
+web часовник със стрелки (possible extensions, alarm, timer, chronometer)
