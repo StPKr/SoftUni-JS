@@ -18,11 +18,11 @@ const items = [
     }
 ]
 
-export function showCatalog() {
+export function showCatalog(ctx) {
     root.innerHTML = `
     <p>Catalog page</p>
     <ul>
-    ${items.map(i => `<li><a href='/catalog/${i.id}'>${i.name}</a></li>`).join('\n')}
+    ${ctx.data.map(i => `<li><a href='/catalog/${i.id}'>${i.name}</a></li>`).join('\n')}
     </ul>
     `;
 }
@@ -61,5 +61,8 @@ export async function loadData(ctx, next) {
     root.innerHTML = `<p>Loading &hellip;</p>`
 
     await new Promise(r => setTimeout(r, 2000));
+
+    ctx.data = items;
+
     next();
 }
