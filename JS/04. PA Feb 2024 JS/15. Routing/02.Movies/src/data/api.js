@@ -8,8 +8,8 @@ async function request(method, url, data) {
         headers: {}
     }
 
-    if (data != undefined) {
-        options.headers['Content-Type'] = 'application/json';
+    if (!data != undefined) {
+        options.headers["Content-Type"] = "application/json";
         options.body = JSON.stringify(data);
     }
 
@@ -21,7 +21,7 @@ async function request(method, url, data) {
 
 
     try {
-        const res = await fetch(host + url, options);
+        const res = await (fetch(host + url, options));
         if (!res.ok) {
             if (res.status == 403) {
                 clearUserData();
