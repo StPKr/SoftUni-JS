@@ -30,7 +30,7 @@ async function onPublish(event) {
         const movie = await request(url, {
             method: 'post',
             headers: {
-                'Content-Type': ' application/json',
+                'Content-Type': 'application/json',
                 'X-Authorization': userData.accessToken
             },
             body: JSON.stringify({ title, img, description })
