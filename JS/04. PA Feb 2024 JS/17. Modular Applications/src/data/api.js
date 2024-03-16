@@ -6,7 +6,7 @@ async function request(method, url, data) {
     const options = {
         method,
         headers: {}
-    }
+    };
 
     if (data != undefined) {
         options.headers["Content-Type"] = "application/json";
@@ -22,6 +22,7 @@ async function request(method, url, data) {
 
     try {
         const res = await fetch(host + url, options);
+        
         if (!res.ok) {
             if (res.status == 403) {
                 clearUserData();
@@ -32,7 +33,6 @@ async function request(method, url, data) {
         }
 
         return res.json();
-
     } catch (err) {
         alert(err.message);
         throw err;
@@ -49,4 +49,4 @@ window.api = {
     post,
     put,
     del
-}
+};

@@ -2,7 +2,7 @@ import { getMovies } from "../data/movies.js";
 import { render, html } from "../lib.js";
 import { loading } from "./partials.js";
 
-const homeTemplate = () => html`
+const homeTemplate = (movies) => html`
 <section id="home-page" class="view-section">
         <div
           class="jumbotron jumbotron-fluid text-light"

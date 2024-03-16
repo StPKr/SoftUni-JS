@@ -10,7 +10,7 @@ export function clearUserData() {
     localStorage.removeItem('user');
 }
 
-export function createSubmitHandler(callback,) {
+export function createSubmitHandler(callback) {
     return function (event) {
         event.preventDefault();
 
