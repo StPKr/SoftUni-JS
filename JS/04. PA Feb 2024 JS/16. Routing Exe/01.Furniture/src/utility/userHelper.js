@@ -3,7 +3,7 @@ function setUserData(userData) {
 }
 
 function getUserData() {
-    return JSON.parse(sessionStorage.getItem('userData'));
+    return sessionStorage.getItem('userData') && JSON.parse(sessionStorage.getItem('userData'));
 }
 
 function clearUserData() {
@@ -12,15 +12,15 @@ function clearUserData() {
 
 function getUserToken() {
     const userData = getUserData();
-    return userData.accessToken;
+    return userData?.accessToken;
 }
 
 function getUserId() {
     const userData = getUserData();
-    return userData._id;
+    return userData?._id;
 }
 
-function hasOwner(iemId) {
+function hasOwner(ownerId) {
     const id = getUserId();
     return ownerId === id;
 }

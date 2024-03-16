@@ -2,7 +2,7 @@ import { api } from "../utility/requester.js";
 
 const BASE_URL = 'http://localhost:3030/data';
 const endpoints = {
-    myFurniture: (userId) => `http://localhost:3030/data/catalog?where=_ownerId%3D%22${userId}%22`,
+    myFurniture: (userId) => `/catalog?where=_ownerId%3D%22${userId}%22`,
     furniture: '/catalog'
 }
 
@@ -23,7 +23,7 @@ async function updateFurniture(id, data) {
 }
 
 async function delFurniture(id) {
-    return await api.get(BASE_URL + endpoints.furniture + `/${id}`);
+    return await api.del(BASE_URL + endpoints.furniture + `/${id}`);
 }
 
 async function getMyFurniture(userId) {

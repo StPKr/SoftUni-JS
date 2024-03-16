@@ -1,13 +1,13 @@
-import { html } from '../../node_modules/lit-html/lit-html.js';
-import { dataServices } from '../service/dataService.js';
-const root = document.querySelector("div[data-id='root']");
+import { html } from "../../node_modules/lit-html/lit-html.js";
+import { dataServices } from "../service/dataService.js";
+import { userHelper } from "../utility/userHelper.js";
 
 
-const dashboardTemplate = (items) => html`
+const myFurnitureTemp = (items) => html`
 <div class="row space-top">
     <div class="col-md-12">
-        <h1>Welcome to Furniture System</h1>
-        <p>Select furniture from the catalog to view details.</p>
+        <h1>My Furniture</h1>
+        <p>This is a list of your publications.</p>
     </div>
 </div>
 <div class="row space-top">
@@ -31,7 +31,7 @@ const cardTemplate = (item) => html`
     </div>
 `;
 
-export async function showDashboardView(ctx) {
-    const data = await dataServices.getAllFurniture();
-    ctx.render(dashboardTemplate(data));
+export async function showMyFurnitureView(ctx) {
+    const data = await dataServices.getMyFurniture(userHelper.getUserId());
+    ctx.render(myFurnitureTemp(data));
 }
