@@ -1,5 +1,6 @@
-import { getRecipes } from "./data/recipes.js";
+import { page } from './lib.js'
+import { showCatalog } from './views/catalog.js'
 
-window.api = {
-    getRecipes
-};
+page('/', showCatalog);
+
+page.start();
