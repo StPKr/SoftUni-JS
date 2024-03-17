@@ -5,7 +5,8 @@ const host = 'http://localhost:3030';
 async function request(method, url, data) {
     const options = {
         method,
-        headers: {}
+        headers: {
+        }
     };
 
     if (data != undefined) {

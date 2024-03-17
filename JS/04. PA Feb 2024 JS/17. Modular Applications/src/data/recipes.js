@@ -1,4 +1,4 @@
-import { get } from "./api.js";
+import { get, post } from "./api.js";
 
 const pageSize = 2;
 
@@ -19,6 +19,10 @@ export async function getRecipes(search, page) {
 
     return {
         recipes,
-        pages: Math.ceil(count/pageSize)
+        pages: Math.ceil(count / pageSize)
     };
+}
+
+export async function createRecipe(name, img, ingredients, steps) {
+    return post('/data/recipes', { name, img, ingredients, steps })
 }
