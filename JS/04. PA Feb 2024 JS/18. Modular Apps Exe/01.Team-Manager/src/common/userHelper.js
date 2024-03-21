@@ -18,10 +18,15 @@ function clearUserData() {
     sessionStorage.removeItem('userData');
 }
 
+function hasOwner(itemOwnerId) {
+    return getUserId() === itemOwnerId;
+}
+
 export const userHelper = {
     setUserData,
     getUserData,
     getUserId,
     getToken,
-    clearUserData
+    clearUserData,
+    hasOwner
 }

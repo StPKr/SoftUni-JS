@@ -24,9 +24,24 @@ async function editTeam(id, data) {
     api.put(`${BASE_URL}${endpoints.teams}/${id}`, data)
 }
 
+async function getListMember(teamId) {
+    return await api.get(`${BASE_URL}data/members?where=teamId%3D%22${teamId}%22&load=user%3D_ownerId%3Ausers`)
+}
+
+async function requestToJoin(teamId) {
+    return await api.post(`${BASE_URL}${endpoints.members}`, { teamId })
+}
+
+async function approveRequest(id, data) {
+    return await api.put(`${BASE_URL}${endpoints.members}/${id}`, data);
+}
+
 export const dataService = {
     getAllTeams,
     createNewTeam,
     getSingleTeam,
-    editTeam
+    editTeam,
+    getListMember,
+    requestToJoin,
+    approveRequest
 }

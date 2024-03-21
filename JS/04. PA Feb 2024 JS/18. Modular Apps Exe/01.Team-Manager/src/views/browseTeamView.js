@@ -23,12 +23,12 @@ ${data.map(cardTemp)}
 
 const cardTemp = (item) => html`
 <article class="layout">
-    <img src="./assets/atat.png" class="team-logo left-col">
+    <img src="../../${item.logoUrl}" class="team-logo left-col">
     <div class="tm-preview">
-        <h2>Storm Troopers</h2>
-        <p>These ARE the droids we're looking for</p>
-        <span class="details">5000 Members</span>
-        <div><a href="#" class="action">See details</a></div>
+        <h2>${item.name}</h2>
+        <p>${item.description}</p>
+        <span class="details">???</span>
+        <div><a href="/details/${item._id}" class="action">See details</a></div>
     </div>
 </article>
 `;
