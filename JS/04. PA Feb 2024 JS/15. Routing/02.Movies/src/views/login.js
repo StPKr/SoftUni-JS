@@ -46,6 +46,6 @@ export function showLogin(ctx) {
 async function onLogin({ email, passowrd, repeatPassword }) {
    
     await login(email, passowrd);
-    page.regirect('/');
+    page.redirect('/');
 
 }

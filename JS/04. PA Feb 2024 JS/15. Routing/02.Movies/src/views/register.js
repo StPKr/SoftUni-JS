@@ -61,6 +61,6 @@ async function onRegister({ email, passowrd, repeatPassword }) {
     }
 
     await register(email, passowrd);
-    page.regirect('/');
+    page.redirect('/');
 
 }
