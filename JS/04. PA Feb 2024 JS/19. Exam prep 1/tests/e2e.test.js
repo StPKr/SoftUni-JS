@@ -3,7 +3,7 @@ const { expect } = require("chai");
 
 const host = "http://localhost:3000"; // Application host (NOT service host - that can be anything)
 const interval = 600;
-const DEBUG = false;
+const DEBUG = true;
 const slowMo = 500;
 
 const mockData = require("./mock-data.json");
@@ -57,7 +57,7 @@ afterEach(async () => {
 
   // Test proper
   describe("Authentication [ 20 Points ]", () => {
-    it("Register does NOT work with empty fields [ 2.5 Points ]", async () => {
+    it.only("Register does NOT work with empty fields [ 2.5 Points ]", async () => {
       const { post } = await handle(endpoints.register);
       const isCalled = post().isHandled;
 
