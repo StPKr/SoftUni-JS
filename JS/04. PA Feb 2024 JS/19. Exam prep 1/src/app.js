@@ -1,20 +1,30 @@
-import { render } from '../node_modules/lit-html/lit-html.js';
-import page from '../node_modules/page/page.mjs'
-import { showHomeView } from './views/howView.js';
-import { showLoginView } from './views/loginView.js';
+import { logout } from "./data/users.js";
+import { page } from "./lib.js";
+import { updateNav } from "./util.js";
+import { showCatalogView } from "./views/catalogView.js";
+import { showCreateView } from "./views/createView.js";
+import { showDetailsView } from "./views/detailsView.js";
+import { showEditView } from "./views/editView.js";
+import { showHome } from "./views/homevView.js";
+import { showLoginView } from "./views/loginView.js";
+import { showRegisterView } from "./views/register.js";
 
-const root = document.querySelector('main');
+updateNav();
 
-page('/', showHomeView);
-page('/register', () => console.error('register'));
+page('/', showHome);
+page('/catalog', showCatalogView);
 page('/login', showLoginView);
-page('/logout', () => console.error('logout'));
-page('/events', () => console.error('events'));
-page('/addEvent', () => console.error('addEvent'));
+page('/register', showRegisterView);
+page('/create', showCreateView);
+page('/catalog/:id', showDetailsView);
+page('/edit/:id', showEditView);
 
 
 page.start();
 
-export function renderer(temp) { 
-    render(temp, root);
-}
+
+document.getElementById('logoutBtn').addEventListener('click', async () => {
+    await logout();
+    updateNav();
+    page.redirect('/');
+}); // no need to make a separate logoutView file
