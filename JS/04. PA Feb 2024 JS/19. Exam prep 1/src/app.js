@@ -1,7 +1,7 @@
 import { logout } from "./data/users.js";
 import { page } from "./lib.js";
 import { updateNav } from "./util.js";
-import { showCatalogView } from "./views/catalogView.js";
+import { showdashboardView } from "./views/dashboardView.js";
 import { showCreateView } from "./views/createView.js";
 import { showDetailsView } from "./views/detailsView.js";
 import { showEditView } from "./views/editView.js";
@@ -12,11 +12,11 @@ import { showRegisterView } from "./views/register.js";
 updateNav();
 
 page('/', showHome);
-page('/catalog', showCatalogView);
+page('/dashboard', showdashboardView);
 page('/login', showLoginView);
 page('/register', showRegisterView);
 page('/create', showCreateView);
-page('/catalog/:id', showDetailsView);
+page('/dashboard/:id', showDetailsView);
 page('/edit/:id', showEditView);
 
 

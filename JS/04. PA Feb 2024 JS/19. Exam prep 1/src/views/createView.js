@@ -55,6 +55,6 @@ async function onCreate({ name, imageUrl, category, description, date }, form) {
     }
 
     await createEvent(name, imageUrl, category, description, date);
-    page.redirect('/catalog');
+    page.redirect('/dashboard');
 
 }

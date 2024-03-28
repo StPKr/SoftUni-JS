@@ -1,7 +1,7 @@
 import { getAllEvents } from '../data/events.js';
 import { html, render } from '../lib.js';
 
-const catalogtemplate = (events) => html`
+const dashboardTemplate = (events) => html`
 <h2>Current Events</h2>
 <section id="dashboard">
     ${events.length ? events.map(eventTemplate) : html`<h4>No Events yet.</h4>`}
@@ -13,11 +13,11 @@ const eventTemplate = (event) => html`
         <img src=${event.imageUrl} alt="example1" />
         <p class="title">${event.name}</p>
         <p class="date">${event.date}</p>
-        <a class="details-btn" href="/catalog/${event._id}">Details</a>
+        <a class="details-btn" href="/dashboard/${event._id}">Details</a>
     </div>
 `;
 
-export async function showCatalogView(ctx) {
+export async function showdashboardView(ctx) {
     const events = await getAllEvents();
-    render(catalogtemplate(events));
+    render(dashboardTemplate(events));
 }

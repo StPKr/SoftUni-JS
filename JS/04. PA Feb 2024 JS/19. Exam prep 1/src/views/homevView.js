@@ -8,7 +8,7 @@ const homeTemplate = () => html`
         
         <p>So why wait? Join our community today and start 
             discovering and sharing the best events in your area!</p>
-            <a class="event-btn" href="/catalog">To Events</a>       
+            <a class="event-btn" href="/dashboard">To Events</a>       
     </div>
     <img class="party-img" src="./images/party people.png" alt="event">
 </section>

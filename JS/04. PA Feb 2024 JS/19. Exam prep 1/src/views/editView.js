@@ -61,7 +61,7 @@ export async function showEditView(ctx) {
         }
 
         await updateEvent(id, { name, imageUrl, category, description, date });
-        page.redirect('/catalog/' + id);
+        page.redirect('/dashboard/' + id);
     }  // nesting the function so we can use the id 
 }
 

@@ -57,12 +57,12 @@ export async function showDetailsView(ctx) {
 
         if (choice) {
             await deleteEvent(id);
-            page.redirect('/catalog');
+            page.redirect('/dashboard');
         }
     } //nesting the function so we can use id
 
     async function onGoing() {
         await goToEvent(id);
-        page.redirect('/catalog/' + id);
+        page.redirect('/dashboard/' + id);
     }
 }
