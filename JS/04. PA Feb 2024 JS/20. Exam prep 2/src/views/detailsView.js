@@ -5,7 +5,7 @@ import { getUserData } from '../util.js';
 const detailsTemplate = (product, isOwner, onDelete) => html`
 <section id="details">
     <div id="details-wrapper">
-        <img id="details-img" src="./images/Honda Hornet.png" alt="example1" />
+        <img id="details-img" src="${product.imageUrl}" alt="example1" />
         <p id="details-title">${product.model}</p>
         <div id="info-wrapper">
             <div id="details-description">
@@ -15,12 +15,14 @@ const detailsTemplate = (product, isOwner, onDelete) => html`
                 <p id = "motorcycle-description">${product.about}</p>
             </div>
             <!--Edit and Delete are only for creator-->
-            <div id="action-buttons">
+            
             ${!isOwner
         ? ''
-        : html`<a href="/edit/${product._id}" id="edit-btn">Edit</a>
-            <a href="javascript:void(0)" id="delete-btn" @click=${onDelete}> Delete</a >`}
-        </div >
+        : html`
+            <div id="action-buttons">
+            <a href="/edit/${product._id}" id="edit-btn">Edit</a>
+            <a href="javascript:void(0)" id="delete-btn" @click=${onDelete}> Delete</a >
+            </div >`}
     </div >
 </div >
 </section >
