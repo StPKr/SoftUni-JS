@@ -7,11 +7,11 @@ const endpoints = {
 }
 
 export async function getAllEvents() {
-    return get(endpoints.events);
+    return await get(endpoints.dashboard);
 }
 
 export async function getEventById(id) {
-    return get(endpoints.eventById + id);
+    return await get(endpoints.eventById + id);
 }
 
 export async function createEvent(name, imageUrl, category, description, date) {

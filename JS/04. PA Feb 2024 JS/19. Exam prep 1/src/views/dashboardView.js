@@ -4,7 +4,9 @@ import { html, render } from '../lib.js';
 const dashboardTemplate = (events) => html`
 <h2>Current Events</h2>
 <section id="dashboard">
-    ${events.length ? events.map(eventTemplate) : html`<h4>No Events yet.</h4>`}
+    ${events.length > 0
+        ? events.map(eventTemplate)
+        : html`<h4>No Events yet.</h4>`}
 </section>
 `;
 
@@ -17,7 +19,7 @@ const eventTemplate = (event) => html`
     </div>
 `;
 
-export async function showdashboardView(ctx) {
+export async function showDashboardView(ctx) {
     const events = await getAllEvents();
     render(dashboardTemplate(events));
 }
