@@ -5,7 +5,8 @@
         "checkJs": true,
         "lib": [
             "ES2021",
-            "DOM.Iterable"
+            "DOM.Iterable",
+            "DOM"
         ],
         "paths": {
             "@src/*": [
@@ -16,7 +17,7 @@
             ],
             "@lit-html/*": [
                 "./node_modules/lit-html/*"
-            ],
+            ]
         }
     },
     "include": [
