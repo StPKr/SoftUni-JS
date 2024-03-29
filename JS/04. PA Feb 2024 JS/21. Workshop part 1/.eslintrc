@@ -1,0 +1,25 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "globals": {},
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "ecmaFeatures": {}
+    },
+    "rules": {
+        "semi": "error",
+        "curly": "error",
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "no-undef": "error",
+        "indent": [
+            "error",
+            4
+        ]
+    }
+}
