@@ -1,0 +1,1 @@
+Solution without events
