@@ -1,12 +1,12 @@
-const { readFile } = require("./util");
+const { readFile } = require('../util');
 
-function staticFileHanlder(req, res) {
+function staticFileHandler(req, res) {
     if (req.url.endsWith('.css')) {
-        //handle stylesheet
+        // handle stylesheet
         sendFile(req.url, 'text/css', res);
         return true;
     } else if (req.url.endsWith('.ico')) {
-        //handle favicon
+        // handle favicon
         sendFile(req.url, 'image/svg+xml', res);
         return true;
     }
@@ -23,5 +23,5 @@ async function sendFile(path, contentType, res) {
 }
 
 module.exports = {
-    staticFileHanlder
-}
+    staticFileHandler
+};
