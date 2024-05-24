@@ -1,0 +1,13 @@
+<h1>Edit Part</h1>
+<form method="post" action="/edit/{{id}}">
+    {{#if error}}
+    <p class="error">All fields are required!</p>
+    {{/if}}
+    <label {{#if error.name}}class="error" {{/if}}>Name: <input name="name" value="{{name}}"></label>
+    <label {{#if error.price}}class="error" {{/if}}>Price: <input type="number" name="price" step="0.01"
+            value="{{price}}"></label>
+    <label {{#if error.stock}}class="error" {{/if}}>Stock: <input type="number" name="stock" value="{{stock}}"></label>
+    <label {{#if error.description}}class="error" {{/if}}>Description: <input name="description"
+            value="{{description}}"></label>
+    <button>Publish</button>
+</form>

@@ -1,0 +1,9 @@
+<h1>Catalog Page</h1>
+<p>Catalog content</p>
+<ul>
+    {{#each parts}}
+    {{> part}}
+    {{else}}
+    <p>No parts matching your criteria!</p>
+    {{/each}}
+</ul>
