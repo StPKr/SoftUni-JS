@@ -1,0 +1,52 @@
+{{#if errors}}
+<div class="error-container">
+    <p>All fields are required!</p>
+</div>
+{{/if}}
+
+<section id="create-page">
+    <div class="createSection">
+        <div class="info">
+            <h2>"Today, I consider myself the luckiest man on the face of the earth." -The Pride of the Yankees, 1942
+            </h2>
+        </div>
+
+        <form method="post" class="createForm">
+            <h2>Add Movie</h2>
+            <ul class="noBullet">
+                <li {{#if errors.title}}class="error"{{/if}}>
+                    <label for="title">Title:</label>
+                    <input type="text" class="inputFields" id="title" name="title" value="{{movie.title}}" />
+                </li>
+                <li {{#if errors.genre}}class="error"{{/if}}>
+                    <label for="genre">Genre:</label>
+                    <input type="text" class="inputFields" id="genre" name="genre" value="{{movie.genre}}" />
+                </li>
+                <li {{#if errors.director}}class="error"{{/if}}>
+                    <label for="director">Director:</label>
+                    <input type="text" class="inputFields" id="director" name="director" value="{{movie.director}}" />
+                </li>
+                <li {{#if errors.year}}class="error"{{/if}}>
+                    <label for="date">Year:</label>
+                    <input type="number" class="inputFields" id="year" name="year" value="{{movie.year}}" />
+                </li>
+                <li {{#if errors.imageURL}}class="error"{{/if}}>
+                    <label for="image">Movie Poster:</label>
+                    <input type="text" class="inputFields" id="image" name="imageURL" value="{{movie.imageURL}}" />
+                </li>
+                <li {{#if errors.rating}}class="error"{{/if}}>
+                    <label for="rating">Rating:</label>
+                    <input type="text" class="inputFields" id="rating" name="rating" value="{{movie.rating}}" />
+                </li>
+                <li {{#if errors.description}}class="error"{{/if}}>
+                    <label for="description">Description:</label>
+                    <textarea id="description" class="inputFields" name="description">{{movie.description}}</textarea>
+                </li>
+                <li id="center-btn">
+                    <button id="create-btn">Add Movie</button>
+                </li>
+            </ul>
+        </form>
+
+    </div>
+</section>
