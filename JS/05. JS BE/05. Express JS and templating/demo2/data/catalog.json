@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Spark Plug",
+        "description": "Standard replacement spark plug for gasoline engines.",
+        "price": 5.99,
+        "stock": 5
+    },
+    {
+        "id": 2,
+        "name": "Air Filter",
+        "description": "High-quality air filter to improve engine performance.",
+        "price": 12.49,
+        "stock": 8
+    },
+    {
+        "id": 3,
+        "name": "Oil Filter",
+        "description": "Premium oil filter for efficient oil circulation.",
+        "price": 8.75,
+        "stock": 12
+    },
+    {
+        "id": 4,
+        "name": "Brake Pad Set",
+        "description": "Durable brake pads for safe stopping power.",
+        "price": 39.99,
+        "stock": 0
+    },
+    {
+        "id": 5,
+        "name": "Radiator Hose",
+        "description": "Flexible radiator hose to maintain proper engine temperature.",
+        "price": 14.95,
+        "stock": 3
+    }
+]

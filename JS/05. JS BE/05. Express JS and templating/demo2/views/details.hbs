@@ -1,0 +1,8 @@
+<h1>{{name}} details</h1>
+{{#if stock}}
+<h2>Cost per item: ${{price}} ({{stock}} in stock)</h2>
+{{else}}
+<h2>(out of stock)</h2>
+{{/if}}
+<p>{{description}}</p>
+<a href="/edit/{{id}}">Edit</a>
