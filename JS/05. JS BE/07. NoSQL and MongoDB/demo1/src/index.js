@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { Person } = require('./models/Person');
+const { Article } = require('./models/Article');
 
 async function start() {
 
@@ -32,13 +33,39 @@ async function start() {
     // // myPerson.firstName = 'P';
     // myPerson.age = -1;
 
-    await Person.create({
-        firstName: "Georrge",
-        lastName: "Shockov",
-        age: 42,
-        hobbies:['Biking']
-    });
+    // await Person.create({
+    //     firstName: "Georrge",
+    //     lastName: "Shockov",
+    //     age: 42,
+    //     hobbies:['Biking']
+    // });
 
+    const peter = await Person.findOne({ firstName: 'Peter' });
+
+    // await Article.create({
+    //     content: 'First article',
+    //     author: peter
+    // });
+
+    const result = await Article.find().populate('author', 'firstName lastName');
+    console.log(result);
+
+    // const peter = await Person.findById('6656266f82709ac6ff55f178');
+
+    // console.log(peter);
+
+    // peter.lastName = 'Humbert';
+
+    // await Person.findByIdAndUpdate('6656266f82709ac6ff55f178', { $set: { age: 50 } });
+
+    // await Person.deleteMany({ firstName: 'Peter' }); //опасно! ако е undefined трие всичко!!!
+
+    // console.log(await Person.countDocuments());
+    // console.log(await Person.countDocuments({age: 29}));
+    // console.log(await Person.find({age:{$lt: 30}}));
+
+    // const result = await (await Person.find().where('age').gt(30).select('firstName lastName').sort({ age: 1 }).skip(2).limit(2));
+    // console.log(result);
 
     // try {
     //     await myPerson.save();
