@@ -25,7 +25,8 @@ const castSchema = new Schema({
     },
     imagUrl: {
         type: String,
-        required: true
+        required: true,
+        regexp: /^https?:\/\/.+/
     },
     movie: {
         type: Types.ObjectId,
