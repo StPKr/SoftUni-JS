@@ -33,7 +33,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    
+
 }
 
 nav,
@@ -134,6 +134,14 @@ footer {
     height: auto;
     width: 300px;
     padding: 1em;
+}
+
+.error label {
+    color: red
+}
+
+.error input.inputFields, .error textarea.inputFields {
+    border-color: red;
 }
 
 .error-container>p {

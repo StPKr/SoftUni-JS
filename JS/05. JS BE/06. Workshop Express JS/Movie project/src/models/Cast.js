@@ -19,11 +19,7 @@ const castSchema = new Schema({
         type: String,
         required: true
     },
-    name: {
-        type: String,
-        required: true
-    },
-    imagUrl: {
+    imageUrl: {
         type: String,
         required: true,
         regexp: /^https?:\/\/.+/
