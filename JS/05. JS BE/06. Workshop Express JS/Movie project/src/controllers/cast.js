@@ -13,8 +13,6 @@ module.exports = {
             imageUrl: !req.body.imageUrl
         };
 
-        console.log(errors);
-
         if (Object.values(errors).includes(true)) {
             res.render('cast-create', { cast: req.body, errors });
             return;
