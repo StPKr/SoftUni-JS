@@ -1,5 +1,13 @@
 <h1>Authentication Demo</h1>
-<p>Welcome, anonymous user</p>
+{{#if user}}
+<p>Welcome, {{user.username}}!</p>
+<div>
+    <a href="/logout">Logout</a>
+</div>
+{{else}}
+<p>Welcome, guest!</p>
 <div>
     <a href="/login">Login</a>
+    <a href="/register">Register</a>
 </div>
+{{/if}} 

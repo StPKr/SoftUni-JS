@@ -1,6 +1,7 @@
 module.exports = {
     homeController: (req, res) => {
-        res.render('home');
+        const user = req.session.user;
+        res.render('home', { user });
 
     }
 };

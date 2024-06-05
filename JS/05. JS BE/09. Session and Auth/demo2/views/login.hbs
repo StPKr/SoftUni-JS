@@ -1,5 +1,6 @@
 <h1>Login Page</h1>
 <form method="post">
+    {{#if error}}<p class="error">{{error.message}}</p>{{/if}}
     <label>Username: <input type="text" name="username"></label>
     <label>Password: <input type="password" name="password"></label>
     <input type="submit" value="Login">
