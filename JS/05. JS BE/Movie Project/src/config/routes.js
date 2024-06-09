@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const { home, details, search } = require('../controllers/catalog');
 const { about } = require('../controllers/about');
-const { createGet, createPost } = require('../controllers/movie');
+const { createGet, createPost, editGet, editPost, deleteGet, deletePost } = require('../controllers/movie');
 const { createGet: createCastGet, createPost: createCastPost } = require('../controllers/cast');
 const { notFound } = require('../controllers/404');
 const { attachGet, attachPost } = require('../controllers/attach');
