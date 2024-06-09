@@ -1,0 +1,43 @@
+{{#if errors}}
+<div class="error-container">
+    <p>All fields are required!</p>
+</div>
+{{/if}}
+
+<section id="create-cast">
+    <div class="createCastSection">
+        <div class="info-cast">
+            <h2>"You're gonna need a bigger boat." — "Jaws," 1975.</h2>
+        </div>
+
+        <form method="POST" class="createCastForm">
+            <h2>Add Cast</h2>
+            <ul class="noBullet">
+                <li {{#if errors.name}}class="error"{{/if}}>
+                    <label for="name">Name:</label>
+                    <input type="text" class="inputFields" id="name" name="name" value="{{cast.name}}" />
+                </li>
+                <li {{#if errors.age}}class="error"{{/if}}>
+                    <label for="age">Age:</label>
+                    <input type="number" class="inputFields" id="age" name="age" value="{{cast.age}}" />
+                </li>
+                <li {{#if errors.born}}class="error"{{/if}}>
+                    <label for="born">Born:</label>
+                    <input type="text" class="inputFields" id="born" name="born" value="{{cast.born}}" />
+                </li>
+                <li {{#if errors.nameInMovie}}class="error"{{/if}}>
+                    <label for="name-in-movie">Name in Movie:</label>
+                    <input type="text" class="inputFields" id="name-in-movie" name="nameInMovie" value="{{cast.nameInMovie}}" />
+                </li>
+                <li {{#if errors.imageUrl}}class="error"{{/if}}>
+                    <label for="image">Cast Image:</label>
+                    <input type="text" class="inputFields" id="image" name="imageUrl" value="{{cast.imageUrl}}" />
+                </li>
+                <li id="center-btn">
+                    <button id="create-btn">Add Cast</button>
+                </li>
+            </ul>
+        </form>
+
+    </div>
+</section>
