@@ -3,7 +3,7 @@ require('../models/Movie');
 require('../models/Cast');
 require('../models/User');
 
-const connectionString = 'mongodb://localhost:27017/movie-magic';
+const connectionString = 'mongodb://127.0.0.1/movie-magic';
 
 async function configDatabase() {
     await mongoose.connect(connectionString);
