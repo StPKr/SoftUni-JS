@@ -3,7 +3,9 @@ const { Schema, SchemaTypes: Types, model } = require('mongoose');
 const movieSchema = new Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        minLength: [5, 'Title must be at least 5 characters long'],
+        match: [/^[a-z0-9 ]+$/gi, 'Title may only contain English letters, number and spaces']
     },
     genre: {
         type: String,
@@ -13,7 +15,7 @@ const movieSchema = new Schema({
         type: String,
         required: true
     },
-    year:{
+    year: {
         type: Number,
         required: true,
         min: 1878,
@@ -28,12 +30,13 @@ const movieSchema = new Schema({
     description: {
         type: String,
         required: true,
+        minLength: 20,
         maxLength: 1000
     },
     imageURL: {
         type: String,
         required: true,
-        regexp: /^https?:\/\/.+/
+        match: /^https?:\/\/.+/
     },
     cast: {
         type: [Types.ObjectId],

@@ -1,9 +1,9 @@
-const { Movie } = require('../models/Movie');
 const { getAllMovies, getMovieById } = require('../services/movie');
 
 module.exports = {
     home: async (req, res) => {
         const movies = await getAllMovies();
+
         for (const movie of movies) {
             movie.isAuthor = req.user && req.user._id == movie.author.toString();
         }

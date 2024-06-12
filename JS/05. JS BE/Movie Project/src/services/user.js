@@ -10,7 +10,9 @@ async function register(email, password) {
     const existing = await User.findOne({ email });
 
     if (existing) {
-        throw new Error('Email is already used');
+        const err = new Error('Email is already used');
+        err.errors = { email: 'Email is already used' };
+        throw err;
     }
 
     const user = new User({
