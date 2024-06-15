@@ -42,7 +42,7 @@ async function update(id, data, userId) {
     return record;
 }
 
-async function deleteById(id, yserId) {
+async function deleteById(id, userId) {
     const record = await Data.findById(id);
 
     if (!record) {

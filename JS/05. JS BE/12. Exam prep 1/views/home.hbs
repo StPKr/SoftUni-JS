@@ -1,0 +1,17 @@
+<main class="home">
+
+    <section id="home">
+        <h1>Welcome to Earth Treasure Vaul</h1>
+        <h2>From sparkling geodes to ancient fossils, EarthTreasureVault offers an exclusive collection of natural
+            treasures, each with its own unique story and geological significance.</h2>
+    </section>
+
+    <section id="last-added">
+        {{#each minerals}}
+        {{>mineral}}
+        {{else}}
+        <p class="no-post">There are no gems and minerals!</p>
+        {{/each}}
+
+    </section>
+</main>
