@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/styles/styles.css" />
+    <title>Search Page</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <!-- Navigation -->
+            <nav>
+                <div>
+                    <a href="#">Home</a>
+                    <a href="#">Dashboard</a>
+                    <a href="#">Search</a>
+                </div>
+
+                <!-- Logged-in users -->
+                <div class="user">
+                    <a href="#">Add Stones</a>
+                    <a href="#">Logout</a>
+                </div>
+
+                <!-- Guest users -->
+                <div class="guest">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="search">
+            <!-- Search Page (Only for logged-in users) -->
+            <section id="search">
+                <h2>Search by Name</h2>
+
+                <form class="search-wrapper cf" method="" action="#">
+                    <input id="#search-input" type="text" name="" placeholder="Search here..." required />
+                    <button type="submit">Search</button>
+                </form>
+
+                <div id="search-container">
+                    <ul class="card-wrapper">
+                        <!-- Display a li with information about every post (if any)-->
+                        <li class="card">
+                            <img
+                                src="./static/images/beryl.webp" />
+                            <p>
+                                <strong>Name: </strong><span class="name">Beryl</span>
+                            </p>
+                            <p>
+                                <strong>Category: </strong><span class="category">Cyclosilicate</span>
+                            </p>
+                            <p><strong>Formula:</strong><span class="formula">Be3Al2Si6O18</span></p>
+                            <a class="details-btn" href="#">Details</a>
+                        </li>
+                    </ul>
+
+                    <!-- Display an h2 if there are no posts -->
+                    <!-- <div id="no-post">
+                        <h2>There are no results found.</h2>
+                    </div> -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>@EarthTreasureVaul</p>
+        </footer>
+    </div>
+</body>
+
+</html>

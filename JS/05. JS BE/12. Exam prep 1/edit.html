@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/styles/styles.css" />
+    <title>Edit Page</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <!-- Navigation -->
+            <nav>
+                <div>
+                    <a href="#">Home</a>
+                    <a href="#">Dashboard</a>
+                    <a href="#">Search</a>
+                </div>
+
+                <!-- Logged-in users -->
+                <div class="user">
+                    <a href="#">Add Stones</a>
+                    <a href="#">Logout</a>
+                </div>
+
+                <!-- Guest users -->
+                <div class="guest">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="edit">
+            <!-- Edit Page (Only for logged-in users) -->
+            <section id="edit">
+                <div class="form">
+                    <h2>Edit item</h2>
+                    <form class="edit-form">
+                        <input type="text" name="" id="name" placeholder="Name" value="Amethyst" />
+                        <input type="text" name="" id="category" placeholder="Category" value="Silicate mineral" />
+                        <input type="text" name="" id="color" placeholder="Color" value="Purple" />
+                        <input type="text" name="" id="stone-img" placeholder="Image" value="https://m.media-amazon.com/images/I/71TIuyGllzS._AC_UF894,1000_QL80_.jpg" />
+                        <input type="text" name="" id="location" placeholder="Location" value="Artigas, Uruguay" />
+                        <input type="text" name="" id="formula" placeholder="Formula" value="SiO2" />
+                        <textarea id="description" placeholder="Description..."
+                            name="">Amethyst is a violet variety of quartz. The name comes from the Koine Greek, a reference to the belief that the stone protected its owner from drunkenness. Ancient Greeks wore amethyst and carved drinking vessels from it in the belief that it would prevent intoxication. Amethyst, a semiprecious stone, is often used in jewelry.</textarea>
+
+                        <button type="submit">Edit</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>@EarthTreasureVaul</p>
+    </footer>
+</body>
+
+</html>
