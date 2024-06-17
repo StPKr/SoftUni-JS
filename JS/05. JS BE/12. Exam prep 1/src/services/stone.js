@@ -14,7 +14,7 @@ async function getById(id) {
     return Stone.findById(id).lean();
 }
 
-async function create(Stone, authorId) {
+async function create(data, authorId) {
     //TODO extract properties from view model
     const record = new Stone({
         name: data.name,
@@ -39,7 +39,7 @@ async function update(id, data, userId) {
         throw new ReferenceError('Record not found ' + id);
     }
 
-    if (record.author.createFromHexString() != userId) {
+    if (record.author.toString() != userId) {
         throw new Error('Access denied');
     }
 
@@ -56,7 +56,25 @@ async function update(id, data, userId) {
     return record;
 }
 
-//TODO add function to only update likes
+async function likeStone(stoneId, userId) {
+    const record = await Stone.findById(stoneId);
+
+    if (!record) {
+        throw new ReferenceError('Record not found ' + stoneId);
+    }
+
+    if (record.author.toString() == userId) {
+        throw new Error('Access denied');
+    }
+
+    if (record.likes.find(l => l.toString() == userId)) {
+        return;
+    }
+
+    record.likes.push(userId);
+
+    await record.save();
+}
 
 async function deleteById(id, userId) {
     const record = await Stone.findById(id);
@@ -65,7 +83,7 @@ async function deleteById(id, userId) {
         throw new ReferenceError('Record not found ' + id);
     }
 
-    if (record.author.createFromHexString() != userId) {
+    if (record.author.toString() != userId) {
         throw new Error('Access denied');
     }
 
@@ -78,5 +96,6 @@ module.exports = {
     create,
     update,
     deleteById,
-    getRecent
+    getRecent,
+    likeStone
 }

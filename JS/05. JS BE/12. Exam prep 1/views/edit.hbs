@@ -1,0 +1,26 @@
+<main class="edit">
+    <!-- Edit Page (Only for logged-in users) -->
+    <section id="edit">
+        <div class="form">
+            <h2>Edit item</h2>
+            <form class="edit-form" method="post">
+                <input type="text" name="name" id="name" placeholder="Name" {{#if data.name}}value="{{data.name}}"
+                    {{/if}} />
+                <input type="text" name="category" id="category" placeholder="Category" {{#if
+                    data.category}}value="{{data.category}}" {{/if}} />
+                <input type="text" name="color" id="color" placeholder="Color" {{#if data.color}}value="{{data.color}}"
+                    {{/if}} />
+                <input type="text" name="image" id="stone-img" placeholder="Image" {{#if
+                    data.image}}value="{{data.image}}" {{/if}} />
+                <input type="text" name="location" id="location" placeholder="Location" {{#if
+                    data.location}}value="{{data.location}}" {{/if}} />
+                <input type="text" name="formula" id="formula" placeholder="Formula" {{#if
+                    data.formula}}value="{{data.formula}}" {{/if}} />
+                <textarea id="description" placeholder="Description..." name="description">{{#if
+                    data.description}}{{data.description}} {{/if}}</textarea>
+
+                <button type="submit">Edit</button>
+            </form>
+        </div>
+    </section>
+</main>
