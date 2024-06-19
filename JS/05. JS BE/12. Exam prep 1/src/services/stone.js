@@ -6,6 +6,10 @@ async function getAll() {
     return Stone.find().lean();
 }
 
+async function getByName(param) {
+    return Stone.find({ name: param }).lean();
+}
+
 async function getRecent() {
     return Stone.find().sort({ $natural: -1 }).limit(3).lean();
 }
@@ -93,6 +97,7 @@ async function deleteById(id, userId) {
 module.exports = {
     getAll,
     getById,
+    getByName,
     create,
     update,
     deleteById,

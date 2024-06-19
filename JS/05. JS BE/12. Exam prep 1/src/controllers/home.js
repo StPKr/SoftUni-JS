@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { getRecent, getAll, getById } = require("../services/stone");
+const { getRecent, getAll, getById, getByName } = require("../services/stone");
 
 const homeRouter = Router();
 
@@ -11,6 +11,18 @@ homeRouter.get('/', async (req, res) => {
 homeRouter.get('/catalog', async (req, res) => {
     const stones = await getAll();
     res.render('catalog', { stones });
+});
+
+homeRouter.get('/search', async (req, res) => {
+    const stones = await getAll();
+    res.render('search', { stones, data: req.body });
+});
+
+homeRouter.post('/search', async (req, res) => {
+    const { search } = req.body;
+    const stones = await getByName(search);
+
+    res.render('search', { stones, data: req.body });
 });
 
 homeRouter.get('/catalog/:id', async (req, res) => {
