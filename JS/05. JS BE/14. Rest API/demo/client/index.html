@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST Demo</title>
+    <script type="module" src="/js/api.js"></script>
+</head>
+
+<body>
+    <h1>Welcome to REST Demo</h1>
+    <h2>Create record</h2>
+    <form id="create">
+        <p class="error" style="display: none;"></p>
+        <input type="hidden" name="_id">
+        <label>Name: <input type="text" name="name"></label>
+        <label>Age: <input type="number" name="age"></label>
+        <input type="submit" value="Create">
+    </form>
+    <button>Read Data</button>
+    <div id="output"></div>
+    <form id="details">
+        <p class="error" style="display: none;"></p>
+        <input type="hidden" name="_id">
+        <label>Name: <input type="text" name="name"></label>
+        <label>Age: <input type="number" name="age"></label>
+        <input type="submit" value="Save">
+    </form>
+</body>
+
+</html>
