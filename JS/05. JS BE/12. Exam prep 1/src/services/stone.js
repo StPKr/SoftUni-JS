@@ -7,7 +7,7 @@ async function getAll() {
 }
 
 async function getByName(param) {
-    return Stone.find({ name: param }).lean();
+    return Stone.find({ name: new RegExp(param, 'i') }).lean();
 }
 
 async function getRecent() {

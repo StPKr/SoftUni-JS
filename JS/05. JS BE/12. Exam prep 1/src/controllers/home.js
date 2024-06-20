@@ -15,14 +15,15 @@ homeRouter.get('/catalog', async (req, res) => {
 
 homeRouter.get('/search', async (req, res) => {
     const stones = await getAll();
-    res.render('search', { stones, data: req.body });
+    res.render('search', { stones });
 });
 
 homeRouter.post('/search', async (req, res) => {
     const { search } = req.body;
-    const stones = await getByName(search);
+    const foundStones = await getByName(search);
+    const result = foundStones.length > 0;
 
-    res.render('search', { stones, data: req.body });
+    res.render('search', { foundStones, result, data: req.body });
 });
 
 homeRouter.get('/catalog/:id', async (req, res) => {

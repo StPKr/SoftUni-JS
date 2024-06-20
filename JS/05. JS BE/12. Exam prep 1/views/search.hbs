@@ -8,7 +8,7 @@
                 data.search}}value="{{data.search}}" {{/if}} />
             <button type="submit">Search</button>
         </form>
-        {{#if data.search}}
+        {{#if stones}}
         <div id="search-container">
             <ul class="card-wrapper">
                 <!-- Display a li with information about every post (if any)-->
@@ -18,11 +18,22 @@
                 {{/each}}
             </ul>
             {{else}}
-            <!-- Display an h2 if there are no posts -->
-            <div id="no-post">
-                <h2>There are no results found.</h2>
-            </div>
+            {{#if result}}
+            <div id="search-container">
+                <ul class="card-wrapper">
+                    <!-- Display a li with information about every post (if any)-->
+                    {{#each foundStones}}
+                    {{> stone-catalog}}
+
+                    {{/each}}
+                </ul>
+            {{else}}
+                <!-- Display an h2 if there are no posts -->
+                <div id="no-post">
+                    <h2>There are no results found.</h2>
+                </div>
             {{/if}}
-        </div>
+        {{/if}}
+            </div>
     </section>
 </main>
