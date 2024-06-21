@@ -1,7 +1,6 @@
 const { Router } = require("express");
 const { getAll, getById, getByNameAndType } = require("../services/volcano");
 
-//TODO replace with real router according to exasm description
 const homeRouter = Router();
 
 homeRouter.get('/', async (req, res) => {

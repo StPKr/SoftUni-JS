@@ -10,15 +10,6 @@
 </head>
 
 <body>
-    {{#if errors}}
-    <div>
-        <div class="errorContainer">
-            {{#each errors}}
-            <p>{{this}}</p>
-            {{/each}}
-        </div>
-    </div>
-    {{/if}}
 
     <header class="header">
         <nav>
@@ -40,6 +31,16 @@
     </header>
 
     <main>
+    {{#if errors}}
+    <div>
+        <div class="errorContainer">
+            {{#each errors}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+    
         {{{body}}}
     </main>
 

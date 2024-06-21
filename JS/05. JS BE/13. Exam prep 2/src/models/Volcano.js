@@ -25,8 +25,8 @@ const volcanoSchema = new Schema({
     },
     typeVolcano: {
         type: String,
-        required: true,
-        enum: ['Supervolcanoes', 'Submarine', 'Subglacial', 'Mud', 'Stratovolcanoes', 'Shield']
+        enum: ['Supervolcanoes', 'Submarine', 'Subglacial', 'Mud', 'Stratovolcanoes', 'Shield'],
+        required: true
     },
     description: {
         type: String,
@@ -35,6 +35,7 @@ const volcanoSchema = new Schema({
     voteList: {
         type: [Types.ObjectId],
         ref: 'User',
+        required: true,
         default: []
     },
     author: {
