@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  background-image: url(../images/background.webp);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+nav {
+  width: 100%;
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  background-color: #dbd1c1;
+}
+
+.logo {
+  width: 50px;
+  cursor: pointer;
+}
+
+nav ul {
+  flex: 1;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.content {
+  margin-top: 5%;
+}
+
+.content h1 {
+  font-size: 88px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: black;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.content p {
+  line-height: 22px;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.content .catalog {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 45%;
+  background: #dbd1c1;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+footer p {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #dbd1c1;
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.errorContainer {
+  position: fixed;
+  margin-top:30px;
+  right: 100px;
+  min-width: 100px;
+  display: block;
+  z-index: 11111;
+  top: 55px;
+  text-align: center;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  height: auto;
+  width: 320px;
+  box-shadow: 0 5px 10px #dbd1c1;
+}
+
+.errorContainer > p {
+  background: #D1491C;
+  font-size: 20px;
+  padding: 20px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.errorContainer {
+  -moz-animation: cssAnimation 0s ease-in 2s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 2s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 2s forwards;
+  /* Opera */
+  animation: cssAnimation 0s ease-in 2s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+}
+
+@-webkit-keyframes cssAnimation {
+  to {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    padding: 0;
+  }
+}

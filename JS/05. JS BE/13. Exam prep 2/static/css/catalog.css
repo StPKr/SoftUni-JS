@@ -1,0 +1,137 @@
+main {
+    padding-top: 30px;
+}
+
+.volcano-catalog #title {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+}
+
+.volcano-catalog h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.volcano-catalog h1 span {
+    color: #D1491C;
+}
+
+.item-list {
+    border-top: 4px solid #D1491C;
+    border-bottom: 4px solid #D1491C;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.20),
+        0 2px 10px 0 rgba(0, 0, 0, 0.20);
+    background-color: #dbd1c1;
+    width: auto;
+    height: 380px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow-y: scroll;
+}
+
+.item-list::-webkit-scrollbar {
+    width: 20px;
+}
+
+.item-list::-webkit-scrollbar-track {
+    border-radius: 100px;
+}
+
+.item-list::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+}
+
+.volcano-catalog .volcano {
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    margin-top: 80px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: #d1491cbd;
+}
+
+.volcano-catalog .volcano-img img {
+    float: left;
+    border: 2px solid black;
+    width: 140px;
+    height: 120px;
+    margin: 20px;
+}
+
+.volcano-catalog .volcano-info {
+    margin-bottom: 30px;
+}
+
+.volcano-catalog .volcano-info h1 {
+    font-size: 24px;
+    margin-top: 15px;
+    color: #dbd1c1;
+}
+
+.volcano-catalog .volcano-info p {
+    color: #dbd1c1;
+    margin-top: 10px;
+}
+
+.volcano-catalog .volcano-info span {
+    color: black;
+    font-weight: bolder;
+}
+
+.volcano-catalog .volcano .btn-details {
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #4568dc, #dbd1c1);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: white;
+    width: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.volcano-catalog .volcano .btn-details:hover {
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+}
+
+
+.no-volcano {
+    border-top: 4px solid #D1491C;
+    border-bottom: 4px solid #D1491C;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.20),
+        0 2px 10px 0 rgba(0, 0, 0, 0.20);
+    background-color: #dbd1c1;
+    width: auto;
+    height: 100px;
+    margin-top: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: black;
+}
+
+.no-volcano p {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+}
