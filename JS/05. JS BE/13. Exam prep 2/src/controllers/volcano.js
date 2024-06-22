@@ -15,8 +15,8 @@ volcanoRouter.get('/create', isUser(), async (req, res) => {
 volcanoRouter.post('/create', isUser(),
     body('name').trim().isLength({ min: 2 }).withMessage('Name must be at least 2 chars long!'),
     body('location').trim().isLength({ min: 3 }).withMessage('Location must be at least 3 chars long!'),
-    body('elevation').trim().isFloat({ min: 0 }).withMessage('Elevation must be more than 0m!'),
-    body('year').trim().isFloat({ min: 0, max: 2024 }).withMessage('Year must be between 0 and 2024!'),
+    body('elevation').trim().isInt({ min: 0 }).withMessage('Elevation must be more than 0m!'),
+    body('year').trim().isInt({ min: 0, max: 2024 }).withMessage('Year must be between 0 and 2024!'),
     body('IMG').trim().isURL({ require_tld: false }).withMessage('Image must be a valid URL!'),
     body('type').trim().custom(value => {
         const allowedTypes = ["Supervolcanoes", "Submarine", "Subglacial", "Mud", "Stratovolcanoes", "Shield"];
@@ -69,8 +69,8 @@ volcanoRouter.get('/edit/:id', isUser(), async (req, res) => {
 volcanoRouter.post('/edit/:id', isUser(),
     body('name').trim().isLength({ min: 2 }).withMessage('Name must be at least 2 chars long!'),
     body('location').trim().isLength({ min: 3 }).withMessage('Location must be at least 3 chars long!'),
-    body('elevation').trim().isFloat({ min: 0 }).withMessage('Elevation must be more than 0m!'),
-    body('year').trim().isFloat({ min: 0, max: 2024 }).withMessage('Year must be between 0 and 2024!'),
+    body('elevation').trim().isInt({ min: 0 }).withMessage('Elevation must be more than 0m!'),
+    body('year').trim().isInt({ min: 0, max: 2024 }).withMessage('Year must be between 0 and 2024!'),
     body('IMG').trim().isURL({ require_tld: false }).withMessage('Image must be a valid URL!'),
     body('type').trim().custom(value => {
         const allowedTypes = ["Supervolcanoes", "Submarine", "Subglacial", "Mud", "Stratovolcanoes", "Shield"];
@@ -104,8 +104,7 @@ volcanoRouter.get('/delete/:id', isUser(), async (req, res) => {
     const userId = req.user._id;
 
     try {
-
-        const result = await deleteById(volcanoId, userId);
+        await deleteById(volcanoId, userId);
 
         res.redirect('/catalog');
     } catch (err) {
@@ -118,12 +117,11 @@ volcanoRouter.get('/vote/:id', isUser(), async (req, res) => {
     const userId = req.user._id;
 
     try {
-
-        const result = await voteVolcano(volcanoId, userId);
+        await voteVolcano(volcanoId, userId);
 
         res.redirect('/catalog/' + volcanoId);
     } catch (err) {
-        res.redirect('/');
+        res.render('details', { errors: parseError(err).errors });
     }
 });
 

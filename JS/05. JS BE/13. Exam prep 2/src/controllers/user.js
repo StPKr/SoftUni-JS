@@ -27,9 +27,7 @@ userRouter.post('/register', isGuest(),
             }
 
             const result = await register(username, email, password);
-
             const token = createToken(result);
-
             res.cookie('token', token, { httpOnly: true });
 
             res.redirect('/');
@@ -43,22 +41,13 @@ userRouter.get('/login', isGuest(), (req, res) => {
 });
 
 userRouter.post('/login', isGuest(),
-    body('username').trim(),
     body('email').trim(),
     body('password').trim(),
     async (req, res) => {
         const { email, password } = req.body;
         try {
-            const validation = validationResult(req);
-
-            if (validation.errors.length) {
-                throw validation.errors;
-            }
-
             const result = await login(email, password);
-
             const token = createToken(result);
-
             res.cookie('token', token, { httpOnly: true });
 
             res.redirect('/');

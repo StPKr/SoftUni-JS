@@ -19,7 +19,12 @@
                 <input type="text" id="image" name="IMG" placeholder="http://..." {{#if data.IMG}}value="{{data.IMG}}"
                     {{/if}}>
                 <label>Volcano Type:</label>
-                <select id="type" name="type">
+                <select id="type" name="type" {{#if data.type}}value="{{data.type}}" selected="{{data.type}}"{{/if}}>
+                    {{#if data.type}}
+                    <option value="{{data.type}}" selected>{{data.type}}</option>
+                    {{else}}
+                    <option value="---" hidden="hidden">---</option>
+                    {{/if}}
                     <option value="Supervolcanoes">Supervolcanoes</option>
                     <option value="Submarine">Submarine</option>
                     <option value="Subglacial">Subglacial</option>
