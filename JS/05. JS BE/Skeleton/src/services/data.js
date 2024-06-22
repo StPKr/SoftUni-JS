@@ -30,7 +30,7 @@ async function update(id, data, userId) {
         throw new ReferenceError('Record not found ' + id);
     }
 
-    if (record.author.createFromHexString() != userId) {
+    if (record.author.toString() != userId) {
         throw new Error('Access denied');
     }
 
@@ -49,7 +49,7 @@ async function deleteById(id, userId) {
         throw new ReferenceError('Record not found ' + id);
     }
 
-    if (record.author.createFromHexString() != userId) {
+    if (record.author.toString() != userId) {
         throw new Error('Access denied');
     }
 

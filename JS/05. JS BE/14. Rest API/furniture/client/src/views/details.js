@@ -36,7 +36,7 @@ export async function detailsPage(ctx) {
     const item = await getItemById(id);
     const userId = sessionStorage.getItem('userId');
 
-    ctx.render(detailsTemplate(item, item._ownerId == userId, onDelete));
+    ctx.render(detailsTemplate(item, item.author == userId, onDelete));
 
     async function onDelete() {
         const confirmed = confirm('Are you sure you want to delete this item?');
