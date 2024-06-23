@@ -17,7 +17,7 @@ volcanoRouter.post('/create', isUser(),
     body('location').trim().isLength({ min: 3 }).withMessage('Location must be at least 3 chars long!'),
     body('elevation').trim().isInt({ min: 0 }).withMessage('Elevation must be more than 0m!'),
     body('year').trim().isInt({ min: 0, max: 2024 }).withMessage('Year must be between 0 and 2024!'),
-    body('IMG').trim().isURL({ require_tld: false }).withMessage('Image must be a valid URL!'),
+    body('IMG').trim().isURL({ require_tld: false, require_protocol: true }).withMessage('Image must be a valid URL!'),
     body('type').trim().custom(value => {
         const allowedTypes = ["Supervolcanoes", "Submarine", "Subglacial", "Mud", "Stratovolcanoes", "Shield"];
         if (!allowedTypes.includes(value)) {
