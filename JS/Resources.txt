@@ -1,1 +1,4 @@
 17. Modular Applications - 1:00:00 - eslint settings
+
+reactquery - must learn
+reactrouter - likely to boom in the future
