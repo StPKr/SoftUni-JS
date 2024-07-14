@@ -1,0 +1,17 @@
+section {
+    display: none;
+    /* Hide all sections by default */
+}
+
+section#home,
+section#book-of-the-week,
+section#catalog,
+section#top-list,
+section#about,
+section#register,
+section#login,
+section#profile,
+section#logout {
+    display: block;
+    /* Change this to dynamically display the active section */
+}

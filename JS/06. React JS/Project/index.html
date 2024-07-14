@@ -1,115 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Forum</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="book-of-the-week.html">Book of the Week</a></li>
-                <li><a href="catalog.html">Catalog</a></li>
-                <li><a href="top-list.html">Top 10 List</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="logout.html">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Home Page -->
-        <section id="home">
-            <h1>Book of the Current Week</h1>
-            <div id="current-book">
-                <!-- Current Book Details will be dynamically loaded here -->
-            </div>
-            <h2>Last 3 Weeks' Discussions</h2>
-            <div id="past-discussions">
-                <!-- Past Book Discussions will be dynamically loaded here -->
-            </div>
-        </section>
-
-        <!-- Book of the Week Page -->
-        <section id="book-of-the-week">
-            <h1>Book of the Week</h1>
-            <div id="book-details">
-                <!-- Book Details will be dynamically loaded here -->
-            </div>
-            <div id="comments-section">
-                <h2>Comments/Reviews</h2>
-                <!-- Comments and Like Buttons will be dynamically loaded here -->
-            </div>
-        </section>
-
-        <!-- Catalog Page -->
-        <section id="catalog">
-            <h1>Catalog</h1>
-            <input type="text" id="search-bar" placeholder="Search for a book...">
-            <div id="book-list">
-                <!-- Book List will be dynamically loaded here -->
-            </div>
-        </section>
-
-        <!-- Top List Page -->
-        <section id="top-list">
-            <h1>Top Rated Books</h1>
-            <div id="top-rated-books">
-                <!-- Top Rated Books will be dynamically loaded here -->
-            </div>
-        </section>
-
-        <!-- Register Page -->
-        <section id="register">
-            <h1>Register</h1>
-            <form id="register-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Register</button>
-            </form>
-        </section>
-
-        <!-- Login Page -->
-        <section id="login">
-            <h1>Login</h1>
-            <form id="login-form">
-                <label for="username">Username:</label>
-                <input type="text" id="login-username" name="username" required>
-                <label for="password">Password:</label>
-                <input type="password" id="login-password" name="password" required>
-                <button type="submit">Login</button>
-            </form>
-        </section>
-
-        <!-- Profile Page -->
-        <section id="profile">
-            <h1>Profile</h1>
-            <div id="profile-details">
-                <!-- Profile Details will be dynamically loaded here -->
-            </div>
-        </section>
-
-        <!-- Logout Page -->
-        <section id="logout">
-            <h1>Logout</h1>
-            <p>You have been logged out.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Book Forum. All rights reserved.</p>
-    </footer>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

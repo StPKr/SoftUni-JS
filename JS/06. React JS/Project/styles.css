@@ -1,74 +1,84 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  section {
-    display: none; /* Hide all sections by default */
-  }
-  
-  section#home, section#book-of-the-week, section#catalog, section#top-list, section#register, section#login, section#profile, section#logout {
-    display: block; /* Change this to dynamically display the active section */
-  }
-  
-  form {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  form label, form input {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  form button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333 ;
+  color: white;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  display: none;
+  /* Hide all sections by default */
+}
+
+section#home,
+section#book-of-the-week,
+section#catalog,
+section#top-list,
+section#about,
+section#register,
+section#login,
+section#profile,
+section#logout {
+  display: block;
+  /* Change this to dynamically display the active section */
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form label,
+form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #421a03;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #421a03;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
