@@ -1,23 +1,31 @@
 header {
     background-color: #421a03;
-    color: white;
-    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #00ceff;
     text-decoration: none;
     font-weight: bold;
+}
+
+.logo {
+    height: 75px;
+    width: auto;
 }
