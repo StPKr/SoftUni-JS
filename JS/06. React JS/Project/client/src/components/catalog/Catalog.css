@@ -1,0 +1,72 @@
+h1 {
+    font-size: 150%;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+input#search-bar {
+    width: 97.75%;
+    /*to fix*/
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #f2e4ab;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+#book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.book {
+    background-color: #f2e4ab;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.book img.cover {
+    width: 100%;
+    height: 370px;
+    /*to fix*/
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.book h2.title {
+    font-size: 140%;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.book p {
+    margin: 5px 0;
+}
+
+.book p.author::before {
+    content: "Author: ";
+    font-weight: bold;
+}
+
+.book p.genre::before {
+    content: "Genre: ";
+    font-weight: bold;
+}
+
+.book p.year::before {
+    content: "Year: ";
+    font-weight: bold;
+}
+
+.book p.summary::before {
+    content: "Summary: ";
+    font-weight: bold;
+}
+
+button {
+    margin-right: 5px;
+}

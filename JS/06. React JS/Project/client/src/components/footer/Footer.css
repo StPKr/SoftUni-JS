@@ -1,7 +1,8 @@
 footer {
     text-align: center;
     background-color: #421a03;
-    color: #00ceff;
+    font-weight: bold;
+    color: #3b8ea5;
     position: fixed;
     width: 100%;
     bottom: 0;

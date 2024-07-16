@@ -1,0 +1,272 @@
+[
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "year": 1937,
+    "cover": "https://m.media-amazon.com/images/I/71k--OLmZKL._AC_UL320_.jpg",
+    "ISBN": "9780618260300",
+    "summary": "Bilbo Baggins embarks on an unexpected adventure to help dwarves reclaim their homeland from the dragon Smaug."
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "year": 1949,
+    "cover": "https://m.media-amazon.com/images/I/7180qjGSgDL._AC_UL320_.jpg",
+    "ISBN": "9780451524935",
+    "summary": "In a totalitarian society controlled by Big Brother, Winston Smith struggles with oppression and seeks truth."
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "year": 1813,
+    "cover": "https://m.media-amazon.com/images/I/91AFXQGcPVL._AC_UY218_.jpg",
+    "ISBN": "9780141439518",
+    "summary": "Elizabeth Bennet navigates issues of manners, upbringing, morality, and marriage in British society."
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "year": 1960,
+    "cover": "https://m.media-amazon.com/images/I/81aY1lxk+9L._AC_UL320_.jpg",
+    "ISBN": "9780061120084",
+    "summary": "Scout Finch grows up in the racially charged Depression-era South, learning about justice and empathy from her father, Atticus."
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Fiction",
+    "year": 1925,
+    "cover": "https://m.media-amazon.com/images/I/61z0MrB6qOS._AC_UY218_.jpg",
+    "ISBN": "9780743273565",
+    "summary": "Jay Gatsby's unrequited love for Daisy Buchanan leads to tragedy in the Roaring Twenties."
+  },
+  {
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "genre": "Adventure",
+    "year": 1851,
+    "cover": "https://m.media-amazon.com/images/I/81+3Wl6KVNL._AC_UL320_.jpg",
+    "ISBN": "9781503280786",
+    "summary": "Captain Ahab's obsessive quest for vengeance against the white whale Moby Dick endangers his crew."
+  },
+  {
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "genre": "Historical Fiction",
+    "year": 1869,
+    "cover": "https://m.media-amazon.com/images/I/71wXZB-VtBL._AC_UL320_.jpg",
+    "ISBN": "9781853260629",
+    "summary": "A complex tale of Russian society during the Napoleonic Wars, focusing on the lives of several aristocratic families."
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "genre": "Psychological Fiction",
+    "year": 1866,
+    "cover": "image-link-8",
+    "ISBN": "9780486415871",
+    "summary": "Raskolnikov, a destitute student, commits a murder and struggles with guilt and justification."
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Fiction",
+    "year": 1951,
+    "cover": "image-link-9",
+    "ISBN": "9780316769488",
+    "summary": "Holden Caulfield recounts his experiences in New York City after being expelled from prep school."
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "year": 1932,
+    "cover": "image-link-10",
+    "ISBN": "9780060850524",
+    "summary": "A futuristic society governed by genetic engineering, mind control, and conditioning faces the challenge of individuality."
+  },
+  {
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "genre": "Gothic Fiction",
+    "year": 1847,
+    "cover": "image-link-11",
+    "ISBN": "9780141439556",
+    "summary": "The turbulent and passionate story of Heathcliff and Catherine Earnshaw on the Yorkshire moors."
+  },
+  {
+    "title": "Great Expectations",
+    "author": "Charles Dickens",
+    "genre": "Fiction",
+    "year": 1861,
+    "cover": "image-link-12",
+    "ISBN": "9780141439563",
+    "summary": "Orphaned Pip navigates a journey from poverty to wealth, shaped by his encounters with eccentric characters."
+  },
+  {
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "genre": "Horror",
+    "year": 1818,
+    "cover": "image-link-13",
+    "ISBN": "9780141439471",
+    "summary": "Victor Frankenstein creates a monstrous being who seeks revenge for his own miserable existence."
+  },
+  {
+    "title": "The Odyssey",
+    "author": "Homer",
+    "genre": "Epic",
+    "year": -800,
+    "cover": "image-link-14",
+    "ISBN": "9780140268867",
+    "summary": "Odysseus's perilous journey home after the Trojan War, facing mythical creatures and divine intervention."
+  },
+  {
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "genre": "Historical Fiction",
+    "year": 1862,
+    "cover": "image-link-15",
+    "ISBN": "9780451419439",
+    "summary": "The story of ex-convict Jean Valjean's quest for redemption and the pursuit by Inspector Javert."
+  },
+  {
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "genre": "Romance",
+    "year": 1847,
+    "cover": "image-link-16",
+    "ISBN": "9780141441146",
+    "summary": "Jane Eyre, an orphaned governess, falls in love with her mysterious employer, Mr. Rochester."
+  },
+  {
+    "title": "The Divine Comedy",
+    "author": "Dante Alighieri",
+    "genre": "Epic Poetry",
+    "year": 1320,
+    "cover": "image-link-17",
+    "ISBN": "9780142437223",
+    "summary": "Dante's allegorical journey through Hell, Purgatory, and Heaven, guided by the poet Virgil."
+  },
+  {
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoevsky",
+    "genre": "Philosophical Fiction",
+    "year": 1880,
+    "cover": "image-link-18",
+    "ISBN": "9780374528379",
+    "summary": "The Karamazov brothers grapple with questions of faith, doubt, and morality after their father's murder."
+  },
+  {
+    "title": "Madame Bovary",
+    "author": "Gustave Flaubert",
+    "genre": "Literary Fiction",
+    "year": 1857,
+    "cover": "image-link-19",
+    "ISBN": "9780140449129",
+    "summary": "Emma Bovary seeks escape from her provincial life through romantic fantasies and adulterous affairs."
+  },
+  {
+    "title": "Anna Karenina",
+    "author": "Leo Tolstoy",
+    "genre": "Romance",
+    "year": 1877,
+    "cover": "image-link-20",
+    "ISBN": "9780143035008",
+    "summary": "Anna Karenina's tragic love affair with Count Vronsky set against the backdrop of Russian society."
+  },
+  {
+    "title": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas",
+    "genre": "Adventure",
+    "year": 1844,
+    "cover": "image-link-21",
+    "ISBN": "9780140449266",
+    "summary": "Edmond Dantès is wrongfully imprisoned and seeks revenge against those who betrayed him."
+  },
+  {
+    "title": "Shogun",
+    "author": "James Clavell",
+    "genre": "Historical Fiction",
+    "year": 1975,
+    "cover": "image-link-22",
+    "ISBN": "9780440178002",
+    "summary": "An English navigator becomes embroiled in the political intrigues of feudal Japan."
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "year": 1997,
+    "cover": "image-link-23",
+    "ISBN": "9780590353427",
+    "summary": "Harry Potter discovers he is a wizard and attends Hogwarts School of Witchcraft and Wizardry."
+  },
+  {
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "genre": "Fantasy",
+    "year": 1996,
+    "cover": "image-link-24",
+    "ISBN": "9780553573404",
+    "summary": "Noble families vie for control of the Iron Throne in the land of Westeros."
+  },
+  {
+    "title": "The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "year": 1954,
+    "cover": "image-link-25",
+    "ISBN": "9780618574940",
+    "summary": "Frodo Baggins begins his quest to destroy the One Ring and defeat Sauron."
+  },
+  {
+    "title": "Dracula",
+    "author": "Bram Stoker",
+    "genre": "Horror",
+    "year": 1897,
+    "cover": "image-link-26",
+    "ISBN": "9780141439846",
+    "summary": "Count Dracula's attempt to move from Transylvania to England and the battle to stop him."
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Adventure",
+    "year": 1988,
+    "cover": "image-link-27",
+    "ISBN": "9780062315007",
+    "summary": "Santiago, an Andalusian shepherd, travels in search of a treasure and learns about his destiny."
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "genre": "Philosophical Fiction",
+    "year": 1890,
+    "cover": "image-link-28",
+    "ISBN": "9780141439570",
+    "summary": "Dorian Gray remains youthful while his portrait ages, reflecting his moral corruption."
+  },
+  {
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "genre": "Adventure",
+    "year": 1605,
+    "cover": "image-link-29",
+    "ISBN": "9780060934347",
+    "summary": "An aging nobleman sets out on chivalrous adventures, believing himself to be a knight."
+  },
+  {
+    "title": "The Grapes of Wrath",
+    "author": "John Steinbeck",
+    "genre": "Historical Fiction",
+    "year": 1939,
+    "cover": "image-link-30",
+    "ISBN": "9780143039433",
+    "summary": "The Joad family travels west during the Great Depression in search of a better life."
+  }
+]
