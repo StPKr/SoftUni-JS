@@ -7,18 +7,18 @@ export default function Header() {
         { name: 'Book of the Week', href: '/book-of-the-week' },
         { name: 'Catalog', href: '/catalog' },
         { name: 'Top 5 List', href: '/top-5-list' },
+        { name: 'About', href: '/about' },
         { name: 'Register', href: '/register' },
         { name: 'Login', href: '/login' },
         // { name: 'Profile', href: '/profile' },
         { name: 'Logout', href: '/logout' },
-        { name: 'About', href: '/about' },
     ]
 
     return (
         <header>
             <nav>
                 <div>
-                    <NavLink href="/" id="home-logo">
+                    <NavLink to="/" id="home-logo">
                         <img src="home-logo.jpg" alt="Home" className='logo' />
                     </NavLink>
                 </div>
@@ -34,7 +34,7 @@ export default function Header() {
                     ))}
                 </ul>
                 <div>
-                    <NavLink href="/profile" id="profile-logo">
+                    <NavLink to="/profile" id="profile-logo">
                         <img src="profile-logo.jpg" alt="Profile" className='logo' />
                     </NavLink>
                 </div>
