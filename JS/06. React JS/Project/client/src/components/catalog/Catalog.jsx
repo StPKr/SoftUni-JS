@@ -31,8 +31,8 @@ export default function Catalog() {
     return (
 
         <section id="catalog">
-            <h1>Catalog</h1>
-            <input type="text" id="search-bar" placeholder="Search for a book..." />
+            <h1>Find a book</h1>
+            <input type="text" id="search-bar" placeholder="Title..." />
             <div id="book-list">
                 {books.map((book) => (
                     <div key={book.ISBN} className="book">
@@ -43,7 +43,7 @@ export default function Catalog() {
                         <p className="year">{book.year}</p>
                         <p className="summary">{book.summary}</p>
                         <button>Add</button>
-                        <button>See more</button>
+                        <button>Details</button>
                     </div>
                 ))}
             </div>
