@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import Footer from './components/footer/Footer'
+
 import Header from './components/header/Header'
 import Home from './components/home/Home'
 import About from './components/about/About'
@@ -8,6 +8,8 @@ import Catalog from './components/catalog/Catalog'
 import TopFiveList from './components/top-five-list/TopFiveList'
 import Register from './components/register/Register'
 import Login from './components/login/Login'
+import Footer from './components/footer/Footer'
+import BookDetails from './components/book-details/BookDetails'
 
 function App() {
 
@@ -21,6 +23,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/book-of-the-week' element={<BookOfTheWeek />} />
           <Route path='/catalog' element={<Catalog />} />
+          <Route path='/catalog/:ISBN' element={<BookDetails />} />
           <Route path='/top-five-list' element={<TopFiveList />} />
           <Route path='/about' element={<About />} />
           <Route path='/register' element={<Register />} />

@@ -1,0 +1,78 @@
+#about-section {
+    position: absolute;
+    left: 0px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#about-section h1,
+#about-section h2 {
+    font-size: 1.5rem;
+    color: #03045e;
+    font-weight: bold;
+
+}
+
+#about-section p,
+#about-section ul {
+    color: #03045e;
+}
+
+#about-intro,
+#about-mission,
+#about-history,
+#about-team,
+#about-services,
+#about-testimonials,
+#about-culture,
+#about-awards,
+#about-community,
+#about-contact,
+#about-cta {
+    margin-bottom: 20px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 15px;
+    color: #555;
+    font-style: italic;
+}
+
+blockquote footer {
+    text-align: right;
+    font-style: normal;
+}
+
+#about-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#about-contact ul li {
+    margin-bottom: 5px;
+}
+
+#about-cta a {
+    color: #03045e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#about-cta a:hover {
+    text-decoration: underline;
+}
