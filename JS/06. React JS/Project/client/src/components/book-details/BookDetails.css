@@ -1,0 +1,26 @@
+div.book-details {
+    background-color: #f2e4ab;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 0px #4faddb, -4px -4px 5px #191c21;
+}
+
+p.author::before {
+    content: "Author: ";
+    font-weight: bold;
+}
+
+p.genre::before {
+    content: "Genre: ";
+    font-weight: bold;
+}
+
+p.year::before {
+    content: "Year: ";
+    font-weight: bold;
+}
+
+p.summary::before {
+    content: "Summary: ";
+    font-weight: bold;
+}

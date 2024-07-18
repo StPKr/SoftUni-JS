@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Catalog.css'
 
 export default function Catalog() {
     const [books, setBooks] = useState([]);
     const [isFocused, setIsFocused] = useState(false);
+    const navigate = useNavigate();
 
     const handleFocus = () => {
         setIsFocused(true);
@@ -47,6 +48,9 @@ export default function Catalog() {
                 className={isFocused ? 'input-highlight' : 'input-non-highlight'}
                 onFocus={handleFocus}
                 onBlur={handleBlur} placeholder="Title..." />
+            <div id="add-to-calatog">
+                Can't find what you're looking for? <Link to="/create">Add to our collection!</Link>
+            </div>
             <div id="book-list">
                 {books.map((book) => (
                     <div key={book.ISBN} className="book">
@@ -56,8 +60,8 @@ export default function Catalog() {
                         <p className="genre">{book.genre}</p>
                         <p className="year">{book.year}</p>
                         <p className="summary">{book.summary}</p> */}
-                        <button>Add</button>
-                        <button>Details</button>
+                        <button >Add</button>
+                        <button onClick={() => navigate(`/catalog/${book.ISBN}`)}>Details</button>
                     </div>
                 ))}
             </div>

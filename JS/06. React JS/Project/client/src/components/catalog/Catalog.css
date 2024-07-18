@@ -57,24 +57,12 @@ input#search-bar {
     margin: 5px 0;
 }
 
-.book p.author::before {
-    content: "Author: ";
-    font-weight: bold;
-}
-
-.book p.genre::before {
-    content: "Genre: ";
-    font-weight: bold;
-}
-
-.book p.year::before {
-    content: "Year: ";
-    font-weight: bold;
-}
-
-.book p.summary::before {
-    content: "Summary: ";
-    font-weight: bold;
+#add-to-calatog {
+    background-color: #f57d38;
+    width: 600px;
+    font-size: 150%;
+    margin-left: 15px;
+    margin-bottom: 20px;
 }
 
 button {

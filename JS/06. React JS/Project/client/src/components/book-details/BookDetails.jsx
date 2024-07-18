@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import './BookDetails.css'
+
 export default function BookDetails() {
     const [book, setBook] = useState({});
-    const {ISBN} = useParams();
+    const { ISBN } = useParams();
 
     useEffect(() => {
         const abortController = new AbortController();
@@ -23,7 +25,7 @@ export default function BookDetails() {
         }
     }, [])
     return (
-        <div>
+        <div className="book-details">
             <h2 className="title">{book.title}</h2>
             <img className="cover" src={book.cover} alt="Book Cover" />
             <p className="author">{book.author}</p>
