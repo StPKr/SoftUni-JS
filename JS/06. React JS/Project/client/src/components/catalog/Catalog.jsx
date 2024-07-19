@@ -41,7 +41,7 @@ export default function Catalog() {
     return (
 
         <section id="catalog">
-            <h1>Find a book</h1>
+            <h1 className="search-main-title">Find a book</h1>
             <input
                 type="text"
                 id="search-bar"
@@ -60,8 +60,10 @@ export default function Catalog() {
                         <p className="genre">{book.genre}</p>
                         <p className="year">{book.year}</p>
                         <p className="summary">{book.summary}</p> */}
-                        <button >Add</button>
-                        <button onClick={() => navigate(`/catalog/${book.ISBN}`)}>Details</button>
+                        <div className="book-buttons">
+                            <button >Add</button>
+                            <button onClick={() => navigate(`/catalog/${book.ISBN}`)}>Details</button>
+                        </div>
                     </div>
                 ))}
             </div>

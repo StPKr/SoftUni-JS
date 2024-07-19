@@ -1,13 +1,19 @@
+import './Home.css'
+
+
 export default function Home() {
     return (
-        <section id="home">
-            <h1>Book of the Current Week</h1>
-            <div id="current-book">
-                Current book
+        <section id="home" className="home">
+            <div className='home-banner'>
+                <img src="https://placehold.co/1839x400" alt="banner" />
             </div>
-            <h2>Last 3 Weeks&apos; Discussions</h2>
+            <div id="current-book-of-the-week">
+                <h1>Book of the Week</h1>
+                <h3>Current book</h3>
+            </div>
             <div id="past-discussions">
-                Past Book
+            <h2>Last 3 Weeks&apos; Discussions</h2>
+                <p>Past Book</p>
             </div>
         </section>
     );
