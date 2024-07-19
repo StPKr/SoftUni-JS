@@ -12,7 +12,7 @@ export default function Home() {
             const result = await gamesAPI.getAll();
 
             setLatestGames(result.reverse().slice(0, 3));
-        })
+        })();
     }, [])
 
 

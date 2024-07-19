@@ -1,15 +1,22 @@
-export default function latestGames() {
+import { Link } from 'react-router-dom'
+
+export default function latestGames({
+    _id,
+    title,
+    category,
+    imageUrl
+}) {
     return (
         <div className="game">
             <div className="image-wrap">
-                <img src="./images/CoverFire.png" />
+                <img src={imageUrl} />
             </div>
-            <h3>Cover Fire</h3>
+            <h3>{title}</h3>
             <div className="rating">
                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
             </div>
             <div className="data-buttons">
-                <a href="#" className="btn details-btn">Details</a>
+                <Link to={`/games/${_id}/details`} className="btn details-btn">Details</Link>
             </div>
         </div>
     );

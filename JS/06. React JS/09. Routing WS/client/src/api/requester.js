@@ -1,4 +1,4 @@
-export default async function requester(method, url, data) {
+async function requester(method, url, data) {
     const options = {};
 
     if (method !== 'GET') {
@@ -24,7 +24,14 @@ export default async function requester(method, url, data) {
 // export const put = requester.bind(null, 'PUT');
 // export const del = requester.bind(null, 'DELETE');
 
-export const get = (url, data) => requester('GET', url, data); //same as above
-export const post = (url, data) => requester('POST', url, data); 
-export const put = (url, data) => requester('PUT', url, data); 
-export const del = (url, data) => requester('DELETE', url, data); 
+const get = (url, data) => requester('GET', url, data); //same as above
+const post = (url, data) => requester('POST', url, data);
+const put = (url, data) => requester('PUT', url, data);
+const del = (url, data) => requester('DELETE', url, data);
+
+export {
+    get,
+    post,
+    put,
+    del
+}
