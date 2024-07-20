@@ -54,8 +54,11 @@ export default function Catalog() {
             <div id="book-list">
                 {books.map((book) => (
                     <div key={book.ISBN} className="book">
+
                         <h2 className="title">{book.title}</h2>
-                        <img className="cover" src={book.cover} alt="Book Cover" />
+                        <Link to={`/catalog/${book.ISBN}`}>
+                            <img className="cover" src={book.cover} alt="Book Cover" />
+                        </Link>
                         {/* <p className="author">{book.author}</p>
                         <p className="genre">{book.genre}</p>
                         <p className="year">{book.year}</p>
