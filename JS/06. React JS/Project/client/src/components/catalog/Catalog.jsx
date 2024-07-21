@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, Link } from 'react-router-dom';
 import './Catalog.css'
+import { get } from "../../api/requester";
 
 export default function Catalog() {
     const [books, setBooks] = useState([]);
@@ -19,14 +20,13 @@ export default function Catalog() {
         const abortController = new AbortController(); // if you click away too fast it cancels the HTTP request
 
         (async () => {
-            const response = await fetch('http://localhost:3030/jsonstore/library/books', {
+            const response = await get('', {
                 signal: abortController.signal
             });
-            const result = await response.json();
 
-            const topFiveBooksArray = Object.values(result);
+            const topFiveBooksArray = Object.values(response);
 
-            setBooks(topFiveBooksArray.slice(0, 5));
+            setBooks(topFiveBooksArray);
         })();
 
         return () => {
@@ -53,10 +53,10 @@ export default function Catalog() {
             </div>
             <div id="book-list">
                 {books.map((book) => (
-                    <div key={book.ISBN} className="book">
+                    <div key={book._id} className="book">
 
                         <h2 className="title">{book.title}</h2>
-                        <Link to={`/catalog/${book.ISBN}`}>
+                        <Link to={`/catalog/${book._id}`}>
                             <img className="cover" src={book.cover} alt="Book Cover" />
                         </Link>
                         {/* <p className="author">{book.author}</p>
@@ -65,7 +65,8 @@ export default function Catalog() {
                         <p className="summary">{book.summary}</p> */}
                         <div className="book-buttons">
                             <button >Add</button>
-                            <button onClick={() => navigate(`/catalog/${book.ISBN}`)}>Details</button>
+                            <button >Nominate</button>
+                            <button onClick={() => navigate(`/catalog/${book._id}`)}>Details</button>
                         </div>
                     </div>
                 ))}

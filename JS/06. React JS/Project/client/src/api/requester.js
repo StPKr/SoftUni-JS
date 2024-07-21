@@ -1,6 +1,6 @@
 import { clearUserData, getUserData } from "../util/userDataHandler.js";
 
-const host = 'http://localhost:3030/jsonstore/book-club'
+const host = 'http://localhost:3030/jsonstore/book-club/books'
 
 async function request(method, url, data) {
     const options = {

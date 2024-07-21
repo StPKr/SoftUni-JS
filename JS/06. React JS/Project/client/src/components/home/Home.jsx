@@ -7,16 +7,19 @@ import { get } from '../../api/requester';
 
 export default function Home() {
     const [book, setBook] = useState({});
+    const [latestComments, setLatestComments] = useState([]);
     const [pastThreeBooks, setPastThreeBooks] = useState([]);
 
     useEffect(() => {
         (async () => {
-            const response = await get('/books');
-            console.log(response)
+            const response = await get('');
 
             const books = Object.values(response);
 
-            setBook(books[4]);
+            const bookOfTheWeek = books[4];
+
+            setBook(bookOfTheWeek);
+            setLatestComments(Object.values(bookOfTheWeek.comments).slice(0, 3));
             setPastThreeBooks(books.slice(0, 3))
         })();
     }, []);
@@ -42,10 +45,9 @@ export default function Home() {
                     </div>
                     <div className='latest-comments'>
                         <h2>Latest comments:</h2>
-                        <p className='comment'>Author: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque accusamus, eius, cupiditate nesciunt aut earum eum error, nostrum rem porro eaque nihil sint eos laborum.</p>
-                        <p className='comment'>Author: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas aliquid labore expedita ullam porro voluptatum repudiandae assumenda.</p>
-                        <p className='comment'>Author: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non aliquam magni aut, quos autem ex dolor id officiis voluptatum officia hic, quam quibusdam quaerat aspernatur blanditiis ea nulla earum distinctio placeat consequuntur quod numquam rem assumenda! Ratione eveniet omnis, necessitatibus ipsa sit dolores odit eaque. Corporis numquam obcaecati unde?</p>
-
+                        {latestComments.map(comment => (
+                            <p key={comment._id} className='comment'>{comment.author}: {comment.text}</p>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -54,11 +56,11 @@ export default function Home() {
                 <a href="#" className="thumbs-up" >
                     <span>&#128077;</span>
                 </a>
-                25
+                {book.likes}
                 <a href="#" className="thumbs-down" >
                     <span>&#128078;</span>
                 </a>
-                33
+                {book.dislikes}
             </div>
 
             <section className='past-discussion-section'>
@@ -74,9 +76,9 @@ export default function Home() {
                             <div className="past-book-details">
                                 <h2 className='past-week-book-title'>{pastBook.title}
                                 </h2>
-                                <p className='summary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id impedit velit exercitationem sint placeat nemo ullam amet pariatur iste, molestiae neque iure architecto ea minus.</p>
+                                <p className='summary'>{pastBook.summary}</p>
                             </div>
-                            <button>See Discussion</button>
+                            <button className='see-discussion'>See Discussion</button>
                         </div>
                     ))}
 

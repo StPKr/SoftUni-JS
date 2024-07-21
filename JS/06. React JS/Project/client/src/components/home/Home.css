@@ -107,3 +107,27 @@
     color: #cc0000;
 }
 
+.see-discussion {
+    background-color: #a85d31;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 25px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.see-discussion:hover {
+    background-color: #7d3b15;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.75);
+}
+
+.see-discussion:active {
+    background-color: #421a03;
+    transform: translateY(3px);
+}
+

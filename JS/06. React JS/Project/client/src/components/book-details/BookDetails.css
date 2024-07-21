@@ -20,6 +20,11 @@ p.year::before {
     font-weight: bold;
 }
 
+p.ISBN::before {
+    content: "ISBN: ";
+    font-weight: bold;
+}
+
 p.summary::before {
     content: "Summary: ";
     font-weight: bold;
