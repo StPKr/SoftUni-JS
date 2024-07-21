@@ -23,13 +23,14 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/book-of-the-week' element={<BookOfTheWeek />} />
           <Route path='/catalog' element={<Catalog />} />
-          <Route path='/catalog/:ISBN' element={<BookDetails />} />
+          <Route path='/catalog/:_id' element={<BookDetails />} />
           <Route path='/top-five-list' element={<TopFiveList />} />
           <Route path='/about' element={<About />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
-          {/* <Route path='/logou' element={<Logout />} /> */}
-          
+          {/* <Route path='/logout' element={<Logout />} /> */}
+
+
         </Routes>
 
       </main>

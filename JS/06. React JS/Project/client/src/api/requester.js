@@ -1,4 +1,6 @@
-import { clearUserData, getUserData } from "./util.js";
+import { clearUserData, getUserData } from "../util/userDataHandler.js";
+
+const host = 'http://localhost:3030/jsonstore/book-club'
 
 async function request(method, url, data) {
     const options = {
@@ -18,7 +20,7 @@ async function request(method, url, data) {
     }
 
     try {
-        const response = await fetch(url, options);
+        const response = await fetch(host + url, options);
 
         if (!response.ok) {
             if (response.status == 403) {

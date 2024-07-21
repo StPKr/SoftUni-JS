@@ -5,13 +5,13 @@ import './BookDetails.css'
 
 export default function BookDetails() {
     const [book, setBook] = useState({});
-    const { ISBN } = useParams();
+    const { _id } = useParams();
 
     useEffect(() => {
         const abortController = new AbortController();
 
         (async () => {
-            const response = await fetch(`http://localhost:3030/jsonstore/library/details/${ISBN}`, {
+            const response = await fetch(`http://localhost:3030/jsonstore/book-club/books/${_id}`, {
                 signal: abortController.signal
             });
             const result = await response.json();

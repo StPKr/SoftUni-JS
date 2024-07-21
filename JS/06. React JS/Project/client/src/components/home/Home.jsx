@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { getCurrentWeek } from '../../util/dateHandler';
 import './Home.css'
 import { useEffect, useState } from 'react';
+import { get } from '../../api/requester';
 
 
 export default function Home() {
@@ -10,11 +11,10 @@ export default function Home() {
 
     useEffect(() => {
         (async () => {
-            const response = await fetch('http://localhost:3030/jsonstore/library/books');
+            const response = await get('/books');
+            console.log(response)
 
-            const result = await response.json();
-
-            const books = Object.values(result);
+            const books = Object.values(response);
 
             setBook(books[4]);
             setPastThreeBooks(books.slice(0, 3))
@@ -25,7 +25,7 @@ export default function Home() {
         <section id="home" className="home">
             <div className='current-book-of-the-week'>
                 <div className='current-book-banner'>
-                    <Link to={`/catalog/${book.ISBN}`}>
+                    <Link to={`/catalog/${book._id}`}>
                         <img src={book.cover} alt="banner" />
                     </Link>
                 </div>
@@ -34,35 +34,47 @@ export default function Home() {
                     </h1>
                     <h2 className='author-of-the-week'>By: {book.author}</h2>
                     <h3>Week: {getCurrentWeek()}</h3>
-                    <p className='current-book-description'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed neque aliquid similique totam cupiditate labore illum quaerat alias, exercitationem adipisci architecto dolorem temporibus reiciendis nobis facere reprehenderit. Ipsam ea tempora dolorum aspernatur eaque blanditiis numquam aliquam possimus eos. Est ipsum deserunt fuga nostrum magnam quasi, nihil maiores aliquid exercitationem soluta.</p>
+                    <p className='summary'>{book.summary}</p>
 
-                    <div className='top-comments'>
-                        <h2>Most-popular comments</h2>
-                        <p className='comment'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, laborum.</p>
-                        <p className='comment'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia harum molestias voluptatibus. Soluta sapiente dicta aut cumque illo vitae facere cupiditate?.</p>
-                        <p className='comment'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugiat necessitatibus eos unde fuga nobis, totam vitae!</p>
+
+                    <div>
+
+                    </div>
+                    <div className='latest-comments'>
+                        <h2>Latest comments:</h2>
+                        <p className='comment'>Author: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque accusamus, eius, cupiditate nesciunt aut earum eum error, nostrum rem porro eaque nihil sint eos laborum.</p>
+                        <p className='comment'>Author: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas aliquid labore expedita ullam porro voluptatum repudiandae assumenda.</p>
+                        <p className='comment'>Author: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non aliquam magni aut, quos autem ex dolor id officiis voluptatum officia hic, quam quibusdam quaerat aspernatur blanditiis ea nulla earum distinctio placeat consequuntur quod numquam rem assumenda! Ratione eveniet omnis, necessitatibus ipsa sit dolores odit eaque. Corporis numquam obcaecati unde?</p>
 
                     </div>
                 </div>
-                <div>
-                    <button>Join Discussion</button>
-                </div>
+            </div>
+            <div>
+                <button className='join-discussion'>Join Discussion</button>
+                <a href="#" className="thumbs-up" >
+                    <span>&#128077;</span>
+                </a>
+                25
+                <a href="#" className="thumbs-down" >
+                    <span>&#128078;</span>
+                </a>
+                33
             </div>
 
             <section className='past-discussion-section'>
                 <h1 className='past-section-title'>Previous Weeks&apos; Discussions</h1>
                 <div className="past-discussions">
                     {pastThreeBooks.map(pastBook => (
-                        <div key={pastBook.ISBN} className='past-book'>
+                        <div key={pastBook._id} className='past-book'>
                             <div className='past-book-banner'>
-                                <Link to={`/catalog/${pastBook.ISBN}`}>
+                                <Link to={`/catalog/${pastBook._id}`}>
                                     <img src={pastBook.cover} alt="banner" />
                                 </Link>
                             </div>
                             <div className="past-book-details">
                                 <h2 className='past-week-book-title'>{pastBook.title}
                                 </h2>
-                                <p className='past-book-description'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, soluta facilis? In fugiat fugit, veritatis exercitationem incidunt aut vitae labore quas cupiditate vel quibusdam ut pariatur. Cupiditate saepe labore inventore neque, aperiam autem totam optio omnis molestiae tenetur sequi distinctio voluptatem sed, unde perferendis quibusdam dignissimos quis? Iure repellendus aperiam porro aspernatur quas possimus ducimus, ipsam facilis culpa reprehenderit totam fuga voluptates qui repellat placeat odit quaerat reiciendis eligendi officia deserunt illum! Expedita sapiente a, esse atque ab, eligendi eius tenetur repellat laborum obcaecati eos recusandae nostrum? Aspernatur minus sit consequuntur odio voluptatibus facilis similique nam debitis enim! Aliquid, ipsum?</p>
+                                <p className='summary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id impedit velit exercitationem sint placeat nemo ullam amet pariatur iste, molestiae neque iure architecto ea minus.</p>
                             </div>
                             <button>See Discussion</button>
                         </div>

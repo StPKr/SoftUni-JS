@@ -6,7 +6,7 @@ export default function Header() {
         // { name: 'Home', href: '/' },
         { name: 'Book of the Week', href: '/book-of-the-week' },
         { name: 'Catalog', href: '/catalog' },
-        { name: 'Top 5 List', href: '/top-5-list' },
+        { name: 'Top 5 List', href: '/top-five-list' },
         { name: 'Register', href: '/register' },
         { name: 'Login', href: '/login' },
         // { name: 'Profile', href: '/profile' },
@@ -19,7 +19,7 @@ export default function Header() {
             <nav>
                 <div>
                     <NavLink to="/" id="home-logo">
-                        <img src="home-logo.jpg" alt="Home" className='logo' />
+                        <img src="home-logo.jpg" alt="Home" className='home-logo' />
                     </NavLink>
                 </div>
                 <ul>
@@ -35,7 +35,7 @@ export default function Header() {
                 </ul>
                 <div>
                     <NavLink to="/profile" id="profile-logo">
-                        <img src="profile-logo.jpg" alt="Profile" className='logo' />
+                        <img src="profile-logo.jpg" alt="Profile" className='profile-logo' />
                     </NavLink>
                 </div>
             </nav>

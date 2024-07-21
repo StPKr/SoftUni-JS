@@ -16,7 +16,7 @@ export default function Login() {
                     <input type="password" id="login-password" name="password" />
                     <input type="submit" className="btn submit" value="Login" />
                     <p className="field">
-                        <span>If you don't have profile click <Link to="/register">here</Link></span>
+                        <span>Not a member yet? Click <Link to="/register">here</Link> to join us!</span>
                     </p>
                 </div>
             </form>

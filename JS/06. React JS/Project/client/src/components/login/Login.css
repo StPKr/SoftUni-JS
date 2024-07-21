@@ -25,8 +25,8 @@
 }
 
 .brand-logo {
-    height: 120px;
-    width: 120px;
+    height: 110px;
+    width: 110px;
     background: url("/home-logo.jpg");
     display: block;
     margin-left: auto;
@@ -37,9 +37,9 @@
 }
 
 .container>h1 {
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: 900;
-    font-size: 2.7rem;
+    font-size: 2rem;
     text-align: center;
     color: #4faddb;
     letter-spacing: 1px;
@@ -59,7 +59,7 @@ input {
 
 label {
     margin-bottom: 8px;
-    font-size: 27px;
+    font-size: 25px;
     color: #4faddb;
     margin-top: 13px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -76,16 +76,16 @@ input::placeholder {
 ;
 
 
-label[for="female"] {
+label {
     margin-top: 10px;
 }
 
 input[type="nickname"],
 input[type="password"],
-input[type="number"],
+input[type="text"],
 input[type="email"] {
     background: #ecf0f3;
-    padding: 30px;
+    padding: 20px;
     padding-left: 20px;
     height: 50px;
     margin-top: 10px;
@@ -104,7 +104,7 @@ label[for="terms"]>input {
     height: 60px;
     border-radius: 20px;
     color: #4faddb;
-    font-size: 26px;
+    font-size: 25px;
     cursor: pointer;
     font-weight: 900;
     box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
@@ -119,12 +119,13 @@ label[for="terms"]>input {
 .container {
     text-align: left;
     margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .field>span {
     position: absolute;
     font-size: 18px;
-    bottom: 17px;
+    bottom: 10px;
     right: 8px;
     text-decoration: none;
     color: black;

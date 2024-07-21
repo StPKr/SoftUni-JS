@@ -49,7 +49,7 @@ export default function Catalog() {
                 onFocus={handleFocus}
                 onBlur={handleBlur} placeholder="Title..." />
             <div id="add-to-calatog">
-                Can't find what you're looking for? <Link to="/create">Add to our collection!</Link>
+                Can&apos;t find what you&apos;re looking for? <Link to="/create">Add to our collection!</Link>
             </div>
             <div id="book-list">
                 {books.map((book) => (

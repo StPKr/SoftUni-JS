@@ -10,7 +10,6 @@ nav {
 
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     flex-grow: 1;
     justify-content: center;
@@ -26,7 +25,12 @@ nav ul li a {
     font-weight: bold;
 }
 
-.logo {
+.home-logo {
     height: 75px;
+    width: auto;
+}
+
+.profile-logo {
+    height: 65px;
     width: auto;
 }
