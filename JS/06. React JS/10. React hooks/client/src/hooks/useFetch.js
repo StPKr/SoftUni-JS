@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-export function useFetch(url, initialData) {
-    const [data, setData] = useState(initialData);
+export function useFetch(url, initalData) {
+    const [data, setData] = useState(initalData);
     const [isFetching, setIsFetching] = useState(true);
     const [toggleRefetch, setToggleRefetch] = useState(false);
 
     useEffect(() => {
-        const abortController = new AbortController();
         setIsFetching(true);
+        const abortController = new AbortController();
 
         (async () => {
             const response = await fetch(url, { signal: abortController.signal });
@@ -22,11 +22,11 @@ export function useFetch(url, initialData) {
 
     const refetch = () => {
         setToggleRefetch(state => !state);
-    }
+    };
 
     return {
         data,
         isFetching,
-        refetch
+        refetch,
     };
 }

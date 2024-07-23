@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 
 export default function Article() {
-    const {articleId} = useParams();
+    const { articleId } = useParams();
     const { data: article, isFetching } = useFetch(`http://localhost:3030/jsonstore/advanced/articles/details/${articleId}`, {});
 
     return (
