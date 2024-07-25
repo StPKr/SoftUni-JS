@@ -38,15 +38,16 @@ export default function Home() {
                     <h2 className='author-of-the-week'>By: {book.author}</h2>
                     <h3>Week: {getCurrentWeek()}</h3>
                     <p className='summary'>{book.summary}</p>
-
-
                     <div>
 
                     </div>
                     <div className='latest-comments'>
-                        <h2>Latest comments:</h2>
+                        <h2 id='latest-comments'>Latest comments:</h2>
                         {latestComments.map(comment => (
-                            <p key={comment._id} className='comment'>{comment.author}: {comment.text}</p>
+                            <div key={comment._id} className="comment">
+                                <strong className="comment-author">{comment.author}:</strong>
+                                <p className="comment-text">{comment.text}</p>
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -56,11 +57,15 @@ export default function Home() {
                 <a href="#" className="thumbs-up" >
                     <span>&#128077;</span>
                 </a>
-                {book.likes}
+                <span><b>
+                    {book.likes}
+                </b></span>
                 <a href="#" className="thumbs-down" >
                     <span>&#128078;</span>
                 </a>
-                {book.dislikes}
+                <span><b>
+                    {book.dislikes}
+                </b></span>
             </div>
 
             <section className='past-discussion-section'>

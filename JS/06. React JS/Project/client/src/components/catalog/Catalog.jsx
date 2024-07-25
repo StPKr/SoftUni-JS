@@ -43,7 +43,7 @@ export default function Catalog() {
         <section id="catalog">
             <h1 className="search-main-title">Find a book</h1>
             <input
-                type="text"
+                type="search"
                 id="search-bar"
                 className={isFocused ? 'input-highlight' : 'input-non-highlight'}
                 onFocus={handleFocus}

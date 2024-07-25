@@ -1,24 +1,35 @@
 import './BookOfTheWeek.css'
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { get } from '../../api/requester';
 import { getCurrentWeek } from '../../util/dateHandler';
 
 export default function CurrentDiscussion() {
     const [book, setBook] = useState({});
-    const [pastThreeBooks, setPastThreeBooks] = useState([]);
+    const [comments, setComments] = useState([]);
+    const [areaValue, setAreaValue] = useState('');
+    const textAreaRef = useRef(null);
 
     useEffect(() => {
         (async () => {
             const response = await get('');
 
-
             const books = Object.values(response);
 
             setBook(books[4]);
-            setPastThreeBooks(books.slice(0, 3))
+            setComments(Object.values(books[4].comments));
         })();
     }, []);
+
+    const handleChange = (event) => {
+        setAreaValue(event.target.value);
+    };
+
+    useEffect(() => {
+        const textArea = textAreaRef.current;
+        textArea.style.height = 'auto';
+        textArea.style.height = textArea.scrollHeight + 'px';
+    }, [areaValue]);
 
     return (
         <>
@@ -48,24 +59,40 @@ export default function CurrentDiscussion() {
                 {book.dislikes}
             </div>
 
+            <h2 id='current-comments-title'><b>Comments</b></h2>
+            <div className='current-comments'>
+                {comments.map(comment => (
+                    <div key={comment._id} className="comment">
+                        <p className="comment-text">{comment.text}</p>
+                        <strong className="comment-author">{comment.author}:</strong>
+                    </div>
+                ))}
+
+            </div>
+
             <article className="create-comment">
                 <label>Add new comment:</label>
                 <form className="form" >
-                    <input
+                    {/* <input
                         type="text"
                         placeholder="Pesho"
                         name="username"
                     // onChange={(e) => setUsername(e.target.value)}
                     // value={username}
-                    />
+                    /> */}
                     <textarea
+                        ref={textAreaRef}
+                        value={areaValue}
+                        onChange={handleChange}
+                        rows={1}
+                        className='comment-area'
                         name="comment"
                         placeholder="Comment......"
                     // onChange={(e) => setComment(e.target.value)}
                     // value={comment}
                     ></textarea>
 
-                    <input className="btn submit" type="submit" value="Add Comment" />
+                    <input className="add-comment" type="submit" value="Add Comment" />
                 </form>
             </article>
         </>
