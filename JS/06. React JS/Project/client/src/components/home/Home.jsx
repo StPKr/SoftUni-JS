@@ -12,13 +12,13 @@ export default function Home() {
     const [modalBook, setModalBook] = useState({});
 
     const openModal = (id) => {
-        if (!isOpen) {
-            (async () => {
+        isOpen
+            ? null
+            : (async () => {
                 const response = await get(`/${id}`);
                 setModalBook(response);
             })();
-            setIsOpen(true);
-        }
+        setIsOpen(true);
     };
 
     const closeModal = () => {
@@ -58,6 +58,21 @@ export default function Home() {
                             ))}
                         </div>
                     </div>
+                    <div className='test-box'>
+                        <div>
+                            <h3>Weekly Schedule</h3>
+                            <p><i className="fas fa-calendar-alt"></i> Every Saturday at 18:00</p>
+                            <h4>Venue</h4>
+                            <p><i className="fas fa-map-marker-alt"></i> Cozy Book Cafe</p>
+                            <p>123 Book St, Reading City</p>
+                            <h4>Can't attend in person?</h4>
+                            <p>
+                                <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-discord"></i> Join our Discord
+                                </a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <button onClick={() => !isOpen && openModal(book._id)} className='join-discussion'>Join Discussion</button>
@@ -87,11 +102,12 @@ export default function Home() {
                         ))}
                     </div>
                 </section>
-            </section>
+            </section >
 
             <div className={`modal-content ${isOpen ? 'open' : 'closed'}`}>
                 <ModalBookDetails book={modalBook} closeModal={closeModal} />
             </div>
+
         </>
     );
 }
