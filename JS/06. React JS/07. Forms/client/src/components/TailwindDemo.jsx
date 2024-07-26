@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import TailwndForm from "./TailwindForm";
-// import './TailwindDemo.css';
+import './TailwindDemo.css';
 // remove the comment for tailwind demo
 
 export default function TailwindDemo() {

@@ -10,6 +10,7 @@ import Register from './components/register/Register'
 import Login from './components/login/Login'
 import Footer from './components/footer/Footer'
 import BookDetails from './components/book-details/BookDetails'
+import Test from './components/test/Test'
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
           {/* <Route path='/logout' element={<Logout />} /> */}
+
+          <Route path='/test' element={<Test />} />
 
 
         </Routes>

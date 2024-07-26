@@ -1,0 +1,48 @@
+.test-wrapper {
+    position: fixed;
+    height: auto;
+    border: 2px solid #ff0000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(7, 80, 109, 0.459);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.7s ease-in-out;
+}
+
+.test-title-img {
+    margin-bottom: 25px;
+    color: red;
+}
+
+.test-details {
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    font-style: oblique;
+    color: hsl(173, 100%, 6%);
+}
+
+.test-additional-content {
+    color: rgb(4, 4, 145);
+}
+
+.test-button {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(0, 135, 245);
+    color: aliceblue;
+    font-size: 1.2rem;
+}
+
+.test-wrapper.open {
+    transform: translateX(0%);
+}
+
+.test-wrapper.closed {
+    transform: translateX(100%);
+}
