@@ -1,0 +1,63 @@
+.loading-container{
+    scale: 0.8;
+}
+
+.loader {
+    width: 200px;
+    height: 140px;
+    background: #083e5e;
+    box-sizing: border-box;
+    position: fixed;
+    top: 100px;
+    left: 45%;
+    border-radius: 8px;
+    perspective: 1000px;
+}
+
+.loader:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    border-radius: 8px;
+    background: #0d6ca3 no-repeat;
+    background-size: 60px 10px;
+    background-image: linear-gradient(#ddd 100px, transparent 0),
+        linear-gradient(#ddd 100px, transparent 0),
+        linear-gradient(#ddd 100px, transparent 0),
+        linear-gradient(#ddd 100px, transparent 0),
+        linear-gradient(#ddd 100px, transparent 0),
+        linear-gradient(#ddd 100px, transparent 0);
+
+    background-position: 15px 30px, 15px 60px, 15px 90px,
+        105px 30px, 105px 60px, 105px 90px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    width: calc(50% - 10px);
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    border-radius: 8px;
+    background: #4faddb no-repeat;
+    background-size: 60px 10px;
+    background-image: linear-gradient(#ddd 100px, transparent 0),
+        linear-gradient(#ddd 100px, transparent 0),
+        linear-gradient(#ddd 100px, transparent 0);
+    background-position: 50% 30px, 50% 60px, 50% 90px;
+    transform: rotateY(0deg);
+    transform-origin: left center;
+    animation: paging 0.5s linear infinite;
+}
+
+
+@keyframes paging {
+    to {
+        transform: rotateY(-180deg);
+    }
+}

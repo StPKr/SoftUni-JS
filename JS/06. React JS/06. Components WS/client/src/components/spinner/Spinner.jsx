@@ -1,7 +1,7 @@
 export default function Spinner() {
     return (
         <div className="loading-shade">
-            {/* Loading spinner */}
+            {/* Loading */}
             <div className="spinner"></div>
         </div>
     );
