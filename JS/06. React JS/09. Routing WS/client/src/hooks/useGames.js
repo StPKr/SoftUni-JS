@@ -31,10 +31,7 @@ export function useGetOneGames(gameId) {
     ]
 }
 
-export function  useCreateGame(gameData){
-    const gameCreateHandler =  () =>{
-         gamesAPI.create(gameData);
-    }
-
-    return gameCreateHandler 
+export function useCreateGame() {
+    const gameCreateHandler = (gameData) => gamesAPI.create(gameData)
+    return gameCreateHandler
 } // this is necessary to ensure that this is not fired on initial load or in case we need validation

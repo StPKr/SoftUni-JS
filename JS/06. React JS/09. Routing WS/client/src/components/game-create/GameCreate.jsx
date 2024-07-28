@@ -18,7 +18,7 @@ export default function GameCreate() {
     const createHandler = async (values) => {
         try {
             const { _id: gameId } = await createGame(values);
-            navigate(`games/${gameId}/details`);
+            navigate(`/games/${gameId}/details`);
         } catch (err) {
             console.log(err.message);
         }
