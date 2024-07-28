@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useLogin } from "../../hooks/useAuth";
 import { useForm } from "../../hooks/useForm";
 
-const initialValues = { email: '', passwod: '' };
+const initialValues = { email: '', password: '' };
 
 export default function Login() {
     const login = useLogin();
