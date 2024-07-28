@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { AuthContext } from './context/AuthContext'
 import { Route, Routes } from 'react-router-dom'
 
 import Header from './components/header/Header'
@@ -13,9 +15,27 @@ import BookDetails from './components/book-details/BookDetails'
 import Test from './components/test/Test'
 
 function App() {
+  //TODO remove this from App component
+  const [authState, setAuthState] = useState({});
+
+  const changeAuthState = (state) => {
+    //TODO: Quick solution, fix by implementing persisted authState
+    localStorage.setItem('accessToken', state.accessToken);
+    //TODO validation
+    setAuthState(state);
+  }
+
+  const contextData = {
+    userId: authState._id,
+    email: authState.email,
+    accessToken: authState.accessToken,
+    isAuthenticated: !!authState.email,
+    changeAuthState
+  };
 
   return (
-    <>
+    <AuthContext.Provider value={contextData}>
+
       <Header />
       <main>
         <Routes>
@@ -39,7 +59,8 @@ function App() {
       </main>
 
       <Footer />
-    </>
+    </AuthContext.Provider>
+
   )
 }
 

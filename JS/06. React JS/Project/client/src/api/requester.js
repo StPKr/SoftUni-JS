@@ -37,7 +37,7 @@ async function request(method, url, data) {
         }
 
     } catch (err) {
-        //TODO add custome error handling and visualisation based on exam requirements, if any
+        //TODO add custome error handling and visualisation if needed
         alert(err.message);
         throw err;
     }
