@@ -7,6 +7,7 @@ export const AuthContext = createContext({
     accessToken: '',
     isAuthenticated: false,
     changeAuthState: (authState = {}) => null,
+    logout: () => null,
 }); //default context for intelisense or if imported somewhere outside of the context provider
 
 export function AuthContextProvider(props) {
@@ -18,12 +19,17 @@ export function AuthContextProvider(props) {
         setAuthState(state);
     }
 
+    const logout = () => {
+        setAuthState(null);
+    } // or use changeAuthState and pass an empty context
+
     const contextData = {
-        userId: authState._id,
-        email: authState.email,
-        accessToken: authState.accessToken,
-        isAuthenticated: !!authState.email,
-        changeAuthState
+        userId: authState?._id,
+        email: authState?.email,
+        accessToken: authState?.accessToken,
+        isAuthenticated: !!authState?.email,
+        changeAuthState,
+        logout
     };
 
     return (
