@@ -1,10 +1,9 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useAuthContext } from "../../contexts/AuthContext";
 
 
 export default function Header() {
-    const { isAuthenticated } = useContext(AuthContext); //can also take user data, like username to display somewhere
+    const { isAuthenticated } = useAuthContext(); //can also take user data, like username to display somewhere
     return (
         <header>
             <h1><Link className="home" to="/">GamesPlay</Link></h1>
