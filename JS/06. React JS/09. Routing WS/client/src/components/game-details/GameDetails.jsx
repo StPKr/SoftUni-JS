@@ -13,7 +13,7 @@ export default function GameDetails() {
     const [comments, dispatch] = useGetAllComments(gameId);
     const createComment = useCreateComment();
     const [game] = useGetOneGames(gameId);
-    const { isAuthenticated, email } = useAuthContext();
+    const { isAuthenticated, email, userId } = useAuthContext();
 
     const {
         changeHandler,
@@ -24,11 +24,13 @@ export default function GameDetails() {
             const newComment = await createComment(gameId, comment);
 
             // setComments(oldComments => [...oldComments, newComment]);
-            dispatch({ type: 'ADD_COMMENT', payload: {...newComment, author: { email }} });
+            dispatch({ type: 'ADD_COMMENT', payload: { ...newComment, author: { email } } });
         } catch (err) {
             console.log(err.message);
         }
     });
+
+    const isOwner = userId === game._ownerId;
 
     return (
         <section id="game-details">
@@ -62,13 +64,13 @@ export default function GameDetails() {
 
                 </div>
 
-                <div className="buttons">
+                {isOwner && (<div className="buttons">
                     <a href="#" className="button">Edit</a>
                     <a href="#" className="button">Delete</a>
-                </div>
+                </div>)}
             </div>
 
-            {isAuthenticated && <article className="create-comment">
+            {isAuthenticated && (<article className="create-comment">
                 <label>Add new comment:</label>
                 <form className="form" onSubmit={submitHandler}>
 
@@ -81,7 +83,7 @@ export default function GameDetails() {
 
                     <input className="btn submit" type="submit" value="Add Comment" />
                 </form>
-            </article>}
+            </article>)}
 
         </section>
     );
