@@ -1,14 +1,16 @@
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useGetOneGames } from "../../hooks/useGames";
 import { useForm } from "../../hooks/useForm";
 import { useCreateComment, useGetAllComments } from "../../hooks/useComments";
 import { useAuthContext } from "../../contexts/AuthContext";
+import { gamesAPI } from "../../api/games-api";
 
 const initialValues = {
     comment: ''
 }
 
 export default function GameDetails() {
+    const navigate = useNavigate();
     const { gameId } = useParams();
     const [comments, dispatch] = useGetAllComments(gameId);
     const createComment = useCreateComment();
@@ -29,6 +31,22 @@ export default function GameDetails() {
             console.log(err.message);
         }
     });
+
+    const gameDeleteHandler = async () => {
+        const isConfirmed = confirm(`Are you sure you want  to delete ${game.title} game?`);
+
+        if (!isConfirmed) {
+            return;
+        }
+
+        try {
+            await gamesAPI.remove(gameId);
+
+            navigate('/');
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
 
     const isOwner = userId === game._ownerId;
 
@@ -65,8 +83,8 @@ export default function GameDetails() {
                 </div>
 
                 {isOwner && (<div className="buttons">
-                    <a href="#" className="button">Edit</a>
-                    <a href="#" className="button">Delete</a>
+                    <Link to={`/games/${gameId}/edit`} className="button">Edit</Link>
+                    <Link to="#" onClick={gameDeleteHandler} className="button">Delete</Link>
                 </div>)}
             </div>
 

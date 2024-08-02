@@ -1,6 +1,6 @@
 import { get, post } from "./requester"
 
-const BASE_URL = 'http://localhost:3030/data/comments';
+const BASE_URL = 'http://localhost:3030/data/games';
 
 const create = async (gameId, text) => await post(BASE_URL, { gameId, text });
 
