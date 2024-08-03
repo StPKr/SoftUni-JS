@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate, Link } from 'react-router-dom';
 import './Catalog.css'
-import { get } from "../../api/requester";
 import { booksAPI } from "../../api/books-api";
 
 export default function Catalog() {
@@ -9,13 +8,9 @@ export default function Catalog() {
     const [isFocused, setIsFocused] = useState(false);
     const navigate = useNavigate();
 
-    const handleFocus = () => {
-        setIsFocused(true);
-    };
+    const handleFocus = () => setIsFocused(true);
+    const handleBlur = () => setIsFocused(false);
 
-    const handleBlur = () => {
-        setIsFocused(false);
-    };
 
     useEffect(() => {
         const abortController = new AbortController(); // if you click away too fast it cancels the HTTP request
@@ -35,9 +30,10 @@ export default function Catalog() {
         }
     }, []);
 
-    useEffect(() => {
-
-    }, []);
+    const setSearchTitle = async (title) => {
+        const response = await booksAPI.getOneByTitle(title);
+        console.log(response);
+    }
 
     return (
 
@@ -48,7 +44,9 @@ export default function Catalog() {
                 id="search-bar"
                 className={isFocused ? 'input-highlight' : 'input-non-highlight'}
                 onFocus={handleFocus}
-                onBlur={handleBlur} placeholder="Title..." />
+                onBlur={handleBlur} placeholder="Title..."
+                onChange={(e) => setSearchTitle(e.target.value)}
+            />
             <div id="add-to-calatog">
                 Can&apos;t find what you&apos;re looking for? <Link to="/create">Add to our collection!</Link>
             </div>
@@ -57,7 +55,7 @@ export default function Catalog() {
                     <div key={book._id} className="book">
 
                         <h2 className="title">{book.title}</h2>
-                        <Link to={`/catalog/${book._id}`}>
+                        <Link to={`/books/${book._id}`}>
                             <img className="cover" src={book.cover} alt="Book Cover" />
                         </Link>
                         {/* <p className="author">{book.author}</p>
@@ -67,7 +65,7 @@ export default function Catalog() {
                         <div className="book-buttons">
                             <button >Add</button>
                             <button >Nominate</button>
-                            <button onClick={() => navigate(`/catalog/${book._id}`)}>Details</button>
+                            <button onClick={() => navigate(`/books/${book._id}`)}>Details</button>
                         </div>
                     </div>
                 ))}

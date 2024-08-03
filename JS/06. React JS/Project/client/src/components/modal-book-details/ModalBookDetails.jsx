@@ -11,6 +11,9 @@ export default function ModalBookDetails({ book, closeModal }) {
             <p className="ISBN">{book.ISBN}</p>
             <p className="summary">{book.summary}</p>
             <button className='close-modal' onClick={closeModal}>X</button>
+            <div className="book-buttons">
+                <button onClick={() => navigate(`/books/${book._id}`)}>Details</button>
+            </div>
         </div>
     );
 }

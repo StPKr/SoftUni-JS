@@ -34,3 +34,13 @@ nav ul li a {
     height: 65px;
     width: auto;
 }
+
+#profile-logo-name {
+    position: relative;
+    text-align: right;
+    font-size: 1.1rem;
+    top: -20px;
+    color: #1db7e2;
+    text-decoration: none;
+    font-weight: bold;
+}

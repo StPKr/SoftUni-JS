@@ -14,6 +14,7 @@ import BookDetails from './components/book-details/BookDetails'
 import Test from './components/test/Test'
 import Logout from './components/logout/Logout'
 import CreateBook from './components/create-book/CreateBook'
+import EditBook from './components/eidt-book/EditBook'
 
 function App() {
 
@@ -27,8 +28,9 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/book-of-the-week' element={<BookOfTheWeek />} />
-          <Route path='/catalog' element={<Catalog />} />
-          <Route path='/catalog/:_id' element={<BookDetails />} />
+          <Route path='/books' element={<Catalog />} />
+          <Route path='/books/:bookId' element={<BookDetails />} />
+          <Route path='/books/:bookId/edit' element={<EditBook />} />
           <Route path='/create' element={<CreateBook />} />
           <Route path='/top-five-list' element={<TopFiveList />} />
           <Route path='/about' element={<About />} />

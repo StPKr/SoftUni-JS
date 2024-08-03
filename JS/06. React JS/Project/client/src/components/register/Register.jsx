@@ -18,7 +18,7 @@ export default function Register() {
         }
 
         try {
-            await register(values.email, values.password);
+            await register(values.username, values.email, values.password);
             navigate('/');
         } catch (err) {
             setError(err.message);

@@ -70,7 +70,7 @@
     text-transform: uppercase;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
     margin-left: 20px;
 }
 
@@ -81,7 +81,7 @@
 
 .join-discussion:active {
     background-color: #083e5e;
-    transform: translateY(3px);
+    transform: translateY(10px);
 }
 
 .thumbs-up,
@@ -131,7 +131,7 @@
 
 .see-discussion:active {
     background-color: #421a03;
-    transform: translateY(3px);
+    transform: translateY(5px);
 }
 
 #latest-comments {

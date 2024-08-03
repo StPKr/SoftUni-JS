@@ -34,7 +34,7 @@ export default function CurrentDiscussion() {
         <>
             <div className='current-book-of-the-week'>
                 <div className='current-book-banner'>
-                    <Link to={`/catalog/${book._id}`}>
+                    <Link to={`/books/${book._id}`}>
                         <img src={book.cover} alt="banner" />
                     </Link>
                 </div>

@@ -31,7 +31,7 @@ export default function TopFiveList() {
                     {pastThreeBooks.map(pastBook => (
                         <div key={pastBook._id} className='past-book'>
                             <div className='past-book-banner'>
-                                <Link to={`/catalog/${pastBook._id}`}>
+                                <Link to={`/books/${pastBook._id}`}>
                                     <img src={pastBook.cover} alt="banner" />
                                 </Link>
                             </div>

@@ -34,6 +34,16 @@ const getBookOfTheWeek = async () => {
     return bookOfTheWeek;
 }
 
+const getOneByTitle = async (title) => {
+    const urlSearchParams = new URLSearchParams({
+        where: `title=${title}`
+    });
+
+    const result = await get(`${BASE_URL}?${urlSearchParams.toString()}`);
+
+    return result;
+}
+
 const getOne = (bookId) => get(`${BASE_URL}/${bookId}`);
 
 const create = (bookData) => post(`${BASE_URL}`, bookData);
@@ -49,5 +59,6 @@ export const booksAPI = {
     remove,
     update,
     getLatest,
-    getBookOfTheWeek
+    getBookOfTheWeek,
+    getOneByTitle
 }
