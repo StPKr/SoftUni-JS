@@ -13,7 +13,7 @@ export default function Catalog() {
 
 
     useEffect(() => {
-        const abortController = new AbortController(); // if you click away too fast it cancels the HTTP request
+        const abortController = new AbortController();
 
         (async () => {
             const response = await booksAPI.getAll('', {
@@ -30,6 +30,7 @@ export default function Catalog() {
         }
     }, []);
 
+    //TODO finish this
     const setSearchTitle = async (title) => {
         const response = await booksAPI.getOneByTitle(title);
         console.log(response);
