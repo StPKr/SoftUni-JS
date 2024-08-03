@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import './BookDetails.css'
-import { get } from "../../api/requester";
+import { booksAPI } from "../../api/books-api";
 
 export default function BookDetails() {
     const [book, setBook] = useState({});
@@ -12,10 +12,10 @@ export default function BookDetails() {
         const abortController = new AbortController();
 
         (async () => {
-            const response = await get(`/${_id}`, {
+            const response = await booksAPI.getOne(_id, {
                 signal: abortController.signal
             });
-
+            console.log(response);
             setBook(response);
         })();
 

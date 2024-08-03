@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, Link } from 'react-router-dom';
 import './Catalog.css'
 import { get } from "../../api/requester";
+import { booksAPI } from "../../api/books-api";
 
 export default function Catalog() {
     const [books, setBooks] = useState([]);
@@ -20,7 +21,7 @@ export default function Catalog() {
         const abortController = new AbortController(); // if you click away too fast it cancels the HTTP request
 
         (async () => {
-            const response = await get('', {
+            const response = await booksAPI.getAll('', {
                 signal: abortController.signal
             });
 

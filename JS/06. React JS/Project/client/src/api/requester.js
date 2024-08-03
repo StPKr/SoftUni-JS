@@ -1,6 +1,4 @@
-import { clearUserData, getUserData } from "../util/userDataHandler.js";
-
-const host = 'http://localhost:3030/jsonstore/book-club/books'
+import { clearAccessToken, getAccessToken } from "../util/authUtils";
 
 async function request(method, url, data) {
     const options = {
@@ -13,18 +11,18 @@ async function request(method, url, data) {
         options.body = JSON.stringify(data);
     }
 
-    const userData = getUserData();
+    const accessToken = getAccessToken();
 
-    if (userData) {
-        options.headers['X-Authorization'] = userData.accessToken;
+    if (accessToken) {
+        options.headers['X-Authorization'] = accessToken;
     }
 
     try {
-        const response = await fetch(host + url, options);
+        const response = await fetch(url, options);
 
         if (!response.ok) {
             if (response.status == 403) {
-                clearUserData();
+                clearAccessToken();
             }
             const err = await response.json();
             throw new Error(err.message);

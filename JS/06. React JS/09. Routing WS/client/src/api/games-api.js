@@ -16,7 +16,7 @@ const getLatest = async () => {
         pageSize: 3,
     }); // this only works if the 'space' is correctly transformed into %20, otherwise it breaks, we can hardcode this in the URL below by adding "?sortBy=_createdOn%20desc&pageSize=3"
 
-    const result = await request.get(`${BASE_URL}?${urlSearchParams.toString()}`);
+    const result = await request.get(`${BASE_URL}?${urlSearchParams}`);
 
     const latestGames = Object.values(result);
 

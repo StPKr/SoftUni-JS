@@ -1,8 +1,8 @@
 import './BookOfTheWeek.css'
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import { get } from '../../api/requester';
 import { getCurrentWeek } from '../../util/dateHandler';
+import { booksAPI } from '../../api/books-api';
 
 export default function CurrentDiscussion() {
     const [book, setBook] = useState({});
@@ -12,12 +12,11 @@ export default function CurrentDiscussion() {
 
     useEffect(() => {
         (async () => {
-            const response = await get('');
+            const response = await booksAPI.getBookOfTheWeek('');
 
-            const books = Object.values(response);
 
-            setBook(books[4]);
-            setComments(Object.values(books[4].comments));
+            setBook(response);
+            setComments(Object.values(response.comments));
         })();
     }, []);
 

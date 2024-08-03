@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { get } from '../../api/requester';
 import ModalBookDetails from '../modal-book-details/ModalBookDetails';
 import Spinner from '../spinner/Spinner';
+import { booksAPI } from '../../api/books-api';
 
 export default function Home() {
     const [book, setBook] = useState({});
@@ -17,7 +18,7 @@ export default function Home() {
         isOpen
             ? null
             : (async () => {
-                const response = await get(`/${id}`);
+                const response = await booksAPI.getOne(id);
                 setModalBook(response);
             })();
         setIsOpen(true);
@@ -30,12 +31,13 @@ export default function Home() {
     useEffect(() => {
         async function getBooks() {
             try {
-                const response = await get('');
-                const books = Object.values(response);
-                const bookOfTheWeek = books[4];
-                setBook(bookOfTheWeek);
-                setLatestComments(Object.values(bookOfTheWeek.comments).slice(0, 3));
-                setPastThreeBooks(books.slice(0, 3));
+                const currentBook = await booksAPI.getBookOfTheWeek();
+                const pastBooks = await booksAPI.getLatest();
+
+                setBook(currentBook);
+                setLatestComments(Object.values(currentBook.comments).slice(0, 3));
+
+                setPastThreeBooks(pastBooks);
             } catch (err) {
                 alert(err.message);
             } finally {
@@ -85,6 +87,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+
                     <div>
                         <button onClick={() => !isOpen && openModal(book._id)} className='join-discussion'>Join Discussion</button>
                         <a href="#" className="thumbs-up">
@@ -96,6 +99,7 @@ export default function Home() {
                         </a>
                         <span><b>{book.dislikes}</b></span>
                     </div>
+
                     <section className='past-discussion-section'>
                         <h1 className='past-section-title'>Previous Weeks' Discussions</h1>
                         <div className="past-discussions">
@@ -115,7 +119,7 @@ export default function Home() {
                     </section>
                 </section >
             }
-            
+
 
             <div className={`modal-content ${isOpen ? 'open' : 'closed'}`}>
                 <ModalBookDetails book={modalBook} closeModal={closeModal} />

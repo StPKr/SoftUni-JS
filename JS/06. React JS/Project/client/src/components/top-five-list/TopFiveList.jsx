@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { get } from "../../api/requester";
 import { Link } from "react-router-dom";
 import './TopFiveList.css';
+import { booksAPI } from "../../api/books-api";
 
 export default function TopFiveList() {
     const [book, setBook] = useState({});
@@ -10,7 +11,7 @@ export default function TopFiveList() {
 
     useEffect(() => {
         (async () => {
-            const response = await get('');
+            const response = await booksAPI.getAll('');
 
             const books = Object.values(response);
 
@@ -18,7 +19,7 @@ export default function TopFiveList() {
 
             setBook(bookOfTheWeek);
             setLatestComments(Object.values(bookOfTheWeek.comments).slice(0, 3));
-            setPastThreeBooks(books.slice(0, 3))
+            setPastThreeBooks(books.slice(0, 5))
         })();
     }, []);
 

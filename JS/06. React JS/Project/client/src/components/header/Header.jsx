@@ -6,6 +6,7 @@ export default function Header() {
         // { name: 'Home', href: '/' },
         { name: 'Book of the Week', href: '/book-of-the-week' },
         { name: 'Catalog', href: '/catalog' },
+        { name: 'Create', href: '/create' },
         { name: 'Top 5 List', href: '/top-five-list' },
         { name: 'Register', href: '/register' },
         { name: 'Login', href: '/login' },
