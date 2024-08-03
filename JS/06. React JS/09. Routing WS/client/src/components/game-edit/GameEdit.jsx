@@ -1,16 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { useGetOneGames } from "../../hooks/useGames";
-import { useEffect } from "react";
 import { gamesAPI } from "../../api/games-api";
 
-const initialValues = {
-    title: '',
-    category: '',
-    maxLevel: '',
-    imageUrl: '',
-    summary: '',
-}
 
 
 export default function GameEdit() {
@@ -21,11 +13,11 @@ export default function GameEdit() {
         changeHandler,
         submitHandler,
         values,
-    } = useForm(Object.assign(initialValues, game), async (values) => {
+    } = useForm(game, async (values) => {
         await gamesAPI.update(gameId, values);
 
         navigate(`/games/${gameId}/details`);
-    });
+    }, { reinitializeForm: true });
 
 
     return (

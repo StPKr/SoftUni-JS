@@ -9,9 +9,9 @@ export default function Home() {
     useEffect(() => {
         (async () => {
             //TODO modify to be only latest
-            const result = await gamesAPI.getAll();
+            const result = await gamesAPI.getLatest();
 
-            setLatestGames(result.reverse().slice(0, 3));
+            setLatestGames(result);
         })();
     }, [])
 
