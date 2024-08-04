@@ -5,36 +5,49 @@ import { booksAPI } from "../../api/books-api";
 
 export default function Catalog() {
     const [books, setBooks] = useState([]);
+    const [filteredBooks, setFilteredBooks] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
     const [isFocused, setIsFocused] = useState(false);
     const navigate = useNavigate();
 
     const handleFocus = () => setIsFocused(true);
     const handleBlur = () => setIsFocused(false);
 
-
     useEffect(() => {
         const abortController = new AbortController();
 
         (async () => {
-            const response = await booksAPI.getAll('', {
-                signal: abortController.signal
-            });
-
-            const topFiveBooksArray = Object.values(response);
-
-            setBooks(topFiveBooksArray);
+            try {
+                const response = await booksAPI.getAll('', {
+                    signal: abortController.signal
+                });
+                setBooks(response);
+                // setFilteredBooks(response); // To show all books on mount
+            } catch (error) {
+                if (error.name !== 'AbortError') {
+                    console.error('Error fetching books:', error);
+                }
+            }
         })();
 
         return () => {
             abortController.abort();
-        }
+        };
     }, []);
 
-    //TODO finish this
-    const setSearchTitle = async (title) => {
-        const response = await booksAPI.getOneByTitle(title);
-        console.log(response);
-    }
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            // e.preventDefault();
+            filterBooks(searchTerm);
+        }
+    };
+
+    const filterBooks = (term) => {
+        const filtered = books.filter((book) =>
+            book.title.toLowerCase().includes(term.toLowerCase())
+        );
+        setFilteredBooks(filtered);
+    };
 
     return (
 
@@ -45,32 +58,38 @@ export default function Catalog() {
                 id="search-bar"
                 className={isFocused ? 'input-highlight' : 'input-non-highlight'}
                 onFocus={handleFocus}
-                onBlur={handleBlur} placeholder="Title..."
-                onChange={(e) => setSearchTitle(e.target.value)}
+                onBlur={handleBlur}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyDown={handleKeyDown}
+                placeholder="Title..."
             />
-            <div id="add-to-calatog">
-                Can&apos;t find what you&apos;re looking for? <Link to="/create">Add to our collection!</Link>
-            </div>
-            <div id="book-list">
-                {books.map((book) => (
-                    <div key={book._id} className="book">
+            {filteredBooks.length > 0
+                ? (<div id="book-list">
+                    {filteredBooks.map((book) => (
+                        <div key={book._id} className="book">
 
-                        <h2 className="title">{book.title}</h2>
-                        <Link to={`/books/${book._id}`}>
-                            <img className="cover" src={book.cover} alt="Book Cover" />
-                        </Link>
-                        {/* <p className="author">{book.author}</p>
-                        <p className="genre">{book.genre}</p>
-                        <p className="year">{book.year}</p>
-                        <p className="summary">{book.summary}</p> */}
-                        <div className="book-buttons">
-                            <button >Add</button>
-                            <button >Nominate</button>
-                            <button onClick={() => navigate(`/books/${book._id}`)}>Details</button>
+                            <h2 className="title">{book.title}</h2>
+                            <Link to={`/books/${book._id}`}>
+                                <img className="cover" src={book.cover} alt="Book Cover" />
+                            </Link>
+                            {/* <p className="author">{book.author}</p>
+                            <p className="genre">{book.genre}</p>
+                            <p className="year">{book.year}</p>
+                            <p className="summary">{book.summary}</p> */}
+                            <div className="book-buttons">
+                                <button >Add</button>
+                                <button >Nominate</button>
+                                <button onClick={() => navigate(`/books/${book._id}`)}>Details</button>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>)
+                : (<div id="add-to-calatog">
+                    Can&apos;t find what you&apos;re looking for? <Link className='hyperlink' to="/create">Add to our collection!</Link>
+                </div>)
+            }
+
+
         </section>
     );
 }

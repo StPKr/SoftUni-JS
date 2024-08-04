@@ -52,7 +52,7 @@ export default function Login() {
                     />
                     <input type="submit" className="btn submit" value="Login" />
                     <p className="field">
-                        <span>Not a member yet? Click <Link to="/register">here</Link> to join us!</span>
+                        <span>Not a member yet? Click <Link className='hyperlink' to="/register">here</Link> to join us!</span>
                     </p>
                 </div>
             </form>

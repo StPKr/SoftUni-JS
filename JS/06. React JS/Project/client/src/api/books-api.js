@@ -10,10 +10,12 @@ const getAll = async () => {
     return books;
 }
 
-const getLatest = async () => {
+
+
+const getMostLiked = async () => {
     const urlSearchParams = new URLSearchParams({
-        sortBy: `title`,
-        pageSize: 3,
+        sortBy: `likes`,
+        pageSize: 5,
     });
 
     const result = await get(`${BASE_URL}?${urlSearchParams.toString()}`);
@@ -34,15 +36,15 @@ const getBookOfTheWeek = async () => {
     return bookOfTheWeek;
 }
 
-const getOneByTitle = async (title) => {
-    const urlSearchParams = new URLSearchParams({
-        where: `title=${title}`
-    });
+// const getOneByTitle = async (title) => {
+//     const urlSearchParams = new URLSearchParams({
+//         where: `title=${title}`
+//     });
 
-    const result = await get(`${BASE_URL}?${urlSearchParams.toString()}`);
+//     const result = await get(`${BASE_URL}?${urlSearchParams.toString()}`);
 
-    return result;
-}
+//     return result;
+// }
 
 const getOne = (bookId) => get(`${BASE_URL}/${bookId}`);
 
@@ -58,7 +60,6 @@ export const booksAPI = {
     create,
     remove,
     update,
-    getLatest,
+    getMostLiked,
     getBookOfTheWeek,
-    getOneByTitle
 }

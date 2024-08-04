@@ -80,7 +80,7 @@ export default function Register() {
                     <input className="btn submit" type="submit" value="Register" />
 
                     <p className="field">
-                        <span>Already a member? Click <Link to="/login">here</Link> to log back in!</span>
+                        <span>Already a member? Click <Link className='hyperlink' to="/login">here</Link> to log back in!</span>
                     </p>
                 </div>
             </form>

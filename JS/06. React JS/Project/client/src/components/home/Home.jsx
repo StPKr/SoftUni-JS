@@ -31,12 +31,12 @@ export default function Home() {
         async function getBooks() {
             try {
                 const currentBook = await booksAPI.getBookOfTheWeek();
-                const pastBooks = await booksAPI.getLatest();
+                const pastBooks = await booksAPI.getMostLiked();
 
                 setBook(currentBook);
                 setLatestComments(Object.values(currentBook.comments).slice(0, 3));
 
-                setPastThreeBooks(pastBooks);
+                setPastThreeBooks(pastBooks.slice(0, 3));
             } catch (err) {
                 alert(err.message);
             } finally {

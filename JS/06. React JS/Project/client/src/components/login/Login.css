@@ -129,7 +129,16 @@ label[for="terms"]>input {
     right: 8px;
     text-decoration: none;
     color: black;
-    background: #fb9d4f;
     border-radius: 10px;
     padding: 5px;
+}
+
+.hyperlink {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hyperlink:hover {
+    text-decoration: underline;
 }
