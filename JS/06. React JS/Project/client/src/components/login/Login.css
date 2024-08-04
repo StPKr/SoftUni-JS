@@ -83,6 +83,7 @@ label {
 input[type="nickname"],
 input[type="password"],
 input[type="text"],
+input[type="number"],
 input[type="email"] {
     background: #ecf0f3;
     padding: 20px;

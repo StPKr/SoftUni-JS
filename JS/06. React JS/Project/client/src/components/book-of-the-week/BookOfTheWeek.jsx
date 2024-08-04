@@ -3,32 +3,55 @@ import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { getCurrentWeek } from '../../util/dateHandler';
 import { booksAPI } from '../../api/books-api';
+import { useForm } from '../../hooks/useForm';
+import { commentsAPI } from '../../api/comments-api'
+import { useCreateComment, useGetAllComments } from '../../hooks/useComments';
+import { useAuthContext } from '../../context/AuthContext';
+
+const initialValues = { comment: '' }
 
 export default function CurrentDiscussion() {
     const [book, setBook] = useState({});
-    const [comments, setComments] = useState([]);
+    const [comments, dispatch] = useGetAllComments(book._id);
+    const createComment = useCreateComment();
+    const { isAuthenticated, username } = useAuthContext();
     const [areaValue, setAreaValue] = useState('');
     const textAreaRef = useRef(null);
+
 
     useEffect(() => {
         (async () => {
             const response = await booksAPI.getBookOfTheWeek('');
 
-
             setBook(response);
-            setComments(Object.values(response.comments));
+            // setComments(Object.values(response.comments));
         })();
     }, []);
 
-    const handleChange = (event) => {
-        setAreaValue(event.target.value);
-    };
+    const {
+        changeHandler,
+        submitHandler,
+        values
+    } = useForm(initialValues, async ({ comment }) => {
+        try {
+            const newComment = await createComment(book._id, comment);
 
-    useEffect(() => {
-        const textArea = textAreaRef.current;
-        textArea.style.height = 'auto';
-        textArea.style.height = textArea.scrollHeight + 'px';
-    }, [areaValue]);
+            dispatch({ type: 'ADD_COMMENT', payload: { ...newComment, author: { username } } });
+
+        } catch (err) {
+            alert(err.message);
+        }
+    });
+
+    // const handleChange = (event) => {
+    //     setAreaValue(event.target.value);
+    // };
+
+    // useEffect(() => {
+    //     const textArea = textAreaRef.current;
+    //     textArea.style.height = 'auto';
+    //     textArea.style.height = textArea.scrollHeight + 'px';
+    // }, [areaValue]);
 
     return (
         <>
@@ -62,38 +85,31 @@ export default function CurrentDiscussion() {
             <div className='current-comments'>
                 {comments.map(comment => (
                     <div key={comment._id} className="comment">
-                        <p className="comment-text">{comment.text}</p>
-                        <strong className="comment-author">{comment.author}:</strong>
+                        <p className="comment-text"> <strong className="comment-author">{comment.author.username}:</strong> {comment.text}</p>
                     </div>
                 ))}
 
             </div>
 
-            <article className="create-comment">
-                <label>Add new comment:</label>
-                <form className="form" >
-                    {/* <input
-                        type="text"
-                        placeholder="Pesho"
-                        name="username"
-                    // onChange={(e) => setUsername(e.target.value)}
-                    // value={username}
-                    /> */}
-                    <textarea
-                        ref={textAreaRef}
-                        value={areaValue}
-                        onChange={handleChange}
-                        rows={1}
-                        className='comment-area'
-                        name="comment"
-                        placeholder="Comment......"
-                    // onChange={(e) => setComment(e.target.value)}
-                    // value={comment}
-                    ></textarea>
+            {isAuthenticated &&
+                <article className="create-comment">
+                    <label>Add new comment:</label>
+                    <form className="form" onSubmit={submitHandler} >
+                        <textarea
+                            // ref={textAreaRef}
+                            // value={areaValue}
+                            // onChange={handleChange}
+                            className='comment-area'
+                            name="comment"
+                            placeholder="Comment......"
+                            onChange={changeHandler}
+                            value={values.comment}
+                        ></textarea>
 
-                    <input className="add-comment" type="submit" value="Add Comment" />
-                </form>
-            </article>
+                        <input className="add-comment" type="submit" value="Add Comment" />
+                    </form>
+                </article>
+            }
         </>
     );
 }

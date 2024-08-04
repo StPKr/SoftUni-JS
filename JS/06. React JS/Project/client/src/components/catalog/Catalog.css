@@ -67,10 +67,10 @@ input#search-bar {
 
 #add-to-calatog {
     background-color: #f57d38;
-    width: 630px;
-    font-size: 150%;
-    margin-left: 15px;
-    margin-bottom: 20px;
+    width: max-content;
+    padding: 5px;
+    font-size: 125%;
+    margin: auto;
     text-align: center;
     border-radius: 8px;
 }

@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import './ModalBookDetails.css';
 
 export default function ModalBookDetails({ book, closeModal }) {
+    const navigate = useNavigate();
     return (
         <div className="book-details">
             <h2 className="title">{book.title}</h2>

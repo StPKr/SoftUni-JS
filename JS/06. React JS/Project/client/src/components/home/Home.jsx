@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import ModalBookDetails from '../modal-book-details/ModalBookDetails';
 import Spinner from '../spinner/Spinner';
 import { booksAPI } from '../../api/books-api';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
     const [book, setBook] = useState({});
@@ -12,6 +13,7 @@ export default function Home() {
     const [isOpen, setIsOpen] = useState(false);
     const [modalBook, setModalBook] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    const navigate = useNavigate();
 
     const openModal = (id) => {
         isOpen
@@ -88,7 +90,7 @@ export default function Home() {
                     </div>
 
                     <div>
-                        <button onClick={() => !isOpen && openModal(book._id)} className='join-discussion'>Join Discussion</button>
+                        <button onClick={() => navigate(`/book-of-the-week`)} className='join-discussion'>Join Discussion</button>
                         <a href="#" className="thumbs-up">
                             <span>&#128077;</span>
                         </a>

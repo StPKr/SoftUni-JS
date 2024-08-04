@@ -1,5 +1,23 @@
 #create-page{
-    background-color: #f2e4ab;
+    position: relative;
+    width: 40%;
+    height: auto;
     margin: auto;
-    width: 50%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: #f2e4ab;
+    box-shadow: 0px 0px 32px 0px #4faddb, -14px -14px 20px #191c21;
+}
+
+#summary {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 2px;
+    background-color: #ecf0f3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    resize: none;
+    box-shadow: inset 6px 6px 6px #ecf0f3, inset -6px -6px 6px white;
 }

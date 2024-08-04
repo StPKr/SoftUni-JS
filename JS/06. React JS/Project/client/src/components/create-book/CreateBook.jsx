@@ -26,7 +26,7 @@ export default function CreateBook() {
             const { _id: bookId } = await createBook(values);
             navigate(`/books/${bookId}`);
         } catch (err) {
-            console.log(err.message);
+            console.log(err.code);
         }
     }
 
@@ -40,6 +40,7 @@ export default function CreateBook() {
         <section id="create-page" className="auth">
             <form id="create" onSubmit={submitHandler}>
                 <div className="container">
+                <img src="home-logo2.png" alt="Home" className='brand-logo' />
 
                     <h1>Create Book</h1>
                     <label htmlFor="title">Title:</label>

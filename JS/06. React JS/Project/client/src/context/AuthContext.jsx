@@ -18,8 +18,8 @@ export function AuthContextProvider(props) {
         setAuthState(state);
     }
 
-    const logout = () => {
-        setAuthState(null);
+    const logout = async () => {
+        await setAuthState(null);
     } // or use changeAuthState and pass an empty context
 
     const contextData = {
