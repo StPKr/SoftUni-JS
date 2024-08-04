@@ -10,8 +10,8 @@ export default function Header() {
         { name: 'Top 5 List', href: '/top-five-list' },
         { name: 'Register', href: '/register' },
         { name: 'Login', href: '/login' },
-        { name: 'Logout', href: '/logout' },
         { name: 'About', href: '/about' },
+        { name: 'Logout', href: '/logout' },
     ];
 
     const { isAuthenticated, username } = useAuthContext();

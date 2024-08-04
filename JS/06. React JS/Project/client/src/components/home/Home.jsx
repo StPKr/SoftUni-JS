@@ -1,7 +1,6 @@
 import { getCurrentWeek } from '../../util/dateHandler';
 import './Home.css';
 import { useEffect, useState } from 'react';
-import { get } from '../../api/requester';
 import ModalBookDetails from '../modal-book-details/ModalBookDetails';
 import Spinner from '../spinner/Spinner';
 import { booksAPI } from '../../api/books-api';
@@ -73,15 +72,15 @@ export default function Home() {
                         </div>
                         <div className='test-box'>
                             <div>
-                                <h3>Weekly Schedule</h3>
+                                <h3>When do we meet?</h3>
                                 <p><i className="fas fa-calendar-alt"></i> Every Saturday at 18:00</p>
-                                <h4>Venue</h4>
-                                <p><i className="fas fa-map-marker-alt"></i> Cozy Book Cafe</p>
-                                <p>123 Book St, Reading City</p>
-                                <h4>Can't attend in person?</h4>
+                                <h4>At:</h4>
+                                <p><i className="fas fa-map-marker-alt"></i>the Cozy Book Cafe</p>
+                                <p> on 123 Book St, Reading City</p>
+                                <h4>Can&apos;t attend in person?</h4>
                                 <p>
                                     <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-                                        <i className="fab fa-discord"></i> Join our Discord
+                                        <i className="fab fa-discord"></i> Join our Discord instead
                                     </a>
                                 </p>
                             </div>
@@ -101,7 +100,7 @@ export default function Home() {
                     </div>
 
                     <section className='past-discussion-section'>
-                        <h1 className='past-section-title'>Previous Weeks' Discussions</h1>
+                        <h1 className='past-section-title'>Previous Weeks&apos; Discussions</h1>
                         <div className="past-discussions">
                             {pastThreeBooks.map(pastBook => (
                                 <div key={pastBook._id} className='past-book'>

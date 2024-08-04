@@ -15,6 +15,9 @@ import Test from './components/test/Test'
 import Logout from './components/logout/Logout'
 import CreateBook from './components/create-book/CreateBook'
 import EditBook from './components/eidt-book/EditBook'
+import UserGuard from './components/common/UserGuard'
+import NotFound from './components/not-found/NotFound'
+import GuestGuard from './components/common/GuestGuard'
 
 function App() {
 
@@ -30,15 +33,24 @@ function App() {
           <Route path='/book-of-the-week' element={<BookOfTheWeek />} />
           <Route path='/books' element={<Catalog />} />
           <Route path='/books/:bookId' element={<BookDetails />} />
-          <Route path='/books/:bookId/edit' element={<EditBook />} />
-          <Route path='/create' element={<CreateBook />} />
           <Route path='/top-five-list' element={<TopFiveList />} />
           <Route path='/about' element={<About />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/logout' element={<Logout />} />
+
+          <Route element={<GuestGuard />}>
+            <Route path='/register' element={<Register />} />
+            <Route path='/login' element={<Login />} />
+
+          </Route>
+
+          <Route element={<UserGuard />}>
+            <Route path='/create' element={<CreateBook />} />
+            <Route path='/books/:bookId/edit' element={<EditBook />} />
+            <Route path='/logout' element={<Logout />} />
+          </Route>
 
           <Route path='/test' element={<Test />} />
+
+          <Route path='*' element={<NotFound />} />
 
 
         </Routes>
