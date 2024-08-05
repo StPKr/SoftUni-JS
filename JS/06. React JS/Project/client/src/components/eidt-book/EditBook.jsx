@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useGetOneBook } from "../../hooks/useBooks";
 import { booksAPI } from "../../api/books-api";
 import { useForm } from "../../hooks/useForm";
+import { createBookValidator } from "../../util/validators";
 
 
 export default function EditBook() {
@@ -13,11 +14,12 @@ export default function EditBook() {
         changeHandler,
         submitHandler,
         values,
+        errors,
     } = useForm(book, async (values) => {
         await booksAPI.update(bookId, values);
 
         navigate(`/books/${bookId}`);
-    },);
+    }, createBookValidator);
 
     return (
         <section id="create-page" className="auth">

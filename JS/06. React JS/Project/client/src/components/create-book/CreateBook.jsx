@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useCreateBook } from "../../hooks/useBooks";
 import { useForm } from "../../hooks/useForm";
 import './CreateBook.css'
+import { createBookValidator } from "../../util/validators";
 
 const initialValues = {
     title: '',
@@ -33,8 +34,9 @@ export default function CreateBook() {
     const {
         values,
         changeHandler,
-        submitHandler
-    } = useForm(initialValues, createHandler)
+        submitHandler,
+        errors
+    } = useForm(initialValues, createHandler, createBookValidator)
 
     return (
         <section id="create-page" className="auth">

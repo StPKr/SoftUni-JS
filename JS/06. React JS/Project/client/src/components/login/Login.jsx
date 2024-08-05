@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'
 import { useLogin } from '../../hooks/useAuth';
 import { useForm } from '../../hooks/useForm';
+import { loginValidator } from '../../util/validators';
 
 const initialValues = { email: '', password: '' };
 
@@ -21,8 +22,9 @@ export default function Login() {
     const {
         values,
         changeHandler,
-        submitHandler
-    } = useForm(initialValues, loginHandler);
+        submitHandler,
+        errors
+    } = useForm(initialValues, loginHandler, loginValidator);
 
     return (
         <section id="login-page" className="auth">

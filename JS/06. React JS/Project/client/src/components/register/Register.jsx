@@ -1,27 +1,24 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useRegister } from "../../hooks/useAuth";
-import { useState } from "react";
 import { useForm } from "../../hooks/useForm";
+import { registerValidator } from "../../util/validators";
 
 const initialValues = { username: '', email: '', password: '', repass: '' };
 
 export default function Register() {
-    const [error, setError] = useState('');
     const register = useRegister();
     const navigate = useNavigate();
 
     const registerHandler = async (values) => {
-        if (values.password !== values.repass) {
-            return setError('Password mismatch!');
-
-        }
 
         try {
             await register(values.username, values.email, values.password);
             navigate('/');
         } catch (err) {
-            setError(err.message);
+            console.log(err);
+            errors.push(err.message)
+            // setShowErrorModal(true);
         }
     };
 
@@ -29,7 +26,10 @@ export default function Register() {
         values,
         changeHandler,
         submitHandler,
-    } = useForm(initialValues, registerHandler);
+        errors
+    } = useForm(initialValues, registerHandler, registerValidator);
+
+    
     return (
         <section id="register-page" className="content auth">
             <form id="register" onSubmit={submitHandler}>
@@ -76,6 +76,10 @@ export default function Register() {
                         onChange={changeHandler}
                         placeholder="*****"
                     />
+
+                    {errors.map((error, index) => (
+                        <p key={index} className="error">{error}</p>
+                    ))}
 
                     <input className="btn submit" type="submit" value="Register" />
 

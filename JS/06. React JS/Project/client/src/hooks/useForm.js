@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-export function useForm(initialValues, submitCallback) {
+export function useForm(initialValues, submitCallback, validator) {
     const [values, setValues] = useState(initialValues);
+    const [errors, setErrors] = useState([]);
 
     useEffect(() => {
         setValues(initialValues);
@@ -16,15 +17,19 @@ export function useForm(initialValues, submitCallback) {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-
-        await submitCallback(values);
-
-        setValues(initialValues);
+        const validationErrors = validator(values);
+        if (!validationErrors || validationErrors.length === 0) {
+            await submitCallback(values);
+            setValues(initialValues);
+        } else {
+            setErrors(validationErrors);
+        }
     }
 
     return {
         values,
         changeHandler,
         submitHandler,
+        errors
     }
 }
