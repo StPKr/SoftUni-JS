@@ -1,10 +1,9 @@
 import './BookOfTheWeek.css'
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import { getCurrentWeek } from '../../util/dateHandler';
+import { getCurrentWeek, unixToTime } from '../../util/dateAndTimeHandler';
 import { booksAPI } from '../../api/books-api';
 import { useForm } from '../../hooks/useForm';
-import { commentsAPI } from '../../api/comments-api'
 import { useCreateComment, useGetAllComments } from '../../hooks/useComments';
 import { useAuthContext } from '../../context/AuthContext';
 
@@ -85,7 +84,7 @@ export default function CurrentDiscussion() {
             <div className='current-comments'>
                 {comments.map(comment => (
                     <div key={comment._id} className="comment">
-                        <p className="comment-text"> <strong className="comment-author">{comment.author.username}:</strong> {comment.text}</p>
+                        <p className="comment-text">On {unixToTime(comment._createdOn)} <strong className="comment-author">{comment.author.username}</strong> said: {comment.text}</p>
                     </div>
                 ))}
 

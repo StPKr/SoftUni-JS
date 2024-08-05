@@ -1,4 +1,4 @@
-import { getCurrentWeek } from '../../util/dateHandler';
+import { getCurrentWeek } from '../../util/dateAndTimeHandler';
 import './Home.css';
 import { useEffect, useState } from 'react';
 import ModalBookDetails from '../modal-book-details/ModalBookDetails';

@@ -30,3 +30,23 @@ export function getCurrentTime() {
 
     return `${day}/${month}/${year} ${hours}:${minutes}`;
 }
+
+
+export function unixToTime(unixTimestamp) {
+    var date = new Date(unixTimestamp);
+
+    var year = date.getFullYear();
+    var monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+    var month = monthNames[date.getMonth()];
+    var day = ("0" + date.getDate()).slice(-2);
+    var hours = ("0" + date.getHours()).slice(-2);
+    var minutes = ("0" + date.getMinutes()).slice(-2);
+
+
+    var formattedTime = month + '-' + day + '-' + year + ' ' + hours + ':' + minutes;
+
+    return formattedTime;
+}
