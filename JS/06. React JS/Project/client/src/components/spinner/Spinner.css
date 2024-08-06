@@ -1,5 +1,7 @@
 .loading-container{
     scale: 0.8;
+    position: relative;
+    z-index: 999;
 }
 
 .loader {
