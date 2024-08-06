@@ -94,6 +94,11 @@ export default function EditBook() {
                         onChange={changeHandler}
                         id="summary"
                     ></textarea>
+
+                    {errors.map((error, index) => (
+                        <p key={index} className="error">{error}</p>
+                    ))}
+                    
                     <input className="btn submit" type="submit" value="Save" />
                 </div>
             </form>

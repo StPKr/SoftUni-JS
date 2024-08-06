@@ -27,7 +27,7 @@ export default function CreateBook() {
             const { _id: bookId } = await createBook(values);
             navigate(`/books/${bookId}`);
         } catch (err) {
-            console.log(err.code);
+            errors.push(err.message)
         }
     }
 
@@ -42,7 +42,7 @@ export default function CreateBook() {
         <section id="create-page" className="auth">
             <form id="create" onSubmit={submitHandler}>
                 <div className="container">
-                <img src="home-logo2.png" alt="Home" className='brand-logo' />
+                    <img src="home-logo2.png" alt="Home" className='brand-logo' />
 
                     <h1>Create Book</h1>
                     <label htmlFor="title">Title:</label>
@@ -112,6 +112,11 @@ export default function CreateBook() {
                         onChange={changeHandler}
                         id="summary"
                     ></textarea>
+
+                    {errors.map((error, index) => (
+                        <p key={index} className="error">{error}</p>
+                    ))}
+
                     <input className="btn submit" type="submit" value="Create Book" />
                 </div>
             </form>

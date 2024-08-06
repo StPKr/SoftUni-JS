@@ -27,12 +27,41 @@ export function registerValidator(values) {
 
 export function loginValidator(values) {
     const errors = [];
-
+    
     return errors;
 }
 
 export function createBookValidator(values) {
     const errors = [];
+
+    if (values.title.length < 3) {
+        errors.push('Title must be at least 3 characters long');
+    }
+
+    if (values.author.length < 3) {
+        errors.push('Author must be at least 3 characters long');
+    }
+
+    if (values.genre.length < 3) {
+        errors.push('Genre must be at least 3 characters long');
+    }
+
+    if (values.year < 1000 || values.year > new Date().getFullYear()) {
+        errors.push('Year must be a valid year');
+    }
+
+    if (!/^https?:\/\/.+\.(jpg|jpeg|png|gif)$/.test(values.cover)) {
+        errors.push('Cover image URL must be a valid URL ending with .jpg, .jpeg, .png, or .gif');
+    }
+
+    if (!/^\d{10}(\d{3})?$/.test(values.ISBN)) {
+        errors.push('ISBN must be a valid 10 or 13 digit number');
+    }
+
+    if (values.summary.length < 10) {
+        errors.push('Summary must be at least 10 characters long');
+    }
+
 
     return errors;
 }

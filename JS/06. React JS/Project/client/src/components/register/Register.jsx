@@ -16,9 +16,7 @@ export default function Register() {
             await register(values.username, values.email, values.password);
             navigate('/');
         } catch (err) {
-            console.log(err);
             errors.push(err.message)
-            // setShowErrorModal(true);
         }
     };
 

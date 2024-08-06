@@ -17,10 +17,15 @@ export function useForm(initialValues, submitCallback, validator) {
 
     const submitHandler = async (e) => {
         e.preventDefault();
+        setErrors([]);
         const validationErrors = validator(values);
         if (!validationErrors || validationErrors.length === 0) {
-            await submitCallback(values);
-            setValues(initialValues);
+            try {
+                await submitCallback(values);
+                setValues(initialValues);
+            } catch (err) {
+                setErrors(errors => [...errors, err.message]);
+            }
         } else {
             setErrors(validationErrors);
         }
@@ -30,6 +35,7 @@ export function useForm(initialValues, submitCallback, validator) {
         values,
         changeHandler,
         submitHandler,
-        errors
+        errors,
+        setErrors
     }
 }

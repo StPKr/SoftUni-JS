@@ -15,7 +15,7 @@ export default function Login() {
             await login(email, password);
             navigate('/');
         } catch (err) {
-            console.log(err.message);
+           setErrors(errors => [...errors, err.message])
         }
     }
 
@@ -23,7 +23,8 @@ export default function Login() {
         values,
         changeHandler,
         submitHandler,
-        errors
+        errors,
+        setErrors
     } = useForm(initialValues, loginHandler, loginValidator);
 
     return (
@@ -52,6 +53,11 @@ export default function Login() {
                         onChange={changeHandler}
                         placeholder="*****"
                     />
+
+                    {errors.map((error, index) => (
+                        <p key={index} className="error">{error}</p>
+                    ))}
+
                     <input type="submit" className="btn submit" value="Login" />
                     <p className="field">
                         <span>Not a member yet? Click <Link className='hyperlink' to="/register">here</Link> to join us!</span>
