@@ -10,8 +10,6 @@ const getAll = async () => {
     return books;
 }
 
-
-
 const getMostLiked = async () => {
     const urlSearchParams = new URLSearchParams({
         sortBy: `likes`,
@@ -35,16 +33,6 @@ const getBookOfTheWeek = async () => {
 
     return bookOfTheWeek;
 }
-
-// const getOneByTitle = async (title) => {
-//     const urlSearchParams = new URLSearchParams({
-//         where: `title=${title}`
-//     });
-
-//     const result = await get(`${BASE_URL}?${urlSearchParams.toString()}`);
-
-//     return result;
-// }
 
 const getOne = (bookId) => get(`${BASE_URL}/${bookId}`);
 

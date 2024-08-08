@@ -27,7 +27,7 @@ export function registerValidator(values) {
 
 export function loginValidator(values) {
     const errors = [];
-    
+
     return errors;
 }
 
@@ -62,6 +62,12 @@ export function createBookValidator(values) {
         errors.push('Summary must be at least 10 characters long');
     }
 
+
+    return errors;
+}
+
+export function commentValidator(values) {
+    const errors = [];
 
     return errors;
 }

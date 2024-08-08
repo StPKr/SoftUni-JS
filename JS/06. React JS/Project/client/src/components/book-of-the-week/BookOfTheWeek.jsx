@@ -1,29 +1,27 @@
 import './BookOfTheWeek.css'
 import { Link } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getCurrentWeek, unixToTime } from '../../util/dateAndTimeHandler';
 import { booksAPI } from '../../api/books-api';
 import { useForm } from '../../hooks/useForm';
 import { useCreateComment, useGetAllComments } from '../../hooks/useComments';
 import { useAuthContext } from '../../context/AuthContext';
+import { commentValidator } from '../../util/validators';
+import { commentsAPI } from '../../api/comments-api';
 
 const initialValues = { comment: '' }
 
 export default function CurrentDiscussion() {
     const [book, setBook] = useState({});
-    const [comments, dispatch] = useGetAllComments(book._id);
+    const [comments, setComments] = useGetAllComments(book._id);
     const createComment = useCreateComment();
-    const { isAuthenticated, username } = useAuthContext();
-    const [areaValue, setAreaValue] = useState('');
-    const textAreaRef = useRef(null);
-
+    const { isAuthenticated } = useAuthContext();
 
     useEffect(() => {
         (async () => {
             const response = await booksAPI.getBookOfTheWeek('');
 
             setBook(response);
-            // setComments(Object.values(response.comments));
         })();
     }, []);
 
@@ -32,25 +30,18 @@ export default function CurrentDiscussion() {
         submitHandler,
         values
     } = useForm(initialValues, async ({ comment }) => {
+        if (comment.length === 0) {
+            return
+        }
         try {
-            const newComment = await createComment(book._id, comment);
+            await createComment(book._id, comment);
+            const allComments = await commentsAPI.getAllComments(book._id);
 
-            dispatch({ type: 'ADD_COMMENT', payload: { ...newComment, author: { username } } });
-
+            setComments(allComments);
         } catch (err) {
             alert(err.message);
         }
-    });
-
-    // const handleChange = (event) => {
-    //     setAreaValue(event.target.value);
-    // };
-
-    // useEffect(() => {
-    //     const textArea = textAreaRef.current;
-    //     textArea.style.height = 'auto';
-    //     textArea.style.height = textArea.scrollHeight + 'px';
-    // }, [areaValue]);
+    }, commentValidator);
 
     return (
         <>
@@ -69,7 +60,6 @@ export default function CurrentDiscussion() {
                 </div>
             </div>
             <div>
-                <button className='join-discussion'>Join Discussion</button>
                 <a href="#" className="thumbs-up" >
                     <span>&#128077;</span>
                 </a>
@@ -84,7 +74,7 @@ export default function CurrentDiscussion() {
             <div className='current-comments'>
                 {comments.map(comment => (
                     <div key={comment._id} className="comment">
-                        <p className="comment-text">On {unixToTime(comment._createdOn)} <strong className="comment-author">{comment.author.username}</strong> said: {comment.text}</p>
+                        <p className="comment-text">On {unixToTime(comment._createdOn)} <strong className="comment-author">{comment.author.username}</strong> said: <strong>{comment.text}</strong></p>
                     </div>
                 ))}
 
@@ -95,9 +85,6 @@ export default function CurrentDiscussion() {
                     <label>Add new comment:</label>
                     <form className="form" onSubmit={submitHandler} >
                         <textarea
-                            // ref={textAreaRef}
-                            // value={areaValue}
-                            // onChange={handleChange}
                             className='comment-area'
                             name="comment"
                             placeholder="Comment......"

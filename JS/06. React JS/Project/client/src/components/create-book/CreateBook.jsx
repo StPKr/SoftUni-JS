@@ -5,6 +5,7 @@ import './CreateBook.css'
 import { createBookValidator } from "../../util/validators";
 import { useState } from "react";
 import Spinner from "../spinner/Spinner";
+import BookSubmitForm from "../common/BookSubmitForm";
 
 const initialValues = {
     title: '',
@@ -50,88 +51,7 @@ export default function CreateBook() {
         <>
             {isLoading
                 ? <Spinner />
-                : <section id="create-page" className="auth">
-                    <form id="create" onSubmit={submitHandler}>
-                        <div className="container">
-                            <img src="home-logo2.png" alt="Home" className='brand-logo' />
-
-                            <h1>Create Book</h1>
-                            <label htmlFor="title">Title:</label>
-                            <input
-                                type="text"
-                                id="title"
-                                name="title"
-                                value={values.title}
-                                onChange={changeHandler}
-                                placeholder="Enter book title..."
-                            />
-
-                            <label htmlFor="author">Author:</label>
-                            <input
-                                type="text"
-                                id="author"
-                                name="author"
-                                value={values.author}
-                                onChange={changeHandler}
-                                placeholder="Enter book author..."
-                            />
-
-                            <label htmlFor="genre">Genre:</label>
-                            <input
-                                type="text"
-                                id="genre"
-                                name="genre"
-                                value={values.genre}
-                                onChange={changeHandler}
-                                placeholder="Enter book genre..."
-                            />
-
-                            <label htmlFor="year">Year:</label>
-                            <input
-                                type="number"
-                                id="year"
-                                name="year"
-                                value={values.year}
-                                onChange={changeHandler}
-                                placeholder="Enter publicashion year..."
-                            />
-
-                            <label htmlFor="cover-img">Cover:</label>
-                            <input
-                                type="text"
-                                id="cover"
-                                name="cover"
-                                value={values.cover}
-                                onChange={changeHandler}
-                                placeholder="Upload a cover image..."
-                            />
-
-                            <label htmlFor="ISBN">ISBN:</label>
-                            <input
-                                type="number"
-                                id="ISBN"
-                                name="ISBN"
-                                value={values.ISBN}
-                                onChange={changeHandler}
-                                placeholder="************"
-                            />
-
-                            <label htmlFor="summary">Summary:</label>
-                            <textarea
-                                name="summary"
-                                value={values.summary}
-                                onChange={changeHandler}
-                                id="summary"
-                            ></textarea>
-
-                            {errors.map((error, index) => (
-                                <p key={index} className="error">{error}</p>
-                            ))}
-
-                            <input className="btn submit" type="submit" value="Create Book" />
-                        </div>
-                    </form>
-                </section>
+                : <BookSubmitForm values={values} changeHandler={changeHandler} submitHandler={submitHandler} errors={errors} header={'Create Book'} buttonText={"Create Book"}/>
             }
         </>
     );

@@ -15,24 +15,24 @@ async function request(method, url, data) {
 
     if (method !== 'GET' && accessToken) {
         options.headers['X-Authorization'] = accessToken;
-    }
+    } 
 
     // try {
-        const response = await fetch(url, options);
+    const response = await fetch(url, options);
 
-        if (!response.ok) {
-            if (response.status == 403) {
-                clearAccessToken();
-            }
-            const err = await response.json();
-            throw new Error(err.message);
+    if (!response.ok) {
+        if (response.status == 403) {
+            clearAccessToken();
         }
+        const err = await response.json();
+        throw new Error(err.message);
+    }
 
-        if (response.status == 204) { //usually returned by logout
-            return response; //this will be '' which can't be taken with json()
-        } else {
-            return response.json();
-        }
+    if (response.status == 204) { //usually returned by logout
+        return response; //this will be '' which can't be taken with json()
+    } else {
+        return response.json();
+    }
 
     // } catch (err) {
     //     //TODO add custome error handling and visualisation if needed

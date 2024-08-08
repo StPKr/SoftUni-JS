@@ -5,6 +5,8 @@ import ModalBookDetails from '../modal-book-details/ModalBookDetails';
 import Spinner from '../spinner/Spinner';
 import { booksAPI } from '../../api/books-api';
 import { useNavigate } from 'react-router-dom';
+import { commentsAPI } from '../../api/comments-api';
+import { useAuthContext } from '../../context/AuthContext';
 
 export default function Home() {
     const [book, setBook] = useState({});
@@ -13,6 +15,7 @@ export default function Home() {
     const [isOpen, setIsOpen] = useState(false);
     const [modalBook, setModalBook] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    const { isAuthenticated } = useAuthContext();
     const navigate = useNavigate();
 
     const openModal = (id) => {
@@ -36,7 +39,10 @@ export default function Home() {
                 const pastBooks = await booksAPI.getMostLiked();
 
                 setBook(currentBook);
-                setLatestComments(Object.values(currentBook.comments).slice(0, 3));
+                
+                const commentsResponse = await commentsAPI.getAllComments(currentBook._id);
+
+                setLatestComments(commentsResponse.slice(- 3));+
 
                 setPastThreeBooks(pastBooks.slice(0, 3));
             } catch (err) {
@@ -66,7 +72,7 @@ export default function Home() {
                                 <h2 id='latest-comments'>Latest comments:</h2>
                                 {latestComments.map(comment => (
                                     <div key={comment._id} className="comment">
-                                        <strong className="comment-author">{comment.author}:</strong>
+                                        <strong className="comment-author">{comment.author.username}:</strong>
                                         <p className="comment-text">{comment.text}</p>
                                     </div>
                                 ))}
@@ -90,7 +96,7 @@ export default function Home() {
                     </div>
 
                     <div>
-                        <button onClick={() => navigate(`/book-of-the-week`)} className='join-discussion'>Join Discussion</button>
+                        <button onClick={() => navigate(`/book-of-the-week`)} className='join-discussion'>{isAuthenticated ? 'Join Discussion' : 'See Discussion'}</button>
                         <a href="#" className="thumbs-up">
                             <span>&#128077;</span>
                         </a>
