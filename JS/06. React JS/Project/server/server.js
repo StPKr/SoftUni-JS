@@ -1727,6 +1727,44 @@
                 "_id": "e8f7g9h2-1c3d-4e5f-6g7h-8i9j0k1l2m3n"
             }
         },
+        prevDiscussions: {
+            "0a272c58-b7ea-4e09-a000-7ec988248f66": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                bookId: "e8f7g9h2-1c3d-4e5f-6g7h-8i9j0k1l2m3n",
+                _createdOn: 1720551075,
+                _id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
+            },
+            "0s272c58-b7ea-4e09-a000-7ec988248f66": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                bookId: "i7c6g0e8-9g0g-5g0g-c0g0-7g0g0g0b7g0g",
+                _createdOn: 1720541025,
+                _id: "0s272c58-b7ea-4e09-a000-7ec988248f66"
+            },
+            "0a272c58-b7ea-4e09-a000-7ec988248f98": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                bookId: "g5b4f8e6-7e8e-4e9e-b8e9-5f8e9e9b4e8b",
+                _createdOn: 1720553095,
+                _id: "0a272c58-b7ea-4e09-a000-7ec988248f98"
+            },
+            "0a272c58-b7ea-4e09-a000-7ec988248t32": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                bookId: "c6a5e8d2-9f1b-4c6f-b8f8-7f9a8b9c5d8e",
+                _createdOn: 1720531015,
+                _id: "0a272c58-b7ea-4e09-a000-7ec988248t32"
+            },
+            "0a272c58-b7ea-4e09-a000-7ec988247y16": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                bookId: "e8f7g9h2-1c3d-4e5f-6g7h-8i9j0k1l2m3n",
+                _createdOn: 1720572975,
+                _id: "0a272c58-b7ea-4e09-a000-7ec988247y16"
+            },
+            "9s272c58-b7ea-4e09-a000-7ec988248f35": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                bookId: "d2c4e6f3-9f52-4d6d-a241-2e4d5e6b9d42",
+                _createdOn: 1720141070,
+                _id: "9s272c58-b7ea-4e09-a000-7ec988248f35"
+            }
+        },
         ideas: {
             "833e0e57-71dc-42c0-b387-0ce0caf5225e": {
                 _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
@@ -1848,7 +1886,7 @@
             },
             "280b4a1a-d0f3-4639-aa54-6d9158365152": {
                 _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
+                teamId: "e49b2d91-80c7-438e-b418-7e3c2cb5f6e5",
                 status: "member",
                 _createdOn: 1616237257265,
                 _updatedOn: 1616237278248

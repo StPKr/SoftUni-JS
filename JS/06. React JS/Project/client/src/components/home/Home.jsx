@@ -36,7 +36,7 @@ export default function Home() {
         async function getBooks() {
             try {
                 const currentBook = await booksAPI.getBookOfTheWeek();
-                const pastBooks = await booksAPI.getMostLiked();
+                const pastBooks = await booksAPI.getPreviousDiscussions();
 
                 setBook(currentBook);
                 
@@ -44,7 +44,7 @@ export default function Home() {
 
                 setLatestComments(commentsResponse.slice(- 3));+
 
-                setPastThreeBooks(pastBooks.slice(0, 3));
+                setPastThreeBooks(pastBooks.slice(-3));
             } catch (err) {
                 alert(err.message);
             } finally {
@@ -111,13 +111,13 @@ export default function Home() {
                         <h1 className='past-section-title'>Previous Weeks&apos; Discussions</h1>
                         <div className="past-discussions">
                             {pastThreeBooks.map(pastBook => (
-                                <div key={pastBook._id} className='past-book'>
-                                    <div className='past-book-banner' onClick={() => openModal(pastBook._id)}>
-                                        <img src={pastBook.cover} alt="banner" />
+                                <div key={pastBook.details._id} className='past-book'>
+                                    <div className='past-book-banner' onClick={() => openModal(pastBook.details._id)}>
+                                        <img src={pastBook.details.cover} alt="banner" />
                                     </div>
                                     <div className="past-book-details">
-                                        <h2 className='past-week-book-title'>{pastBook.title}</h2>
-                                        <p className='summary'>{pastBook.summary}</p>
+                                        <h2 className='past-week-book-title'>{pastBook.details.title}</h2>
+                                        <p className='summary'>{pastBook.details.summary}</p>
                                     </div>
                                     <button className='see-discussion'>See Discussion</button>
                                 </div>

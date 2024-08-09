@@ -4,17 +4,13 @@ import './TopFiveList.css';
 import { booksAPI } from "../../api/books-api";
 
 export default function TopFiveList() {
-    const [book, setBook] = useState({});
     const [pastThreeBooks, setPastThreeBooks] = useState([]);
 
     useEffect(() => {
         (async () => {
-            const response = await booksAPI.getAll('');
+            const response = await booksAPI.getMostLiked('');
 
-            const books = Object.values(response);
-
-
-            setPastThreeBooks(books.slice(0, 5))
+            setPastThreeBooks(response)
         })();
     }, []);
 

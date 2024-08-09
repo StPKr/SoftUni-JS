@@ -12,11 +12,16 @@ const getAll = async () => {
 
 const getMostLiked = async () => {
     const urlSearchParams = new URLSearchParams({
-        sortBy: `likes`,
+        sortBy: `likes desc`,
         pageSize: 5,
     });
 
-    const result = await get(`${BASE_URL}?${urlSearchParams.toString()}`);
+    let url = `${BASE_URL}?${urlSearchParams.toString()}`;
+
+    // Replace spaces encoded as `+` with `%20` since server throws an error
+    url = url.replace(/\+/g, '%20');
+
+    const result = await get(url);
     const latestBooks = Object.values(result);
 
     return latestBooks;
@@ -32,6 +37,20 @@ const getBookOfTheWeek = async () => {
     const bookOfTheWeek = result[0];
 
     return bookOfTheWeek;
+}
+
+const getPreviousDiscussions = async () => {
+    const urlSearchParams = new URLSearchParams({
+        load: `details=bookId:books`,
+    });
+
+    const url = 'http://localhost:3030/data/prevDiscussions'
+
+    const result = await get(`${url}?${urlSearchParams.toString()}`);
+
+    const prevDiscussions = Object.values(result);
+
+    return prevDiscussions;
 }
 
 const getOne = (bookId) => get(`${BASE_URL}/${bookId}`);
@@ -50,4 +69,5 @@ export const booksAPI = {
     update,
     getMostLiked,
     getBookOfTheWeek,
+    getPreviousDiscussions
 }

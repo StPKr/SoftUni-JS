@@ -41,10 +41,9 @@ export default function Header() {
                     {isAuthenticated && (
                         <div>
                             <span id='profile-logo-name'>{username}</span>
-                            <NavLink to="/profile" id="profile-logo">
-
-                                <img src="profile-logo.jpg" alt="Profile" className='profile-logo' />
-                            </NavLink>
+                            {/* <NavLink to="/profile" id="profile-logo"> */}
+                            <img src="profile-logo.jpg" alt="Profile" className='profile-logo' />
+                            {/* </NavLink> */}
                         </div>
                     )}
                 </div>

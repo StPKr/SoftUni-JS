@@ -18,6 +18,7 @@ import EditBook from './components/eidt-book/EditBook'
 import UserGuard from './components/common/UserGuard'
 import NotFound from './components/not-found/NotFound'
 import GuestGuard from './components/common/GuestGuard'
+import Profile from './components/profile/Profile'
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
           </Route>
 
           <Route element={<UserGuard />}>
+            
             <Route path='/create' element={<CreateBook />} />
             <Route path='/books/:bookId/edit' element={<EditBook />} />
             <Route path='/logout' element={<Logout />} />
