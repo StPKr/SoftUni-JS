@@ -57,8 +57,45 @@ export default function CurrentDiscussion() {
                     <h2 className='author-of-the-week'>By: {book.author}</h2>
                     <h3>Week: {getCurrentWeek()}</h3>
                     <p className='summary'>{book.summary}</p>
+                    <div id='discussion-points'>
+                        <h2>
+                            Food for Thought:
+                        </h2>
+                        <h3>Characters / Point of View / Plot / Setting / Symbolism </h3>
+                        <ul>
+                            <li>
+                                Who was the mockingbird?
+                            </li>
+                            <li>
+                                How was the mockingbird killed?
+                            </li>
+                            <li>
+                                How is Atticus's sense of justice inferred when he tells the children they can shoot all the bluejays they want, but “it is a sin to kill a mockingbird”?
+                            </li>
+                            <li>
+                                Was Atticus successful in instilling conscience in his children?
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div className='test-box'>
+                    <div>
+                        <h3>When do we meet?</h3>
+                        <p><i className="fas fa-calendar-alt"></i> Every Saturday at 18:00</p>
+                        <h4>At:</h4>
+                        <p><i className="fas fa-map-marker-alt"></i>the Cozy Book Cafe</p>
+                        <p> on 123 Book St, Reading City</p>
+                        <h4>Can&apos;t attend in person?</h4>
+                        <p>
+                            <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-discord"></i> Join our Discord instead
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
+
             <div>
                 <a href="#" className="thumbs-up" >
                     <span>&#128077;</span>

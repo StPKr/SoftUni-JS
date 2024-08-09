@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { get } from "../../api/requester";
 import { Link } from "react-router-dom";
 import './TopFiveList.css';
 import { booksAPI } from "../../api/books-api";
 
 export default function TopFiveList() {
     const [book, setBook] = useState({});
-    const [latestComments, setLatestComments] = useState([]);
     const [pastThreeBooks, setPastThreeBooks] = useState([]);
 
     useEffect(() => {
@@ -15,10 +13,7 @@ export default function TopFiveList() {
 
             const books = Object.values(response);
 
-            const bookOfTheWeek = books[4];
 
-            setBook(bookOfTheWeek);
-            setLatestComments(Object.values(bookOfTheWeek.comments).slice(0, 3));
             setPastThreeBooks(books.slice(0, 5))
         })();
     }, []);
@@ -41,18 +36,18 @@ export default function TopFiveList() {
                                 <p className='summary'>{pastBook.summary}</p>
                             </div>
                             <div>
-                                <button className='see-discussion'>See Discussion</button>
+                                {/* <button className='see-discussion'>See Discussion</button> */}
                                 <a href="#" className="thumbs-up" >
                                     <span>&#128077;</span>
                                 </a>
                                 <span><b>
-                                    {book.likes}
+                                    {pastBook.likes}
                                 </b></span>
                                 <a href="#" className="thumbs-down" >
                                     <span>&#128078;</span>
                                 </a>
                                 <span><b>
-                                    {book.dislikes}
+                                    {pastBook.dislikes}
                                 </b></span>
                             </div>
                         </div>

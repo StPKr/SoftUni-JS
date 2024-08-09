@@ -37,7 +37,7 @@ export default function Catalog() {
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
-            // e.preventDefault();
+            e.preventDefault();
             filterBooks(searchTerm);
         }
     };
@@ -72,13 +72,7 @@ export default function Catalog() {
                             <Link to={`/books/${book._id}`}>
                                 <img className="cover" src={book.cover} alt="Book Cover" />
                             </Link>
-                            {/* <p className="author">{book.author}</p>
-                            <p className="genre">{book.genre}</p>
-                            <p className="year">{book.year}</p>
-                            <p className="summary">{book.summary}</p> */}
                             <div className="book-buttons">
-                                <button >Add</button>
-                                <button >Nominate</button>
                                 <button onClick={() => navigate(`/books/${book._id}`)}>Details</button>
                             </div>
                         </div>

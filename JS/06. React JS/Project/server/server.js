@@ -1517,373 +1517,215 @@
         },
         books: {
             "d1a8a1a4-77fc-431e-8582-8f1f8a174f68": {
+                "_ownerId": "45bd39a8-cd51-4790-803a-81051ad84bdf",
                 "title": "To Kill a Mockingbird",
                 "author": "Harper Lee",
                 "genre": "Fiction",
                 "year": 1960,
                 "cover": "https://m.media-amazon.com/images/I/51g3u0pKK4L._SY445_SX342_.jpg",
                 "ISBN": "9780060935467",
-                "summary": "A novel about the serious issues of rape and racial inequality in the Deep South, told through the eyes of young Scout Finch.",
+                "summary": "Harper Lee’s 'To Kill a Mockingbird' is a profound narrative set in the American South during the 1930s. The story is narrated by Scout Finch, who recounts her childhood experiences and the moral dilemmas faced by her father, Atticus Finch. Atticus, a lawyer, defends Tom Robinson, a black man wrongly accused of raping a white woman. Through Scout’s innocent perspective, the novel addresses the deep-seated racial prejudices of the time and explores themes of justice, empathy, and human decency.",
                 "likes": 8,
                 "dislikes": 1,
                 "isBookOfTheWeek": true,
-                "comments": {
-                    "7fa5e2f3-6d0d-4e7c-9a30-d62764768c6a": {
-                        "author": "Jane Doe",
-                        "text": "A powerful and timeless story that touches on important issues.",
-                        "_id": "7fa5e2f3-6d0d-4e7c-9a30-d62764768c6a"
-                    },
-                    "1f2e4d16-70b5-41b5-b1b7-2d7b4451eb59": {
-                        "author": "John Smith",
-                        "text": "The characters and setting are so well described, it feels real.",
-                        "_id": "1f2e4d16-70b5-41b5-b1b7-2d7b4451eb59"
-                    }
-                },
+                "_createdOn": 1728062400000,
                 "_id": "d1a8a1a4-77fc-431e-8582-8f1f8a174f68"
             },
             "f3b564c3-2e4e-4b9d-94a0-4c6db9b63cf8": {
+                "_ownerId": "mock-owner-id-1",
                 "title": "1984",
                 "author": "George Orwell",
                 "genre": "Dystopian",
                 "year": 1949,
                 "cover": "https://m.media-amazon.com/images/I/41ylo-bKSLL._SY445_SX342_.jpg",
                 "ISBN": "9780451524935",
-                "summary": "A novel that portrays a dystopian society under the extreme surveillance of a totalitarian regime.",
+                "summary": "George Orwell’s '1984' presents a grim vision of a totalitarian future where the state exerts absolute control over all aspects of life. The story follows Winston Smith, who works for the government rewriting history to fit the party's narrative. As Winston secretly rebels against the oppressive regime and falls in love with Julia, he confronts the devastating power of surveillance, censorship, and psychological manipulation. Orwell’s novel remains a stark warning about the dangers of unchecked government power and loss of personal freedoms.",
                 "likes": 10,
                 "dislikes": 2,
-                "comments": {
-                    "3e25f3c8-2e7f-4e37-8b44-9d7ef7e1c3f3": {
-                        "author": "Alice Johnson",
-                        "text": "A chilling and thought-provoking read.",
-                        "_id": "3e25f3c8-2e7f-4e37-8b44-9d7ef7e1c3f3"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1727980800000,
                 "_id": "f3b564c3-2e4e-4b9d-94a0-4c6db9b63cf8"
             },
             "a0c8c92f-44a1-42c1-a737-7c98c7f4a123": {
+                "_ownerId": "mock-owner-id-2",
                 "title": "Pride and Prejudice",
                 "author": "Jane Austen",
                 "genre": "Romance",
                 "year": 1813,
                 "cover": "https://m.media-amazon.com/images/I/51KbdibE71L._SY445_SX342_.jpg",
                 "ISBN": "9781503290563",
-                "summary": "A romantic novel that delves into issues of marriage, money, and love in early 19th-century England.",
+                "summary": "Jane Austen’s 'Pride and Prejudice' explores the complexities of love, class, and society in early 19th-century England. The novel centers on Elizabeth Bennet, an intelligent and spirited young woman, and her evolving relationship with the wealthy and reserved Mr. Darcy. As Elizabeth navigates societal expectations and personal misunderstandings, Austen delves into themes of pride, prejudice, and personal growth. The novel’s sharp wit and insightful observations about human nature continue to captivate readers with its timeless portrayal of romance and social dynamics.",
                 "likes": 12,
                 "dislikes": 0,
-                "comments": {
-                    "d48fd8a7-601f-4e61-a3b8-2c137e7e4f19": {
-                        "author": "Emily Davis",
-                        "text": "A beautifully written classic with memorable characters.",
-                        "_id": "d48fd8a7-601f-4e61-a3b8-2c137e7e4f19"
-                    },
-                    "5c7d7f4b-7c27-4b54-9f59-7d77f9a2b8cd": {
-                        "author": "Sophia Wilson",
-                        "text": "Timeless story of love and society.",
-                        "_id": "5c7d7f4b-7c27-4b54-9f59-7d77f9a2b8cd"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1728364800000,
                 "_id": "a0c8c92f-44a1-42c1-a737-7c98c7f4a123"
             },
             "e49b2d91-80c7-438e-b418-7e3c2cb5f6e5": {
+                "_ownerId": "mock-owner-id-3",
                 "title": "The Great Gatsby",
                 "author": "F. Scott Fitzgerald",
                 "genre": "Tragedy",
                 "year": 1925,
                 "cover": "https://m.media-amazon.com/images/I/41NssxNlPlS._SY445_SX342_.jpg",
                 "ISBN": "9780743273565",
-                "summary": "A story about the young and mysterious millionaire Jay Gatsby and his quixotic passion for the beautiful Daisy Buchanan.",
+                "summary": "F. Scott Fitzgerald’s 'The Great Gatsby' is a classic depiction of the Jazz Age in America, focusing on the enigmatic Jay Gatsby and his obsessive pursuit of the elusive Daisy Buchanan. Set against the backdrop of opulence and decadence of the 1920s, the novel portrays Gatsby’s dream of rekindling a past romance and achieving the American Dream. Through the eyes of narrator Nick Carraway, Fitzgerald explores themes of aspiration, social class, and the corrupting influence of wealth, ultimately presenting a poignant commentary on the disillusionment of the American Dream.",
                 "likes": 7,
                 "dislikes": 3,
-                "comments": {
-                    "a3e7b213-5263-4d21-a2fc-08d7d28eb632": {
-                        "author": "Robert Brown",
-                        "text": "A compelling critique of the American Dream.",
-                        "_id": "a3e7b213-5263-4d21-a2fc-08d7d28eb632"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1728307200000,
                 "_id": "e49b2d91-80c7-438e-b418-7e3c2cb5f6e5"
             },
             "b1c2e301-49c1-4e50-9b14-63c9b98215fa": {
+                "_ownerId": "mock-owner-id-4",
                 "title": "The Catcher in the Rye",
                 "author": "J.D. Salinger",
                 "genre": "Fiction",
                 "year": 1951,
                 "cover": "https://m.media-amazon.com/images/I/41n9SiDYd5L._SY445_SX342_.jpg",
                 "ISBN": "9780316769488",
-                "summary": "A novel about a young teenager, Holden Caulfield, who narrates the story from a mental hospital.",
+                "summary": "J.D. Salinger’s 'The Catcher in the Rye' delves into the life of Holden Caulfield, a troubled teenager who narrates his experiences from a mental institution. As Holden wanders through New York City, he grapples with feelings of alienation, loss, and a longing to protect the innocence of his younger sister, Phoebe. The novel captures the essence of teenage angst and the struggle to find one’s place in a world filled with superficiality. Salinger’s exploration of identity and disillusionment continues to resonate with readers.",
                 "likes": 6,
                 "dislikes": 4,
-                "comments": {
-                    "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f0a4c": {
-                        "author": "Chris Martin",
-                        "text": "A profound and deeply emotional read.",
-                        "_id": "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f0a4c"
-                    },
-                    "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f032c": {
-                        "author": "John Dowe",
-                        "text": "I am blown out of my mind!",
-                        "_id": "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f032c"
-                    },
-                    "b4f0e6e1-5e8d-4f64-bf61-2cda1e08a5a1": {
-                        "author": "Jessica Thomas",
-                        "text": "An intense exploration of teenage angst and rebellion.",
-                        "_id": "b4f0e6e1-5e8d-4f64-bf61-2cda1e08a5a1"
-                    },
-                    "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f0a5c": {
-                        "author": "Chris Martin",
-                        "text": "A profound and deeply emotional read.",
-                        "_id": "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f0a5c"
-                    },
-                    "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f033c": {
-                        "author": "John Dowe",
-                        "text": "I am blown out of my mind!",
-                        "_id": "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f033c"
-                    },
-                    "b4f0e6e1-5e8d-4f64-bf61-2cda1e08a6a1": {
-                        "author": "Jessica Thomas",
-                        "text": "An intense exploration of teenage angst and rebellion.",
-                        "_id": "b4f0e6e1-5e8d-4f64-bf61-2cda1e08a6a1"
-                    },
-                    "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f0a6c": {
-                        "author": "Chris Martin",
-                        "text": "A profound and deeply emotional read.",
-                        "_id": "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f0a6c"
-                    },
-                    "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f034c": {
-                        "author": "John Dowe",
-                        "text": "I am blown out of my mind!",
-                        "_id": "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f034c"
-                    },
-                    "b4f0e6e1-5e8d-4f64-bf61-2cda1e08a5a2": {
-                        "author": "Jessica Thomas",
-                        "text": "An intense exploration of teenage angst and rebellion.",
-                        "_id": "b4f0e6e1-5e8d-4f64-bf61-2cda1e08a5a2"
-                    },
-                    "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f1a4c": {
-                        "author": "Chris Martin",
-                        "text": "A profound and deeply emotional read.",
-                        "_id": "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f1a4c"
-                    },
-                    "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f132c": {
-                        "author": "John Dowe",
-                        "text": "I am blown out of my mind!",
-                        "_id": "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f132c"
-                    },
-                    "b4f0e6e1-5e8d-4f64-bf61-2cda1e08a5b1": {
-                        "author": "Jessica Thomas",
-                        "text": "An intense exploration of teenage angst and rebellion.",
-                        "_id": "b4f0e6e1-5e8d-4f64-bf61-2cda1e08a5b1"
-                    },
-                    "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f0a4d": {
-                        "author": "Chris Martin",
-                        "text": "A profound and deeply emotional read.",
-                        "_id": "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f0a4d"
-                    },
-                    "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f032d": {
-                        "author": "John Dowe",
-                        "text": "I am blown out of my mind!",
-                        "_id": "c0e6f63b-2c9e-4d95-b5a5-3d7f8d6f032d"
-                    },
-                    "b4f0e6e1-5e8d-4f64-bf61-2cda1e08a5a4": {
-                        "author": "Jessica Thomas",
-                        "text": "An intense exploration of teenage angst and rebellion.",
-                        "_id": "b4f0e6e1-5e8d-4f64-bf61-2cda1e08a5a4"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1728268800000,
                 "_id": "b1c2e301-49c1-4e50-9b14-63c9b98215fa"
             },
             "d2c4e6f3-9f52-4d6d-a241-2e4d5e6b9d42": {
+                "_ownerId": "mock-owner-id-5",
                 "title": "Moby-Dick",
                 "author": "Herman Melville",
                 "genre": "Adventure",
                 "year": 1851,
                 "cover": "https://m.media-amazon.com/images/I/41oWzwU1NkL._SY445_SX342_.jpg",
                 "ISBN": "9781503280786",
-                "summary": "The narrative of Captain Ahab's obsessive quest to seek revenge on Moby Dick, the giant white sperm whale.",
+                "summary": "Herman Melville’s 'Moby-Dick' is a complex tale of obsession and revenge, centered on Captain Ahab’s relentless pursuit of the great white whale, Moby Dick. The novel, narrated by Ishmael, offers a rich tapestry of maritime adventure, philosophical musings, and detailed observations of whaling. As Ahab’s fixation drives him to madness, Melville explores themes of fate, morality, and the struggle between man and nature. This epic narrative remains a profound exploration of human ambition and the consequences of unchecked obsession.",
                 "likes": 5,
                 "dislikes": 2,
-                "comments": {
-                    "e7c2d6e2-8d6a-49da-bb7e-2f7f9e4b2f63": {
-                        "author": "Michael Harris",
-                        "text": "A timeless tale of obsession and revenge.",
-                        "_id": "e7c2d6e2-8d6a-49da-bb7e-2f7f9e4b2f63"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1727971200000,
                 "_id": "d2c4e6f3-9f52-4d6d-a241-2e4d5e6b9d42"
             },
             "e3a5f7c4-8e4d-4c2b-b6e7-3f2e5c7f9a45": {
+                "_ownerId": "mock-owner-id-6",
                 "title": "War and Peace",
                 "author": "Leo Tolstoy",
                 "genre": "Historical Fiction",
                 "year": 1869,
                 "cover": "https://m.media-amazon.com/images/I/41VRrP5J3cL._SY445_SX342_.jpg",
                 "ISBN": "9780199232765",
-                "summary": "A sweeping narrative of Russia during the Napoleonic Wars, focusing on the lives of several aristocratic families.",
+                "summary": "Leo Tolstoy’s 'War and Peace' is a monumental historical novel that chronicles the impact of the Napoleonic Wars on Russian society through the lives of several aristocratic families. The novel intertwines personal dramas with historical events, focusing on characters like Pierre Bezukhov, Prince Andrei Bolkonsky, and Natasha Rostova. Tolstoy’s exploration of themes such as power, fate, and the human condition offers a sweeping view of history and a profound meditation on the nature of life and individual destiny.",
                 "likes": 9,
                 "dislikes": 1,
-                "comments": {
-                    "f0b2e8a1-3d6f-4b6e-bb6f-3f5d7e8b2c4a": {
-                        "author": "Anna Carter",
-                        "text": "An epic masterpiece with intricate characters and plot.",
-                        "_id": "f0b2e8a1-3d6f-4b6e-bb6f-3f5d7e8b2c4a"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1728278400000,
                 "_id": "e3a5f7c4-8e4d-4c2b-b6e7-3f2e5c7f9a45"
             },
             "f4b3e9d5-6e7d-4d8e-b7d8-4e8d6e9b3d5a": {
+                "_ownerId": "mock-owner-id-7",
                 "title": "Brave New World",
                 "author": "Aldous Huxley",
                 "genre": "Dystopian",
                 "year": 1932,
                 "cover": "https://m.media-amazon.com/images/I/917t3Joq2WL._SY466_.jpg",
                 "ISBN": "9780060850524",
-                "summary": "A dystopian vision of the future, where technological advancements have led to the control of society through genetic engineering and conditioning.",
+                "summary": "Aldous Huxley’s 'Brave New World' envisions a future where technological and genetic advancements have led to a highly controlled society. In this dystopian world, individuality and critical thinking are suppressed in favor of consumerism and conformity. The novel follows Bernard Marx and John the Savage as they navigate the oppressive social order and question the cost of happiness and stability. Huxley’s work remains a powerful critique of the potential consequences of technological overreach and loss of human autonomy.",
                 "likes": 11,
                 "dislikes": 0,
-                "comments": {
-                    "c5d2f7a6-3d7e-4c6f-b6e7-3f6d8e9b3e6a": {
-                        "author": "David White",
-                        "text": "A thought-provoking and chilling read about the future.",
-                        "_id": "c5d2f7a6-3d7e-4c6f-b6e7-3f6d8e9b3e6a"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1728144000000,
                 "_id": "f4b3e9d5-6e7d-4d8e-b7d8-4e8d6e9b3d5a"
             },
             "g5b4f8e6-7e8e-4e9e-b8e9-5f8e9e9b4e8b": {
+                "_ownerId": "mock-owner-id-8",
                 "title": "The Catch-22",
                 "author": "Joseph Heller",
                 "genre": "Satire",
                 "year": 1961,
                 "cover": "https://m.media-amazon.com/images/I/41DnorU7hUL._SY445_SX342_.jpg",
                 "ISBN": "9781451626650",
-                "summary": "A satirical novel set during World War II, focusing on the absurdities of war and the experiences of Captain John Yossarian.",
+                "summary": "Joseph Heller’s 'Catch-22' is a satirical critique of the absurdities and contradictions of war. Set during World War II, the novel follows Captain John Yossarian, a bombardier who is desperately trying to maintain his sanity while navigating the bureaucratic and illogical nature of military life. The term 'Catch-22' refers to the paradoxical rule that prevents soldiers from escaping dangerous missions. Heller’s darkly humorous narrative examines themes of power, absurdity, and the dehumanizing effects of war.",
                 "likes": 8,
                 "dislikes": 3,
-                "comments": {
-                    "d7e2e8a7-4d7e-4e8f-b7e8-5f7e9d7b6c5a": {
-                        "author": "Paul Adams",
-                        "text": "A brilliant and humorous critique of war and bureaucracy.",
-                        "_id": "d7e2e8a7-4d7e-4e8f-b7e8-5f7e9d7b6c5a"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1728416000000,
                 "_id": "g5b4f8e6-7e8e-4e9e-b8e9-5f8e9e9b4e8b"
             },
             "h6b5f9e7-8f9f-4f9f-b9f9-6f9f9f9b5f9b": {
+                "_ownerId": "mock-owner-id-9",
                 "title": "Crime and Punishment",
                 "author": "Fyodor Dostoevsky",
                 "genre": "Philosophical Fiction",
                 "year": 1866,
                 "cover": "https://m.media-amazon.com/images/I/51XS4wiME5L._SY445_SX342_.jpg",
                 "ISBN": "9780140449136",
-                "summary": "The story of Raskolnikov, a young intellectual who commits a murder and struggles with the moral consequences of his crime.",
+                "summary": "Fyodor Dostoevsky’s 'Crime and Punishment' delves into the psychological torment of Raskolnikov, a young student who commits murder and then grapples with intense guilt and paranoia. The novel is a profound exploration of morality, redemption, and the human psyche. As Raskolnikov’s inner conflict deepens, Dostoevsky examines themes of justice, suffering, and the struggle between good and evil. This classic work offers a gripping narrative and insightful commentary on the consequences of moral transgression and the search for redemption.",
                 "likes": 9,
                 "dislikes": 2,
-                "comments": {
-                    "e8d3f9a8-5d8e-4f8f-c8e8-6f8f8f9b6f9b": {
-                        "author": "Sarah Lee",
-                        "text": "A gripping exploration of guilt and redemption.",
-                        "_id": "e8d3f9a8-5d8e-4f8f-c8e8-6f8f8f9b6f9b"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1728441600000,
                 "_id": "h6b5f9e7-8f9f-4f9f-b9f9-6f9f9f9b5f9b"
             },
             "i7c6g0e8-9g0g-5g0g-c0g0-7g0g0g0b7g0g": {
+                "_ownerId": "mock-owner-id-10",
                 "title": "Jane Eyre",
                 "author": "Charlotte Brontë",
                 "genre": "Romance",
                 "year": 1847,
                 "cover": "https://m.media-amazon.com/images/I/41dokl9KKbL._SY445_SX342_.jpg",
                 "ISBN": "9780142437209",
-                "summary": "The story of Jane Eyre, an orphaned girl who becomes a governess and falls in love with her employer, Mr. Rochester.",
+                "summary": "Charlotte Brontë’s 'Jane Eyre' tells the story of an orphaned girl who becomes a governess and falls in love with her enigmatic employer, Mr. Rochester. The novel follows Jane’s struggles against social class constraints and personal hardships, including the dark secrets hidden at Thornfield Hall. Brontë’s work is celebrated for its exploration of themes such as class, gender, and morality, and its portrayal of a strong, independent heroine who challenges societal norms and seeks true love on her own terms.",
                 "likes": 10,
                 "dislikes": 1,
-                "comments": {
-                    "f9e4g0a9-6e9e-5g9g-d9e9-7g9g0g9b7g9g": {
-                        "author": "Laura Scott",
-                        "text": "A wonderful and inspiring tale of love and resilience.",
-                        "_id": "f9e4g0a9-6e9e-5g9g-d9e9-7g9g0g9b7g9g"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1728038400000,
                 "_id": "i7c6g0e8-9g0g-5g0g-c0g0-7g0g0g0b7g0g"
             },
             "c6a5e8d2-9f1b-4c6f-b8f8-7f9a8b9c5d8e": {
+                "_ownerId": "mock-owner-id-11",
                 "title": "The Lord of the Rings",
                 "author": "J.R.R. Tolkien",
                 "genre": "Fantasy",
                 "year": 1954,
                 "cover": "https://m.media-amazon.com/images/I/41MPoou4SRL._SY445_SX342_.jpg",
                 "ISBN": "9780618640157",
-                "summary": "An epic high-fantasy novel that follows the quest to destroy the One Ring and the ensuing battle between good and evil.",
+                "summary": "J.R.R. Tolkien’s 'The Lord of the Rings' is a seminal high-fantasy epic that follows the quest to destroy the One Ring and the battle between good and evil. The story centers on Frodo Baggins and his companions as they journey through Middle-earth to defeat the Dark Lord Sauron. The novel is renowned for its richly detailed world-building, complex characters, and themes of heroism, friendship, and the struggle against tyranny. Tolkien’s masterpiece continues to captivate readers with its imaginative scope and timeless narrative.",
                 "likes": 15,
                 "dislikes": 2,
-                "comments": {
-                    "a8b9c1d2-3e4f-5g6h-7i8j-9k0l1m2n3o4p": {
-                        "author": "James Peterson",
-                        "text": "A masterpiece of world-building and storytelling.",
-                        "_id": "a8b9c1d2-3e4f-5g6h-7i8j-9k0l1m2n3o4p"
-                    },
-                    "b9c1d2e3-4f5g-6h7i-8j9k-0l1m2n3o4p5q": {
-                        "author": "Samantha Green",
-                        "text": "The characters and plot are so rich and immersive.",
-                        "_id": "b9c1d2e3-4f5g-6h7i-8j9k-0l1m2n3o4p5q"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1728105600000,
                 "_id": "c6a5e8d2-9f1b-4c6f-b8f8-7f9a8b9c5d8e"
             },
             "d7e6f8a1-0b2c-3d4e-5f6g-7h8i9j0k1l2m": {
+                "_ownerId": "mock-owner-id-12",
                 "title": "Harry Potter and the Philosopher's Stone",
                 "author": "J.K. Rowling",
                 "genre": "Fantasy",
                 "year": 1997,
                 "cover": "https://m.media-amazon.com/images/I/51zZ3SAulVL._SY445_SX342_.jpg",
                 "ISBN": "9780590353427",
-                "summary": "The first book in the Harry Potter series, introducing the young wizard Harry Potter and his first year at Hogwarts School of Witchcraft and Wizardry.",
+                "summary": "J.K. Rowling’s 'Harry Potter and the Philosopher's Stone' marks the beginning of the iconic series about a young wizard discovering his magical heritage. The novel follows Harry Potter's first year at Hogwarts School of Witchcraft and Wizardry, where he learns about his past, makes friends, and confronts the dark forces that threaten the wizarding world. Rowling’s captivating storytelling introduces readers to a richly imagined world of magic, friendship, and adventure, setting the stage for the epic journey that unfolds over the subsequent books.",
                 "likes": 20,
                 "dislikes": 3,
-                "comments": {
-                    "f1g2h3i4-5j6k-7l8m-9n0o-1p2q3r4s5t6u": {
-                        "author": "Emma Watson",
-                        "text": "A magical start to an unforgettable series.",
-                        "_id": "f1g2h3i4-5j6k-7l8m-9n0o-1p2q3r4s5t6u"
-                    },
-                    "g2h3i4j5-6k7l-8m9n-0o1p-2q3r4s5t6u7v": {
-                        "author": "Daniel Radcliffe",
-                        "text": "An enchanting story that captivated me from the first page.",
-                        "_id": "g2h3i4j5-6k7l-8m9n-0o1p-2q3r4s5t6u7v"
-                    },
-                    "h3i4j5k6-7l8m-9n0o-1p2q-3r4s5t6u7v8w": {
-                        "author": "Rupert Grint",
-                        "text": "The world of Hogwarts is wonderfully imaginative.",
-                        "_id": "h3i4j5k6-7l8m-9n0o-1p2q-3r4s5t6u7v8w"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1728201600000,
                 "_id": "d7e6f8a1-0b2c-3d4e-5f6g-7h8i9j0k1l2m"
             },
             "e8f7g9h2-1c3d-4e5f-6g7h-8i9j0k1l2m3n": {
+                "_ownerId": "mock-owner-id-13",
                 "title": "The Little Prince",
                 "author": "Antoine de Saint-Exupéry",
                 "genre": "Children's Literature",
                 "year": 1943,
                 "cover": "https://m.media-amazon.com/images/I/41Av+b4S2JL._SY445_SX342_.jpg",
                 "ISBN": "9780156012195",
-                "summary": "A poetic tale of a young prince who travels from planet to planet, learning about love, loneliness, and the importance of looking beneath the surface.",
+                "summary": "Antoine de Saint-Exupéry’s 'The Little Prince' is a beloved tale that follows a young prince traveling from planet to planet, encountering various inhabitants and learning valuable lessons about love, loneliness, and the essence of human relationships. Through its poetic and allegorical narrative, the book explores themes of innocence, wonder, and the importance of seeing beneath the surface to find true meaning in life. The story's charming simplicity and profound wisdom make it a timeless classic for readers of all ages.",
                 "likes": 18,
                 "dislikes": 1,
-                "comments": {
-                    "i4j5k6l7-8m9n-0o1p-2q3r-4s5t6u7v8w9x": {
-                        "author": "Alice Brown",
-                        "text": "A beautiful and touching story that resonates with all ages.",
-                        "_id": "i4j5k6l7-8m9n-0o1p-2q3r-4s5t6u7v8w9x"
-                    },
-                    "j5k6l7m8-9n0o-1p2q-3r4s-5t6u7v8w9x0y": {
-                        "author": "Bob Johnson",
-                        "text": "The illustrations and story are simply enchanting.",
-                        "_id": "j5k6l7m8-9n0o-1p2q-3r4s-5t6u7v8w9x0y"
-                    }
-                },
+                "isBookOfTheWeek": false,
+                "_createdOn": 1728124800000,
                 "_id": "e8f7g9h2-1c3d-4e5f-6g7h-8i9j0k1l2m3n"
             }
-
         },
         ideas: {
             "833e0e57-71dc-42c0-b387-0ce0caf5225e": {
