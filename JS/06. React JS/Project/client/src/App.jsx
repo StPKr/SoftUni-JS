@@ -18,7 +18,7 @@ import EditBook from './components/eidt-book/EditBook'
 import UserGuard from './components/common/UserGuard'
 import NotFound from './components/not-found/NotFound'
 import GuestGuard from './components/common/GuestGuard'
-import Profile from './components/profile/Profile'
+import PastDiscussion from './components/past-discussion/PastDiscussion'
 
 function App() {
 
@@ -32,6 +32,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/book-of-the-week' element={<BookOfTheWeek />} />
+          <Route path='/past-discussion/:bookId' element={<PastDiscussion />} />
           <Route path='/books' element={<Catalog />} />
           <Route path='/books/:bookId' element={<BookDetails />} />
           <Route path='/top-five-list' element={<TopFiveList />} />
@@ -40,7 +41,6 @@ function App() {
           <Route element={<GuestGuard />}>
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
-
           </Route>
 
           <Route element={<UserGuard />}>

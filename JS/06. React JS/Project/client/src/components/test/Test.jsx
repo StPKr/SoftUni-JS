@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import './Test.css';
 import { booksAPI } from '../../api/books-api';
+import { likesAPI } from '../../api/likes-api';
+import { dislikesAPI } from '../../api/dislikes-api';
 
 export default function Test() {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,9 +16,15 @@ export default function Test() {
     useEffect(() => {
         async function getBooks() {
             try {
-                const currentBook = await booksAPI.getMostLiked();
+                const currentBooks = await booksAPI.getMostLiked();
 
-                setBooks(currentBook);
+                setBooks(currentBooks);
+                console.log(currentBooks)
+                const likes = await likesAPI.getLikesForBook(currentBooks[0]._id);
+                const dislikes = await dislikesAPI.getDislikesForBook(currentBooks[0]._id);
+                console.log(likes);
+                console.log(dislikes);
+
 
             } catch (err) {
                 alert(err.message);
@@ -30,7 +38,7 @@ export default function Test() {
             <ol>
                 {books.map(book => (
                     <li key={book.ISBN}>
-                        {book.title}
+                        {book.title} - {book.likes}
                     </li>
                 ))}
             </ol>

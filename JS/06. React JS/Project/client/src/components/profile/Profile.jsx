@@ -2,7 +2,7 @@ import { useAuthContext } from '../../context/AuthContext';
 import './Profile.css'
 
 export default function Profile() {
-    const { username, email } = useAuthContext();
+    const { username } = useAuthContext();
     return (
         <div className="profile-container">
             <div className="profile-header">

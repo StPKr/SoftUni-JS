@@ -14,6 +14,14 @@ export default function TopFiveList() {
         })();
     }, []);
 
+    const truncateSummary = (summary) => {
+        const words = summary.split(' ');
+        if (words.length > 10) {
+            return words.slice(0, 15).join(' ') + '...';
+        }
+        return summary;
+    };
+
     return (
         <>
             <h1 id="top-five">Top Rated Books</h1>
@@ -29,7 +37,7 @@ export default function TopFiveList() {
                             <div className="past-book-details">
                                 <h2 className='past-week-book-title'>{pastBook.title}
                                 </h2>
-                                <p className='summary'>{pastBook.summary}</p>
+                                <p className='summary'>{truncateSummary(pastBook.summary)}</p>
                             </div>
                             <div>
                                 {/* <button className='see-discussion'>See Discussion</button> */}

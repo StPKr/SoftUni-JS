@@ -1765,6 +1765,29 @@
                 _id: "9s272c58-b7ea-4e09-a000-7ec988248f35"
             }
         },
+        likes: {
+            "0a272c4s8-b7ea-4e09-agds20-7ec98824f266": {
+                _ownerId: "35c62d76-8152-4626-8712-eessatre33dgs35",
+                bookId: "d7e6f8a1-0b2c-3d4e-5f6g-7h8i9j0k1l2m",
+                _createdOn: 1720551075,
+                _id: "0a272c4s8-b7ea-4e09-agds20-7ec98824f266"
+            },
+            "0a272c4s8-b7ea-4e09-agds20-7ec9y824f269": {
+                _ownerId: "35c62d76-8152-4626-8712-eessatre33dgs41",
+                bookId: "d7e6f8a1-0b2c-3d4e-5f6g-7h8i9j0k1l2m",
+                _createdOn: 1720551095,
+                _id: "0a272c4s8-b7ea-4e09-agds20-7ec98824f266"
+            },
+            "0a272c4s8-b7ea-4e09-agds20-7ec98824g268": {
+                _ownerId: "35c62d76-8152-4626-8719-eessatre33dgs37",
+                bookId: "e8f7g9h2-1c3d-4e5f-6g7h-8i9j0k1l2m3n",
+                _createdOn: 1720561075,
+                _id: "0a272c4s8-b7ea-4e09-agds20-7ec98824f266"
+            },
+        },
+        dislikes: {
+
+        },
         ideas: {
             "833e0e57-71dc-42c0-b387-0ce0caf5225e": {
                 _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",

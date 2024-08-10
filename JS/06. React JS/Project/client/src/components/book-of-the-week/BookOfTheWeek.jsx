@@ -12,7 +12,7 @@ import Spinner from '../spinner/Spinner';
 
 const initialValues = { comment: '' }
 
-export default function CurrentDiscussion() {
+export default function BookOfTheWeek() {
     const [book, setBook] = useState({});
     const [comments, setComments] = useGetAllComments(book._id);
     const createComment = useCreateComment();

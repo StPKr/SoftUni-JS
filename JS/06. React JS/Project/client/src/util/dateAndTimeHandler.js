@@ -17,21 +17,6 @@ export function getCurrentWeek() {
     return `${formattedMonday} - ${formattedSunday}`
 }
 
-export function getCurrentTime() {
-    const now = new Date();
-
-    const day = String(now.getDate()).padStart(2, '0');
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const month = monthNames[now.getMonth()];
-    const year = now.getFullYear();
-
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-
-    return `${day}/${month}/${year} ${hours}:${minutes}`;
-}
-
-
 export function unixToTime(unixTimestamp) {
     var date = new Date(unixTimestamp);
 
@@ -46,7 +31,7 @@ export function unixToTime(unixTimestamp) {
     var minutes = ("0" + date.getMinutes()).slice(-2);
 
 
-    var formattedTime = month + '-' + day + '-' + year + ' ' + hours + ':' + minutes;
+    var formattedTime = day + '-' + month + '-' + year + ' at ' + hours + ':' + minutes;
 
     return formattedTime;
 }

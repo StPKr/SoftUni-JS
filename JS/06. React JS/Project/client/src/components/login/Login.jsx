@@ -39,9 +39,7 @@ export default function Login() {
             {
                 isLoading
                     ? <Spinner />
-                    :
-
-                    <section id="login-page" className="auth">
+                    : <section id="login-page" className="auth">
                         <form id="login" onSubmit={submitHandler}>
 
                             <div className="container">

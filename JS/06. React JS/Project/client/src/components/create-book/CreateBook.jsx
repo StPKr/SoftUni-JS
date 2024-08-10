@@ -17,8 +17,7 @@ const initialValues = {
     summary: '',
     likes: 0,
     dislikes: 0,
-    comments: [],
-    // test: [] - add any custom values not included in the form6
+    // test: [] - add any other custom values not included in the form
 }
 
 export default function CreateBook() {

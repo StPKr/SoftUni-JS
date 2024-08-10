@@ -23,9 +23,9 @@ export default function Catalog() {
                 });
                 setBooks(response);
                 // setFilteredBooks(response); // To show all books on mount
-            } catch (error) {
-                if (error.name !== 'AbortError') {
-                    console.error('Error fetching books:', error);
+            } catch (err) {
+                if (err.name !== 'AbortError') {
+                    alert('Error fetching books:', err);
                 }
             }
         })();
@@ -61,7 +61,7 @@ export default function Catalog() {
                 onBlur={handleBlur}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="Title..."
+                placeholder="Enter a title..."
             />
             {filteredBooks.length > 0
                 ? (<div id="book-list">

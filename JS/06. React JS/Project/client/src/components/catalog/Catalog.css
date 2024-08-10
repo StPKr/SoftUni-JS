@@ -40,7 +40,7 @@ input#search-bar {
 }
 
 .book-buttons {
-    margin: 0;
+    margin-right: 5px;
     position: relative;
     bottom: 0%;
 }

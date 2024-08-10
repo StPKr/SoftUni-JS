@@ -2,8 +2,9 @@ import { useNavigate } from 'react-router-dom';
 import './ModalBookDetails.css';
 import { booksAPI } from '../../api/books-api';
 import { useAuthContext } from '../../context/AuthContext';
+import Spinner from '../spinner/Spinner';
 
-export default function ModalBookDetails({ book, closeModal }) {
+export default function ModalBookDetails({ book, closeModal, }) {
     const { userId } = useAuthContext();
     const navigate = useNavigate();
 

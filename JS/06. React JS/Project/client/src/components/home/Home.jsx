@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import ModalBookDetails from '../modal-book-details/ModalBookDetails';
 import Spinner from '../spinner/Spinner';
 import { booksAPI } from '../../api/books-api';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { commentsAPI } from '../../api/comments-api';
 import { useAuthContext } from '../../context/AuthContext';
 
@@ -17,6 +17,7 @@ export default function Home() {
     const [isLoading, setIsLoading] = useState(true);
     const { isAuthenticated } = useAuthContext();
     const navigate = useNavigate();
+    const [error, setError] = useState(null);
 
     const openModal = (id) => {
         isOpen
@@ -24,8 +25,8 @@ export default function Home() {
             : (async () => {
                 const response = await booksAPI.getOne(id);
                 setModalBook(response);
+                setIsOpen(true);
             })();
-        setIsOpen(true);
     };
 
     const closeModal = () => {
@@ -39,20 +40,30 @@ export default function Home() {
                 const pastBooks = await booksAPI.getPreviousDiscussions();
 
                 setBook(currentBook);
-                
+
                 const commentsResponse = await commentsAPI.getAllComments(currentBook._id);
 
-                setLatestComments(commentsResponse.slice(- 3));+
+                setLatestComments(commentsResponse.slice(-3));
 
                 setPastThreeBooks(pastBooks.slice(-3));
             } catch (err) {
-                alert(err.message);
+                setError(err.message);
             } finally {
                 setIsLoading(false);
             }
         }
         getBooks();
     }, []);
+
+    // To handle invalid access token from logout
+    if (error) {
+        return (
+            <>
+                <div className='error'>Error: {error}</div>
+                <p>Return to <Link className='hyperlink' to="/login">Login</Link>?</p>
+            </>
+        );
+    }
 
     return (
         <>
@@ -119,7 +130,7 @@ export default function Home() {
                                         <h2 className='past-week-book-title'>{pastBook.details.title}</h2>
                                         <p className='summary'>{pastBook.details.summary}</p>
                                     </div>
-                                    <button className='see-discussion'>See Discussion</button>
+                                    <button onClick={() => navigate(`/past-discussion/${pastBook.details._id}`)} className='see-discussion'>See Discussion</button>
                                 </div>
                             ))}
                         </div>
@@ -127,11 +138,9 @@ export default function Home() {
                 </section >
             }
 
-
             <div className={`modal-content ${isOpen ? 'open' : 'closed'}`}>
                 <ModalBookDetails book={modalBook} closeModal={closeModal} />
             </div>
-
         </>
     );
 }
