@@ -50,8 +50,6 @@ function App() {
             <Route path='/logout' element={<Logout />} />
           </Route>
 
-          <Route path='/test' element={<Test />} />
-
           <Route path='*' element={<NotFound />} />
 
 
