@@ -54,19 +54,18 @@ This is a single-page application (SPA) built using React.js that serves as an o
 **3. Pages and Components**
 
 - **Header and Footer:** Common components that are displayed on every page.
-- **Home (`Home.js`):** The landing page of the application.
-- **About (`About.js`):** An informational page about the application.
-- **BookOfTheWeek (`BookOfTheWeek.js`):** Displays the book of the week.
-- **Catalog (`Catalog.js`):** Displays a list of books available in the catalog.
-- **BookDetails (`BookDetails.js`):** Shows detailed information about a specific book.
-- **TopFiveList (`TopFiveList.js`):** Lists the top five rated books.
-- **Register and Login (`Register.js`, `Login.js`):** Handles user registration and login.
-- **CreateBook (`CreateBook.js`):** Allows authenticated users to create a new book entry.
-- **EditBook (`EditBook.js`):** Allows authenticated users to edit an existing book entry.
-- **Logout (`Logout.js`):** Logs the user out of the application.
-- **PastDiscussion (`PastDiscussion.js`):** Displays past discussions related to a book.
-- **NotFound (`NotFound.js`):** A fallback page for non-existing routes.
-- **Test (`Test.js`):** A component used for testing purposes.
+- **Home (`Home.jsx`):** The landing page of the application.
+- **About (`About.jsx`):** An informational page about the application.
+- **BookOfTheWeek (`BookOfTheWeek.jsx`):** Displays the book of the week.
+- **Catalog (`Catalog.jsx`):** Displays a list of books available in the catalog.
+- **BookDetails (`BookDetails.jsx`):** Shows detailed information about a specific book.
+- **TopFiveList (`TopFiveList.jsx`):** Lists the top five rated books.
+- **Register and Login (`Register.jsx`, `Login.jsx`):** Handles user registration and login.
+- **CreateBook (`CreateBook.jsx`):** Allows authenticated users to create a new book entry.
+- **EditBook (`EditBook.jsx`):** Allows authenticated users to edit an existing book entry.
+- **Logout (`Logout.jsx`):** Logs the user out of the application.
+- **PastDiscussion (`PastDiscussion.jsx`):** Displays past discussions related to a book.
+- **NotFound (`NotFound.jsx`):** A fallback page for non-existing routes.
 
 ### Routing and Guards
 
