@@ -10,7 +10,7 @@ export default function PastDiscussion() {
     const { bookId } = useParams();
     const [book, setBook] = useState({});
     const [comments, setComments] = useState([])
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const abortController = new AbortController();
@@ -22,9 +22,6 @@ export default function PastDiscussion() {
                 });
                 setBook(response);
 
-                const allComments = await commentsAPI.getAllComments(book._id);
-
-                setComments(allComments);
             } catch (err) {
                 alert(err.message);
             } finally {
@@ -39,6 +36,28 @@ export default function PastDiscussion() {
     }, []);
 
 
+    useEffect(() => {
+        const abortController = new AbortController();
+
+        (async () => {
+            try {
+                const allComments = await commentsAPI.getAllComments(bookId, {
+                    signal: abortController.signal
+                });
+
+                setComments(allComments);
+            } catch (err) {
+                alert(err.message);
+            } finally {
+                setIsLoading(false);
+            }
+
+        })();
+
+        return () => {
+            abortController.abort();
+        }
+    }, [bookId]);
 
 
     return (
