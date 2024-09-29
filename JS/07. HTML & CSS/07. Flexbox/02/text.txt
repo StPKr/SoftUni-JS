@@ -1,0 +1,33 @@
+
+flex-direction
+
+flex-direction: row; (default)
+
+
+1
+2
+3
+
+
+flex-direction: row-reverse;
+
+
+1
+2
+3
+
+
+flex-direction: column;
+
+
+1
+2
+3
+
+
+flex-direction: column-reverse;
+
+
+1
+2
+3

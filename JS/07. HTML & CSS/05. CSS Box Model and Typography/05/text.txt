@@ -1,0 +1,7 @@
+Fixed Height: 200px
+
+Percentage Height: 50% of Parent
+
+Viewport Height: 50vh
+
+Min-Max Height: min-height 100px, max-height 300px

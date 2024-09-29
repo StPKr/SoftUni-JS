@@ -1,0 +1,5 @@
+Uniform Padding: 20px
+
+Non-Uniform Padding: 10px 30px 20px 40px (Top Right Bottom Left)
+
+Percentage Padding: 5%

@@ -1,0 +1,19 @@
+/* descendant selector */
+div p {
+    color: peru;
+}
+
+/* child selector */
+ul>li {
+    list-style-type: armenian;
+}
+
+/* adjacent sibling selector */
+p+p {
+    background-color: gray;
+}
+
+/* general sibling selector */
+p~span {
+    font-weight: 600;
+}

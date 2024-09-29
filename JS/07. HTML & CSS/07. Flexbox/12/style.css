@@ -1,0 +1,33 @@
+.flex-container {
+    display: flex;
+    width: 400px;
+    padding: 1rem;
+    border: 2px solid blue;
+    align-items: flex-start;
+}
+
+.flex-container .flex-item {
+    border: 2px solid black;
+    padding: 20px;
+    background-color: #eee;
+}
+
+.custom-order-one {
+    order: 1;
+}
+
+.custom-order-two {
+    order: 2;
+}
+
+.custom-order-three {
+    order: 3;
+}
+
+.custom-order-four {
+    order: 4;
+}
+
+.custom-order-five {
+    order: 5;
+}

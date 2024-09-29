@@ -1,0 +1,28 @@
+flex-grow
+
+flex-grow: 0; (default)
+
+1
+2
+3
+
+
+flex-grow: 1;
+
+1
+2
+3
+
+
+flex-grow, grow 2nd child only
+
+1
+2
+3
+
+
+flex-grow, grow proportionally (1, 2, 3)
+
+1
+2
+3

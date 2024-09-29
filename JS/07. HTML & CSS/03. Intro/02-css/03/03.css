@@ -1,0 +1,20 @@
+p.highlight {
+    color: aqua;
+}
+
+li.highlight{
+    color: aquamarine;
+}
+
+.fancy{
+    color: orange;
+}
+
+li.fancy{
+    color: red;
+    font-style: italic;
+}
+
+.special{
+    color: green;
+}

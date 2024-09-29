@@ -1,0 +1,7 @@
+Fixed Width: 300px
+
+Percentage Width: 50%
+
+Viewport Width: 50vw
+
+Min-Max Width: min-width 100px, max-width 300px

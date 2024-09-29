@@ -1,0 +1,23 @@
+
+flex-shrink
+
+flex-shrink: 1; (default)
+
+1
+2
+3
+
+
+flex-shrink: 0;
+
+1
+2
+3
+
+
+flex-shrink, shrink 2nd child only
+
+1
+2
+3
+

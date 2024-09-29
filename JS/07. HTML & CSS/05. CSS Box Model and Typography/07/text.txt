@@ -1,0 +1,5 @@
+Content-Box (default)
+Width: 300px; Padding: 20px; Border: 5px;
+
+Border-Box
+Width: 300px; Padding: 20px; Border: 5px;

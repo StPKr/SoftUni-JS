@@ -1,0 +1,16 @@
+Display Block
+Paragraph with display block
+Paragraph with display block
+Paragraph with display block
+
+
+Display Inline
+Paragraph with display block
+Paragraph with display block
+Paragraph with display block
+
+
+Display Inline-Block
+Paragraph with display block
+Paragraph with display block
+Paragraph with display block

@@ -1,0 +1,5 @@
+Uniform Margin: 20px
+
+Non-Uniform Margin: 10px 30px 20px 40px (Top Right Bottom Left)
+
+Negative Margin: -20px

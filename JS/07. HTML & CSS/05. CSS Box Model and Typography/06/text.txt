@@ -1,0 +1,7 @@
+Solid Border
+
+Dashed Border
+
+Dotted Border
+
+Mixed Border: Top and Bottom Dashed, Left and Right Solid

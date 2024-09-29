@@ -1,0 +1,38 @@
+
+align-self
+
+align-self: flex-start;
+
+1
+2
+3
+4
+5
+
+
+align-self: center;
+
+1
+2
+3
+4
+5
+
+
+align-self: flex-end;
+
+1
+2
+3
+4
+5
+
+
+align-self: baseline;
+
+1
+2
+3
+4
+5
+

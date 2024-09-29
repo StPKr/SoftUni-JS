@@ -1,0 +1,43 @@
+
+justify-content
+
+justify-content: flex-start; (default)
+
+1
+2
+3
+
+
+justify-content: center;
+
+1
+2
+3
+
+
+justify-content: flex-end;
+
+1
+2
+3
+
+
+justify-content: space-between;
+
+1
+2
+3
+
+
+justify-content: space-around;
+
+1
+2
+3
+
+
+justify-content: space-evenly;
+
+1
+2
+3

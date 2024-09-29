@@ -1,0 +1,19 @@
+h1 {
+    color: blue;
+}
+
+p {
+    font-size: large;
+}
+
+.highlight {
+    background-color: bisque;
+}
+
+ul{
+    list-style-type: lower-greek;
+}
+
+#special{
+    color: violet;
+}

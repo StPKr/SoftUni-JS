@@ -1,0 +1,40 @@
+
+flex-wrap
+
+flex-wrap: nowrap; (default)
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+flex-wrap: wrap;
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+flex-wrap: wrap-reverse;
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
