@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.banner {
+    background-image: url('./images/image1.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 -175px;
+    height: 500px;
+}
+
+.content{
+    color: #FFF;
+    text-align: center;
+    padding: 200px;
+    font-size: 1.5rem;
+}

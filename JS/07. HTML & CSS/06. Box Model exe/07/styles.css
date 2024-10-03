@@ -1,0 +1,13 @@
+span {
+    height: 75px;
+    width: 75px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+i {
+    text-align: center;
+    padding: 20px;
+}
