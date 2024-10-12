@@ -1,0 +1,17 @@
+@Media Queries
+
+Menu item 1
+Menu item 2
+Menu item 3
+Menu item 4
+
+Praesent a metus
+
+Phasellus pretium elit quis tellus posuere euismod. Maecenas sollicitudin facilisis mi, vitae malesuada odio volutpat quis. Etiam lacinia imperdiet ipsum quis finibus. Vivamus semper non tellus eget tincidunt. Mauris mattis fermentum dui, finibus blandit urna imperdiet malesuada. Fusce mi leo, rhoncus varius sodales at, vulputate eu lacus. Nulla mattis eget odio vitae tristique. Sed nec tempor dolor. Nullam sed fermentum nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+ridiculus mus. Aenean porttitor congue imperdiet. Maecenas id gravida erat. Donec rutrum nisi nec est tincidunt vulputate. Donec molestie ex quis lorem maximus hendrerit. Donec mi sem, vulputate a porta nec, mollis id arcu. Phasellus porttitor nisl a nisi maximus placerat. Praesent a metus tincidunt massa tempor eleifend.
+Urna blandit condimentum sit amet sit amet sem. Phasellus eget euismod diam. Quisque odio dolor, sodales sit amet mi at, rhoncus tempor massa. Nullam sit amet tincidunt lorem, ac vestibulum ligula. Pellentesque sollicitudin libero sed maximus egestas.
+
+Nullam sit amet tincidunt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut dignissim felis, sed gravida sapien. Nulla facilisi. Cras dictum, urna vel placerat consequat, nisi lectus molestie purus, nec laoreet ipsum purus ac orci. Phasellus efficitur tellus
+
+2024 All rights reserved.

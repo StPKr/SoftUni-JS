@@ -1,0 +1,28 @@
+Media Feature - Hover
+
+none
+The primary input mechanism cannot hover at all or cannot conveniently hover (e.g., many mobile devices emulate hovering when the user performs an inconvenient long tap), or there is no primary pointing input mechanism.
+
+
+@media (hover: none) {
+body::before {
+display: block;
+content: 'The device does NOT support hover';
+}
+}              
+
+
+
+hover
+The primary input mechanism can conveniently hover over elements.
+
+
+@media (hover: hover) {
+body::before {
+display: block;
+content: 'The device does support hover';
+}
+}              
+
+
+

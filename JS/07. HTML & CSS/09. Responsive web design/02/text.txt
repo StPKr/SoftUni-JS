@@ -1,0 +1,55 @@
+Media Features
+Not complete list
+https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features
+
+hover
+Does the primary input mechanism allow the user to hover over elements? Added in Media Queries Level 4.
+
+
+@media (hover: none) {
+body::before {
+display: block;
+content: 'This device doesn't support hover';
+}
+}
+
+
+
+orientation
+Orientation of the viewport.
+
+
+@media (orientation: landscape) {
+body::before {
+display: block;
+content: 'The device is in landscape orientation';
+}
+}
+
+
+
+width
+Width of the viewport including width of scrollbar.
+
+
+@media (width: 600px) {
+body::before {
+display: block;
+content: 'The viewport width is 600px';
+}
+}
+
+
+
+height
+Height of the viewport.
+
+
+@media (height: 800px) {
+body::before {
+display: block;
+content: 'The viewport height is 800px';
+}
+}
+
+
