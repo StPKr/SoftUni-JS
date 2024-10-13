@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background: #eee;
+    font-family: Lato, sans-serif;
+}
+
+.loginForm {
+    background: #FFF;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px 50px;
+    border-radius: 5px;
+}
+
+fieldset {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 30px 20px;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+legend.main-legend {
+    font-weight: bold;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    width: 40%;
+}
+
+legend.secondary-legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    padding: 0 0 15px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.field label[for="date"] {
+    padding: 0 0 5px 0;
+    border: none;
+}
+
+.loginForm input {
+    border: none;
+    padding: 0 0 5px 0;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+
+.loginForm input[type="submit"] {
+    border: 0;
+    border-radius: 5px;
+    background: #eee;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    height: 55px;
+    margin: 15px 0;
+}
+
+span {
+    font-size: 12px;
+    font-style: italic;
+    color: gray;
+}

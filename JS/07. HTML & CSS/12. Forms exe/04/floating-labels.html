@@ -16,9 +16,22 @@
 
 <body>
     <form action="#" class="loginForm">
-        <input type="name" name="name" id="name" required placeholder="Name">
-        <input type="email" name="email" id="email" required placeholder="Email Address">
-        <input type="submit" value="Login">
+        <fieldset>
+            <legend>Login</legend>
+
+            <p class="field">
+                <label for="email">Email</label>
+                <span>example: test.email@email.com</span>
+            </p>
+
+            <p class="field">
+                <label for="password">Password</label>
+                <span>minimum 6 characters, letters and numbers at least 1 special character</span>
+            </p>
+
+            <input type="submit" value="Login">
+
+        </fieldset>
     </form>
 </body>
 
