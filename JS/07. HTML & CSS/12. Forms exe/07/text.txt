@@ -1,0 +1,19 @@
+
+
+Header
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere sunt dignissimos nisi blanditiis iste hic expedita modi eos unde. Quam architecto consequatur odit? Corporis ea molestias iusto iste, earum laborum.
+
+
+
+Banner
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere sunt dignissimos nisi blanditiis iste hic expedita modi eos unde. Quam architecto consequatur odit? Corporis ea molestias iusto iste, earum laborum.
+
+
+
+Contacts
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere sunt dignissimos nisi blanditiis iste hic expedita modi eos unde. Quam architecto consequatur odit? Corporis ea molestias iusto iste, earum laborum.
+
+
+
+Footer
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere sunt dignissimos nisi blanditiis iste hic expedita modi eos unde. Quam architecto consequatur odit? Corporis ea molestias iusto iste, earum laborum.

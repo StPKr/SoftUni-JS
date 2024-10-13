@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The Form Element</h1>
+    <p>The form element represents a document section containing interactive controls for submitting
+        information.
+    </p>
+    <h2>Attribute - method="get" (default)</h2>
+    <p>Form data appended to the action URL with a ? separator.</p>
+    <div>
+        <pre><code>
+    &lt;form action=&quot;#&quot; method=&quot;get&quot;&gt;
+        &lt;input type=&quot;search&quot;&gt;
+    &lt;/form&gt;
+                    </code></pre>
+    </div>
+    <form action="#" method="get">
+        <label for="search">Search</label>
+        <input type="search">
+        <input type="submit">
+    </form>
+    <h2>Attribute - method="post" (default)</h2>
+    <p>Form data sent as the request body.</p>
+    <div>
+        <pre><code>
+    &lt;form action=&quot;#&quot; method=&quot;post&quot;&gt;
+        &lt;input type=&quot;search&quot;&gt;
+    &lt;/form&gt;
+                    </code></pre>
+    </div>
+    <form action="#" method="post">
+        <label for="search">Search</label>
+        <input type="search">
+        <input type="submit">
+    </form>
+</body>
+
+</html>

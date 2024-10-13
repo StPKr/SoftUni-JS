@@ -1,0 +1,32 @@
+
+Registration
+
+
+Login information
+
+
+Email
+
+example: john.doe@gmail.com
+
+
+
+Password
+
+minimum 6 characters, letters and numbers, at least 1 special character
+
+
+
+
+
+Additional information
+
+
+Date of Birth
+
+example: john.doe@gmail.com
+
+
+
+
+

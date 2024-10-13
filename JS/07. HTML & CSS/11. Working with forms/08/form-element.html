@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fieldset</h1>
+    <p>The fieldset element is used to group several controls as well as labels within a web form.
+    </p>
+    <div>
+        <pre><code>
+    &lt;fieldset&gt;
+        &lt;legend&gt;Login&lt;/legend&gt;
+        &lt;p class=&quot;field&quot;&gt;
+            &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;username&quot; id=&quot;username&quot;&gt;
+        &lt;/p&gt;
+        &lt;p class=&quot;field&quot;&gt;
+            &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
+            &lt;input type=&quot;password&quot; name=&quot;password&quot; id=&quot;password&quot;&gt;
+        &lt;/p&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Login&quot;&gt;
+    &lt;/fieldset&gt;
+            </code></pre>
+            
+    </div>
+    <fieldset>
+        <legend>Login</legend>
+        <p class="field">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+        </p>
+        <p class="field">
+            <label for="password">Passowrd</label>
+            <input type="password" name="password" id="password">
+        </p>
+        <input type="submit" value="Login">
+    </fieldset>
+</body>
+
+</html>

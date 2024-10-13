@@ -1,0 +1,12 @@
+Select
+The select element represents a control that provides a menu of options.
+
+Choose a pet:
+
+--Please choose an option--
+Dog
+Cat
+Hamster
+Parrot
+Spider
+Goldfish

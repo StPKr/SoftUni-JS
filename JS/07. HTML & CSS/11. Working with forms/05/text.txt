@@ -1,0 +1,2 @@
+Checkbox
+A check box allowing single values to be selected/deselected.
