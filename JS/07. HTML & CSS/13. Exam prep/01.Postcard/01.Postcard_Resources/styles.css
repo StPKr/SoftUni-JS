@@ -1,0 +1,80 @@
+/* latin */
+@font-face {
+    font-family: 'Gochi Hand';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/gochihand/v23/hES06XlsOjtJsgCkx1Pkfon_-w.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gochi Hand', Fallback, sans-serif;
+    background-color: rgb(238, 238, 238);
+}
+
+.container {
+    width: 900px;
+    height: 730px;
+    margin: 50px auto;
+    padding: 0.05px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.upper-part {
+    background-image: url('./images/nature.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 20px;
+    padding: 10px 20px;
+    height: 500px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.postcard-content {
+    background-color: rgb(243, 243, 243);
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: auto;
+}
+
+.postcard-content>h2 {
+    margin-bottom: 15px;
+}
+
+.bottom-border {
+    border-bottom: 1px solid #ccc;
+}
+
+.lower-part {
+    margin: 20px 40px;
+}
+
+.lower-part>* {
+    padding: 5px;
+}
+
+.lower-part>h2 {
+    margin: 0 0 5px 0;
+}
+
+.lower-part>p{
+    font-size: 20px;
+    color: gray;
+}
+
+h2 {
+    margin: 0 0 5px 0;
+}
