@@ -51,9 +51,10 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    margin: 0 40px 0 20px;
+    margin: 0 20px;
     padding: 15px;
     text-align: center;
+    width: calc(100% - 80px);
 }
 
 .postcard-content>h2 {
