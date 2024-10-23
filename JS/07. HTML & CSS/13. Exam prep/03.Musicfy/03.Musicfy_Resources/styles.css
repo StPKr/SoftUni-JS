@@ -212,7 +212,7 @@ table td:first-child {
 }
 
 td {
-    padding: 0 20px 0 0;
+    padding: 0 20px 0 5px;
 }
 
 td > img{
