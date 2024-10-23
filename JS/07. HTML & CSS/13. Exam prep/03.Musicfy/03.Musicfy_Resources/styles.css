@@ -183,15 +183,42 @@ main {
 .lower-segment {
     margin: auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lower-segment>p {
+    font-size: 10px;
 }
 
 table {
     width: 60%;
     margin: auto;
-    font-size: 12px;
-    display: flex;
+    font-size: 11px;
+    border-collapse: collapse;
 }
 
+table tr:nth-child(odd) {
+    background-color: #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(145, 250, 145);
+}
+
+table td:first-child {
+    text-align: left;
+}
+
+td {
+    padding: 0 20px 0 0;
+}
+
+td > img{
+    width: 12px;
+    padding: 3px 0;
+}
 
 .main-footer {
     position: absolute;
@@ -201,4 +228,5 @@ table {
     text-align: center;
     padding: 15px 0;
     color: white;
+    font-size: 11px;
 }
