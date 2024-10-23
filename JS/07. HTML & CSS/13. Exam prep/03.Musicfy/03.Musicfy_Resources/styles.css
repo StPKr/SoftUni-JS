@@ -19,6 +19,10 @@ a {
     text-decoration: none;
 }
 
+body {
+    background-color: #eee;
+}
+
 .container {
     width: 900px;
     margin: 0 auto;
@@ -147,8 +151,47 @@ main {
 
 .lower-part {
     flex: 1 1 79%;
-    background-color: aqua;
+    background-color: white;
 }
+
+.middle-segment {
+    display: flex;
+    width: 100%;
+    margin: 250px auto 50px;
+    gap: 50px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 11px;
+    flex: 1 1 35%;
+    margin: 0 0 0 40px;
+}
+
+.list>h4 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.logo>img {
+    width: 200px;
+    margin: 0 50px 0 0;
+}
+
+.lower-segment {
+    margin: auto;
+    text-align: center;
+}
+
+table {
+    width: 60%;
+    margin: auto;
+    font-size: 12px;
+    display: flex;
+}
+
 
 .main-footer {
     position: absolute;
