@@ -1,9 +1,9 @@
 <div class="wrapper">
-    <p>This is my user list:</p>
-    
-    @for (user of usersList; track $index){
-    <app-user-item [user]="user" />
-    }
+  <p>This is my user list:</p>
 
-    <button (click)="(refreshList)">Refresh List</button>
+  @for (user of usersList; track $index) {
+  <app-user-item [user]="user" />
+  }
+
+  <button (click)="refreshList()">Refresh List</button>
 </div>
