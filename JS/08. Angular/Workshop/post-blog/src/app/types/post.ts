@@ -1,5 +1,5 @@
-import { Theme } from "../types/theme"
-import { User } from "../types/user"
+import { Theme } from "./theme"
+import { User } from "./user"
 
 export interface Post {
     "likes": string[],
