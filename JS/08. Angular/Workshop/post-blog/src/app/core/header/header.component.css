@@ -1,5 +1,6 @@
 header {
-    background:#234465 
+    background-color: #234465;
+    color: white;
 }
 
 header ul {
@@ -16,12 +17,10 @@ header ul span {
     padding: 0.5em;
 }
 
-
-
 header li {
     list-style: none;
-    margin: .35em;
-    padding: 0 .95em;
+    margin: 0.35em;
+    padding: 0.5em 1em;
     background-color: #ff9f00;
     width: 15vw;
     text-align: center;
@@ -39,26 +38,28 @@ header a {
     cursor: pointer;
 }
 
-
+nav {
+    border-top: 1px solid #00acf4;
+}
 
 .logo {
     font-size: 2em;
     color: white;
-    padding-bottom: 0;
     text-align: center;
 }
 
 .logo-wrap {
-display: flex;
-align-items: center;
-justify-content: center;
+    font-family: 'Parisienne', cursive;
+    letter-spacing: 0.5em;
     margin: 0.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-wrap > img {
     height: 15vh;
     margin-right: 3vw;
-    margin-left: -4vw;
 }
 
 .mini-navbar-wrap {
@@ -87,5 +88,4 @@ justify-content: center;
   }
   .mini-navbar ul li:hover{
       scale: 1.1;
-      
   }
