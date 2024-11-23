@@ -3,5 +3,47 @@
 
 <hr />
 
-<div routerLink="/login">Go to Login page</div>
-<div routerLink="/register">Go to Register page</div>
+<div appMyRouterLink="/login">Go to Login page</div>
+<div appMyRouterLink="/register">Go to Register page</div>
+
+<hr />
+
+<p [ngStyle]="{width: widthInPercentage, backgroundColor: 'yellow'}">Lorem ipsum dolor sit amet. {{randomPercentage}}%
+</p>
+<p [ngClass]="{highlight: isPercentageAbove50}">Lorem ipsum dolor sit amet.</p>
+
+<hr />
+
+<div *ngIf="!true">Simple Div 1</div>
+<div *ngIf="true">Simple Div 2</div>
+
+<hr />
+
+<ng-template [ngIf]="true">
+    <div>
+        <div>Simple Div 3</div>
+        <div>Simple Div 4</div>
+    </div>
+
+</ng-template>
+
+<hr />
+
+<!-- <ul>
+    @for(item of [1,2,3,4]; track $index){
+    <li>{{item}} item</li>
+    }
+</ul>
+
+<ul>
+    <li *ngFor="let item of [1,2,3,4]">{{item}} - item</li>
+</ul> -->
+
+<!-- Custom Directive -->
+<button (click)="toggleIsShown()">Toggle is Shown</button>
+<div *appMyStructural="isShown">#1 - Testing Custom Structural Directives</div>
+
+<ng-template [appMyStructural]="isShown" let-testMe="myCustomValue">
+    <div>#2 - Testing Custom Structural Directives</div>
+    <div>let-testMe: {{testMe}}</div>
+</ng-template>
