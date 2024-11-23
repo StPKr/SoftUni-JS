@@ -26,6 +26,10 @@ export class ApiService {
     return this.http.get<Theme[]>(`${apiUrl}/themes`);
   }
 
+  getBooks() {
+    return this.http.get('http://localhost:3030/data/books');
+  }
+
   getSingleTheme(id: string) {
     const { apiUrl } = environment;
     return this.http.get<Theme>(`${apiUrl}/themes/${id}`);

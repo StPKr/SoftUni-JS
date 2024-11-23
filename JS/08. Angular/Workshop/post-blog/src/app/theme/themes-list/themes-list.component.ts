@@ -15,12 +15,12 @@ export class ThemesListComponent {
   themes: Theme[] = [];
   isLoading = true;
 
-  constructor(private apiServece: ApiService) {
+  constructor(private apiService: ApiService) {
 
   }
 
   ngOnInit() {
-    this.apiServece.getThemes().subscribe(themes => {
+    this.apiService.getThemes().subscribe(themes => {
       this.themes = themes;
       this.isLoading = false;
     });
