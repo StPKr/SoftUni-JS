@@ -1,5 +1,5 @@
 <div class="container">
-    <form class="register" action="" method="post">
+    <form class="register" [formGroup]="form" (ngSubmit)="register()">
 
         <fieldset>
             <h2>Registration Form</h2>
@@ -7,16 +7,28 @@
             <!-- username -->
             <p class="field field-icon">
                 <label for="username"><span><i class="fas fa-user"></i></span></label>
-                <input class="input-error" type="text" name="username" id="username" placeholder="Johny">
+                <input
+                    [class]="(form.get('username')?.touched && form.get('username')?.errors?.['required']) || (form.get('username')?.touched && form.get('username')?.errors?.['minlength']) ? 'input-error' : ''"
+                    type="text" name="username" id="username" placeholder="Johny" formcontrolName="username">
             </p>
+
+            @if(form.get('username')?.touched){
+            @if(form.get('username')?.errors?.['required']){
             <p class="error">
                 Username is required!
             </p>
+            }
+            @if(form.get('username')?.errors?.['minlength']){
+            <p class="error">
+                Username must be at least 5 characters!
+            </p>
+            }
+            }
 
             <!-- email -->
             <p class="field field-icon">
                 <label for="email"><span><i class="fas fa-envelope"></i></span></label>
-                <input type="email" name="email" id="email" placeholder="john.doe@gmail.com">
+                <input type="email" name="email" id="email" placeholder="john.doe@gmail.com" formcontrolName="email">
             </p>
             <!-- <p class="error">
                 Email is required!
@@ -28,7 +40,7 @@
             <!-- telephone -->
             <p class="field field-icon">
                 <label for="tel"><span><i class="fas fa-phone"></i></span></label>
-                <select name="select-tel" id="select-tel" class="tel">
+                <select name="select-tel" id="select-tel" class="tel" formcontrolName="tel">
                     <option value="00359">+359</option>
                 </select>
                 <input type="text" name="tel" id="tel" placeholder="885 888 888">
@@ -37,7 +49,7 @@
             <!-- password -->
             <p class="field field-icon">
                 <label for="password"><span><i class="fas fa-lock"></i></span></label>
-                <input type="password" name="password" id="password" placeholder="******">
+                <input type="password" name="password" id="password" placeholder="******" formcontrolName="password">
             </p>
             <!-- <p class="error">
                 Password is required!
@@ -49,11 +61,13 @@
             <!-- rePassword -->
             <p class="field field-icon">
                 <label for="rePassword"><span><i class="fas fa-lock"></i></span></label>
-                <input type="password" name="rePassword" id="rePassword" placeholder="******">
+                <input type="password" name="rePassword" id="rePassword" placeholder="******"
+                    formcontrolName="rePassword">
             </p>
             <!-- <p class="error">Repeat Password does not match password!</p> -->
 
-            <button disabled>Create Account</button>
+            <button [disabled]="form.invalid" [style]="{backgroundColor: form.invalid ? 'grey' : '#234465'}">Create
+                Account</button>
 
             <p class="text-center">
                 Have an account?
