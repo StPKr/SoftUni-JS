@@ -1,0 +1,10 @@
+<router-outlet />
+<div>{{user | json | uppercase}}</div>
+<!-- user.json().uppercase() -->
+
+<div>Reduce Fn: {{user.grades | reduce : sum : 0}}</div>
+<button (click)="addProperty()">Add Property</button>
+
+<div>Promise {{p | async}}</div>
+<div>Promise {{time$ | async | date : 'hh:mm:ss'}}</div>
+<hr />
