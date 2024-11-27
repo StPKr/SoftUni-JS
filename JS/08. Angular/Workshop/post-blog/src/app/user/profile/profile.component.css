@@ -24,7 +24,7 @@
     height: 7em;
     margin: auto;
     display: block;
-    border-radius: 50%; 
+    border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -69,13 +69,14 @@
     transform: scale(1.05);
 }
 
-.flex > input, .flex > div {
+.flex>input,
+.flex>div {
     width: 55%;
     text-align: left;
     margin: 0.5em;
 }
 
-.flex > div > input {
+.flex>div>input {
     width: 90%;
     padding: 0.4em;
     border: 1px solid #999;
@@ -92,7 +93,7 @@
 }
 
 .red-button {
-    background-color: #d9534f;
+    background-color: #d9534f !important;
     color: white;
     border-radius: 0.5em;
     padding: 0.5em 1.5em;
@@ -103,4 +104,16 @@
     color: white;
     border-radius: 0.5em;
     padding: 0.5em 1.5em;
+    margin-left: 10x;
+}
+
+.btn-wrapper {
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    color: red;
 }

@@ -57,7 +57,7 @@ nav {
     justify-content: center;
 }
 
-.logo-wrap > img {
+.logo-wrap>img {
     height: 15vh;
     margin-right: 3vw;
 }
@@ -76,16 +76,21 @@ nav {
 .mini-navbar ul {
     margin-bottom: 60px;
     margin-right: -50px;
-  }
-  
-  .mini-navbar ul li {
-      background-color: #ff9f00;
-      width: 15vw;
-      text-align: center;
-      padding: 5px;
-      border-radius: 20px;
-      text-shadow: 1px 1px rgb(95, 94, 94);
-  }
-  .mini-navbar ul li:hover{
-      scale: 1.1;
-  }
+}
+
+.mini-navbar ul li {
+    background-color: #ff9f00;
+    width: 15vw;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    text-shadow: 1px 1px rgb(95, 94, 94);
+}
+
+.mini-navbar ul li:hover {
+    scale: 1.1;
+}
+
+.user-profile-btn {
+    min-width: fit-content !important;
+}

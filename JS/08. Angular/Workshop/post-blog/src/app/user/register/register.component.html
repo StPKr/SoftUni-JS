@@ -17,11 +17,13 @@
             </p>
 
             @if(form.get('username')?.touched){
+            @if(form.get('username')?.errors?.['required']){
             <p class="error">Username is required!</p>
             }
             <!--  -->
             @if(form.get('username')?.errors?.['minlength']){
             <p class="error">Username must be at least 5 characters!</p>
+            }
             }
 
             <!-- email -->
