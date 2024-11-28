@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { interval, map } from 'rxjs';
 import { ReducePipe } from './reduce.pipe';
+import { UserService } from './user.service';
+import { httpInterceptor } from './http.interceptor';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ReducePipe],
+  imports: [RouterOutlet, CommonModule, ReducePipe, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,6 +17,8 @@ export class AppComponent {
   title = 'demo-app';
 
   user = { name: 'Petko', age: 23, grades: [5, 6, 5, 6, 6] };
+
+  constructor(private userService: UserService) { }
 
   sum(acc: number, cur: number): number {
     return acc + cur;
@@ -33,4 +37,8 @@ export class AppComponent {
   });
 
   time$ = interval(1000).pipe(map(() => new Date()));
+
+  loadUsers() {
+    this.userService.loadUsers();
+  }
 }

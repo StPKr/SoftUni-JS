@@ -1,4 +1,9 @@
+<div><a routerLink="/">Home</a></div>
+<div><a routerLink="/lazy">Lazy</a></div>
+
 <router-outlet />
+
+<hr />
 <div>{{user | json | uppercase}}</div>
 <!-- user.json().uppercase() -->
 
@@ -8,3 +13,5 @@
 <div>Promise {{p | async}}</div>
 <div>Promise {{time$ | async | date : 'hh:mm:ss'}}</div>
 <hr />
+
+<button (click)="loadUsers()">Load Users</button>
