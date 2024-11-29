@@ -11,7 +11,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes,
       //Configurations
       withPreloading(PreloadAllModules),
-      withDebugTracing(), //for debugging
+      // withDebugTracing(), //for debugging
     ),
     provideHttpClient(withInterceptors([httpInterceptor])),
   ]

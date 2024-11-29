@@ -38,6 +38,14 @@ export class AppComponent {
 
   time$ = interval(1000).pipe(map(() => new Date()));
 
+  get isLoading$() {
+    return this.userService.isLoading$;
+  }
+
+  get user$() {
+    return this.userService.user$;
+  }
+
   loadUsers() {
     this.userService.loadUsers();
   }

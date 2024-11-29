@@ -15,3 +15,9 @@
 <hr />
 
 <button (click)="loadUsers()">Load Users</button>
+<hr />
+@if (isLoading$ | async){
+<div>Loading...</div>
+}@else{
+<div>{{user$ | async | json}}</div>
+}
