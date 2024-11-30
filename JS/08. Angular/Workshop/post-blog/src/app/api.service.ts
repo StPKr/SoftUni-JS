@@ -12,9 +12,8 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getPosts(limit?: number) {
-    const { apiUrl } = environment;
 
-    let url = `${apiUrl}/posts`;
+    let url = `/api/posts`;
     if (limit) {
       url += `?limit=${limit}`
     }
@@ -22,8 +21,7 @@ export class ApiService {
   }
 
   getThemes() {
-    const { apiUrl } = environment;
-    return this.http.get<Theme[]>(`${apiUrl}/themes`);
+    return this.http.get<Theme[]>(`/api/themes`);
   }
 
   getBooks() {
@@ -31,13 +29,14 @@ export class ApiService {
   }
 
   getSingleTheme(id: string) {
-    const { apiUrl } = environment;
-    return this.http.get<Theme>(`${apiUrl}/themes/${id}`);
+    return this.http.get<Theme>(`/api/themes/${id}`);
   }
 
   createTheme(themeName: string, postText: string) {
-    const { apiUrl } = environment;
     const payload = { themeName, postText };
-    return this.http.post<Theme>(`${apiUrl}/themes`, payload);
+    return this.http.post<Theme>(`/api/themes`, payload);
   }
+
+  //update http.put
+  //delete http.delete
 }
