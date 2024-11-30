@@ -21,7 +21,7 @@ export class ApiService {
   }
 
   getThemes() {
-    return this.http.get<Theme[]>(`/api/themes32`);
+    return this.http.get<Theme[]>(`/api/themes`);
   }
 
   getBooks() {
