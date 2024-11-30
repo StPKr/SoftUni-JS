@@ -6,11 +6,11 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ErrorMessageService {
   private apiError$$ = new BehaviorSubject(null);
-  private apiError$ = this.apiError$$.asObservable();
+  public apiError$ = this.apiError$$.asObservable();
 
   constructor() { }
 
-  setErrro(error: any): void {
+  setError(error: any): void {
     this.apiError$$.next(error);
   }
 }
