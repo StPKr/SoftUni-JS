@@ -12,7 +12,7 @@
                 <a href="#">
                     <h3>{{post.themeId.themeName}}</h3>
                     <p>{{post.userId.username}}</p>
-                    <p><span>{{post.created_at}}</span></p>
+                    <p><span>{{post.created_at | elapsedTime}}</span></p>
                 </a>
             </div>
             }

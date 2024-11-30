@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import moment from 'moment';
 
 @Pipe({
   name: 'elapsedTime',
@@ -6,8 +7,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ElapsedTimePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(date: string, ...args: unknown[]): unknown {
+    console.log({ date });
+
+    return moment(date).fromNow();
   }
 
 }
