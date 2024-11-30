@@ -3,11 +3,12 @@ import { ApiService } from '../../api.service';
 import { Theme } from '../../types/theme';
 import { LoaderComponent } from '../../shared/loader/loader.component';
 import { RouterLink } from '@angular/router';
+import { SlicePipe } from '../../shared/pipes/slice.pipe';
 
 @Component({
   selector: 'app-themes-list',
   standalone: true,
-  imports: [LoaderComponent, RouterLink],
+  imports: [LoaderComponent, RouterLink, SlicePipe],
   templateUrl: './themes-list.component.html',
   styleUrl: './themes-list.component.css'
 })
