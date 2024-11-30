@@ -24,7 +24,13 @@ export const routes: Routes = [
             { path: ':themeId', component: CurrentThemeComponent, canActivate: [AuthGuard] },
         ]
     },
-    { path: 'add-theme', component: AddThemeComponent, canActivate: [AuthGuard] },
+    {
+        path: 'add-theme',
+        loadComponent: () =>
+            import('./theme/add-theme/add-theme.component').then(
+                (c) => c.AddThemeComponent//lazy loading
+            ), canActivate: [AuthGuard]
+    },
 
     { path: 'error', component: ErrorMessageComponent },
     { path: '404', component: PageNotFoundComponent },
