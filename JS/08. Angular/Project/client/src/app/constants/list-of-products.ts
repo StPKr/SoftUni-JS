@@ -1,0 +1,72 @@
+export const exampleProducts = [
+    {
+        name: "Enchanted Wand",
+        description: "A magical wand that enhances spellcasting abilities.",
+        price: 150,
+        seller: "MysticMage99",
+        date: new Date(2024, 10, 15), // November 15, 2024
+    },
+    {
+        name: "Potion of Healing",
+        description: "Restores 50 HP instantly. Perfect for adventurers.",
+        price: 25,
+        seller: "HealerJoe",
+        date: new Date(2024, 10, 10),
+    },
+    {
+        name: "Crystal Ball",
+        description: "Used for scrying and foreseeing future events.",
+        price: 300,
+        seller: "SeeressLuna",
+        date: new Date(2024, 9, 25),
+    },
+    {
+        name: "Ring of Invisibility",
+        description: "Grants temporary invisibility when worn.",
+        price: 500,
+        seller: "ShadowSeller",
+        date: new Date(2024, 8, 30),
+    },
+    {
+        name: "Phoenix Feather Quill",
+        description: "A magical quill that never runs out of ink.",
+        price: 100,
+        seller: "WriterWizard",
+        date: new Date(2024, 9, 5),
+    },
+    {
+        name: "Book of Ancient Spells",
+        description: "Contains rare and forgotten spells of old.",
+        price: 750,
+        seller: "ArcaneArchivist",
+        date: new Date(2024, 10, 1),
+    },
+    {
+        name: "Amulet of Protection",
+        description: "Provides a magical shield against attacks.",
+        price: 200,
+        seller: "KnightErrant",
+        date: new Date(2024, 8, 20),
+    },
+    {
+        name: "Elven Cloak",
+        description: "A cloak that blends seamlessly with the surroundings.",
+        price: 400,
+        seller: "ForestFolk",
+        date: new Date(2024, 9, 10),
+    },
+    {
+        name: "Bag of Holding",
+        description: "A small bag with infinite storage space.",
+        price: 250,
+        seller: "TreasureTroll",
+        date: new Date(2024, 10, 18),
+    },
+    {
+        name: "Dragon Scale Armor",
+        description: "Impenetrable armor crafted from dragon scales.",
+        price: 1200,
+        seller: "DragonMaster",
+        date: new Date(2024, 7, 15),
+    },
+];

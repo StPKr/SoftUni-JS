@@ -1,1 +1,10 @@
-<p>home works!</p>
+<div class="wrapper">
+    <div class="title">
+        <h2>Latest products</h2>
+    </div>
+    <div class="product-list">
+        @for(product of products; track $index){
+        <app-product [product]="product" />
+        }
+    </div>
+</div>

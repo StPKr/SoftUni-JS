@@ -1,0 +1,29 @@
+header {
+    background-color: #a663cc;
+    /* background-image: linear-gradient(90deg,#797CC1, #B587C5); */
+    color: #b2ffd6;
+    text-shadow: 1px 1px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo-wrapper>img {
+    width: 75px;
+    height: 75px;
+}
+
+.navbar-wrapper {
+    align-items: center;
+}
+
+nav>ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}

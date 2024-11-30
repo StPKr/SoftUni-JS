@@ -1,0 +1,15 @@
+.wrapper {
+    background-image: url('../../../public/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+app-product {
+    width: 33%;
+}
