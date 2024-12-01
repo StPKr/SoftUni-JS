@@ -121,7 +121,7 @@ body {
 
 
 
-h2 {
+h2, h3 {
     text-align: center;
     border-bottom: 1px dashed #999;
 }
@@ -133,6 +133,8 @@ span {
 button {
     background-color: #4ebced;
     color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 
 button:hover {

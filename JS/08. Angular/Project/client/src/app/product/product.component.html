@@ -3,7 +3,7 @@
     <p>{{ product.description }}</p>
     <p><strong>Price:</strong> ${{ product.price }}</p>
     <p><strong>Seller:</strong> {{ product.seller }}</p>
-    <p><strong>Added on:</strong> {{ product.date | date: 'longDate' }}</p>
+    <p><strong>Added on:</strong> {{ product.date | date: 'dd-MMM-yyyy' }}</p>
     <button>Details</button>
     <button>Edit</button>
     <button>Delete</button>

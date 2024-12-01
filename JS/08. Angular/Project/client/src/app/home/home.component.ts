@@ -1,18 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { exampleProducts } from '../constants/list-of-products';
-import { ProductComponent } from '../product/product.component';
+import { ProductChunkComponent } from "../product-chunk/product-chunk.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProductComponent],
+  imports: [ProductChunkComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
-  products = exampleProducts;
+export class HomeComponent implements OnInit {
+  latestProducts: any = [];
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.latestProducts = exampleProducts
+      .sort((a, b) => +new Date(b.date) - +new Date(a.date))
+      .slice(0, 5);
+  }
 }

@@ -4,10 +4,12 @@ import { TestComponent } from './test/test.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
+import { CatalogComponent } from './catalog/catalog.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
+    { path: 'catalog', component: CatalogComponent },
 
     //User
     { path: 'login', component: LoginComponent },

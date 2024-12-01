@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="title">
+        <h2>All products</h2>
+    </div>
+    <div class="sorting">
+        <label for="sort">Sort By:</label>
+        <select id="sort" #sortDropdown (change)="onSortChange(sortDropdown.value)">
+            <option value="">Select</option>
+            <option value="price">Price (Low to High)</option>
+            <option value="date">Date (Newest First)</option>
+            <option value="product">Product (A-Z)</option>
+            <option value="seller">Seller (A-Z)</option>
+        </select>
+    </div>
+    <div class="product-list">
+        @for(product of products; track $index){
+        <app-product [product]="product" />
+        }
+    </div>
+</div>

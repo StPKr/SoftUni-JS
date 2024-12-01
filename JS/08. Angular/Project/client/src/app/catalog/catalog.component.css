@@ -1,0 +1,39 @@
+.wrapper {
+    background-image: url('../../../public/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+app-product {
+    width: 33%;
+}
+
+.sorting {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+}
+
+.sorting label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #b2ffd6;
+    text-shadow: 1px 1px black;
+}
+
+.sorting select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #b2ffd6;
+    background-color: #3c096c;
+    color: #b2ffd6;
+}

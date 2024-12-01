@@ -1,10 +1,61 @@
 <div class="wrapper">
-    <div class="title">
-        <h2>Latest products</h2>
+    <div class="welcome">
+        <h2>Welcome to Magic Bazaar!</h2>
+        <p>
+            Welcome to **Magic Bazaar**, the premier marketplace for magical artifacts, enchanted tools, and
+            mystical curiosities.
+            Our platform connects wizards, adventurers, and collectors from all corners of the realm. Whether you’re
+            looking
+            for a staff of power, a cloak of invisibility, or just a simple potion of luck, you’ve come to the right
+            place.
+            Dive into our catalog and explore a treasure trove of enchantments.
+        </p>
+        <p>
+            At Magic Bazaar, we take pride in fostering a friendly and trustworthy community. We encourage sellers
+            to showcase
+            unique and authentic items while offering buyers a seamless shopping experience. Don’t forget to check
+            out the latest
+            listings to find rare items before they vanish!
+        </p>
     </div>
-    <div class="product-list">
-        @for(product of products; track $index){
-        <app-product [product]="product" />
-        }
+    <div class="sections">
+        <div class="left-section">
+            <h3>Site Rules</h3>
+            <ul>
+                <li>Respect all users and communicate politely at all times.</li>
+                <li>Counterfeit magical items are strictly forbidden.</li>
+                <li>Provide accurate descriptions and clear images of your listings.</li>
+                <li>Maintain a professional tone in all transactions.</li>
+                <li>All sales are final. Ensure you’re satisfied before completing a purchase.</li>
+                <li>Report any suspicious activity or misconduct immediately.</li>
+                <li>Magic Bazaar is not responsible for curses or side effects caused by misused items.</li>
+                <li>Sellers must verify the authenticity of their magical items.</li>
+                <li>Avoid listing dangerous or prohibited items like cursed objects or forbidden spells.</li>
+                <li>Adhere to local magical trade laws when buying or selling.</li>
+            </ul>
+            <p>
+                By participating in Magic Bazaar, you agree to follow these rules and contribute to a vibrant and
+                respectful magical
+                marketplace. Happy trading!
+            </p>
+            <p>
+                **New Here?** <a style="color: #240046; text-decoration: underline;" routerLink="/register">Create an
+                    account</a> to start buying and selling enchanted items today. Returning adventurers can
+                log in to access their personal collection of trades and wishlists.
+            </p>
+            <p>
+                Remember, the early bird gets the worm—or in this case, the most powerful magical relics. Don’t miss out
+                on exclusive
+                limited-time offers and rare auctions. Explore Magic Bazaar and let your magical journey begin!
+            </p>
+        </div>
+        <div class="right-section">
+            <h3>Latest Items</h3>
+            <div class="latest-products">
+                @for(product of latestProducts; track $index){
+                <app-product-chunk [product]="product" />
+                }
+            </div>
+        </div>
     </div>
 </div>
