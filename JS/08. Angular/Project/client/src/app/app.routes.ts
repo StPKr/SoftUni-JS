@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { TestComponent } from './test/test.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { LoginComponent } from './user/login/login.component';
+import { RegisterComponent } from './user/register/register.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -10,7 +11,7 @@ export const routes: Routes = [
 
     //User
     { path: 'login', component: LoginComponent },
-    { path: 'register', component: LoginComponent },
+    { path: 'register', component: RegisterComponent },
 
     //User end
     

@@ -1,0 +1,65 @@
+.registerForm {
+    background: #FFF;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    max-width: 40%;
+    margin: 30px auto;
+    padding: 30px 50px;
+    border-radius: 5px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+legend {
+    font-weight: bold;
+    border-bottom: 1px solid silver;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+}
+
+.registerForm label::after {
+    content: '*';
+    color: #FF0000;
+    padding-left: 5px;
+}
+
+.registerForm input {
+    border: 2px solid silver;
+    padding: 5px;
+    border-radius: 5px;
+    height: 45px;
+}
+
+.registerForm input[type="submit"] {
+    border: 0;
+    background: #a663cc;
+    color: #b2ffd6;
+    text-shadow: 1px 1px black;
+    height: 55px;
+    margin: 15px 0;
+}
+
+.registerForm input[type="submit"]:hover {
+    cursor: pointer;
+    background: #3c096c;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.registerForm input:focus {
+    border-color: rebeccapurple;
+    outline: none;
+}
