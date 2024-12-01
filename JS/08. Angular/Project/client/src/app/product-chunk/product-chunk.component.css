@@ -25,7 +25,15 @@
     color: #555;
 }
 
-.chunk-wrapper{
+.chunk-wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+.chunk-wrapper button {
+    background-color: #ff8500;
+}
+
+.chunk-wrapper button:hover {
+    background-color: #ff6d00;
 }

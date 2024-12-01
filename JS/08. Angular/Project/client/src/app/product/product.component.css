@@ -23,3 +23,11 @@
     font-size: 1rem;
     color: #555;
 }
+
+.product-btns button {
+    background-color: #ff8500;
+}
+
+.product-btns button:hover {
+    background-color: #ff6d00;
+}
