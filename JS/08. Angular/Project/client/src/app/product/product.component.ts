@@ -18,7 +18,7 @@ export class ProductComponent {
     description: string;
     price: number;
     seller: string;
-    date: number;
+    _createdOn: number;
     _id: string;
   };
 }

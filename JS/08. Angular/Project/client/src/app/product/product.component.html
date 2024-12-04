@@ -5,7 +5,7 @@
         <p>{{ product.description }}</p>
         <p><strong>Price:</strong> ${{ product.price }}</p>
         <p><strong>Seller:</strong> {{ product.seller }}</p>
-        <p><strong>Added on:</strong> {{ product.date  }}</p>
+        <p><strong>Added on:</strong> {{ product._createdOn | epochToDate }}</p>
     </div>
     <div class="product-btns">
         <button>Details</button>

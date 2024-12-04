@@ -27,7 +27,7 @@ export class CatalogComponent implements OnInit {
     if (option === 'price') {
       this.products.sort((a: any, b: any) => a.price - b.price);
     } else if (option === 'date') {
-      this.products.sort((a: any, b: any) => +new Date(b.date) - +new Date(a.date));
+      this.products.sort((a: any, b: any) => b._createdOn - a._createdOn);
     } else if (option === 'seller') {
       this.products.sort((a: any, b: any) => a.seller.localeCompare(b.seller));
     } else if (option === 'product') {
