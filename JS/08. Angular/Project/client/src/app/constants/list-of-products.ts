@@ -4,7 +4,7 @@ export const exampleProducts = [
         description: "A magical wand that enhances spellcasting abilities.",
         price: 150,
         seller: "MysticMage99",
-        date: new Date(2024, 10, 15), // November 15, 2024
+        date: new Date(2024, 10, 15),
     },
     {
         name: "Potion of Healing",

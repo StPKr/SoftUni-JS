@@ -1,13 +1,13 @@
 import { User } from "./user";
 
 export interface Product {
-    "comments": Comment[],
-    "_id": string,
+    "_ownerId": string,
     "name": string,
     "description": string,
-    "price": string,
-    "seller": User,
-    "created_at": string,
+    "price": number,
+    "seller": string,
+    "date": number,
+    "_id": string,
     "updatedAt": string,
-    "__v": Number,
+    "comments": Comment[],
 }

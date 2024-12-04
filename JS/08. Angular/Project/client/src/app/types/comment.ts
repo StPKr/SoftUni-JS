@@ -9,5 +9,4 @@ export interface Comment {
     "productId": Product,
     "created_at": string,
     "updatedAt": string,
-    "__v": number
 }

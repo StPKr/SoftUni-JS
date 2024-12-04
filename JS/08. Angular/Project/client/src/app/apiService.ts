@@ -1,13 +1,16 @@
 import { HttpClient } from "@angular/common/http";
-import { exampleProducts } from "./constants/list-of-products";
+import { Injectable } from "@angular/core";
+import { environment } from "../environments/environment.development";
+import { Product } from "./types/product";
 
-
+const { apiUrl } = environment;
+@Injectable({
+    providedIn: 'root'
+})
 export class ApiService {
-
-
     constructor(private http: HttpClient) { }
 
-    getProducts(limit?: number) {
-        let products = exampleProducts;
+    getProducts() {
+        return this.http.get<Product[]>(`${apiUrl}/products`);
     }
 }

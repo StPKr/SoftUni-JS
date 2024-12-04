@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductComponent } from '../product/product.component';
-import { exampleProducts } from '../constants/list-of-products';
 import { ApiService } from '../apiService';
 import { Product } from '../types/product';
 
@@ -12,13 +11,15 @@ import { Product } from '../types/product';
   styleUrl: './catalog.component.css'
 })
 export class CatalogComponent implements OnInit {
-  products: any = [];
+  products: Product[] = [];
   sortOption: string = '';
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.products = [...exampleProducts];
+    this.apiService.getProducts().subscribe(products => {
+      this.products = products;
+    });
   }
 
   onSortChange(option: string): void {

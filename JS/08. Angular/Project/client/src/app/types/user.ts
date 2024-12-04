@@ -8,5 +8,4 @@ export interface User {
     "password": string,
     "created_at": string,
     "updatedAt": string,
-    "__v": Number,
 }
