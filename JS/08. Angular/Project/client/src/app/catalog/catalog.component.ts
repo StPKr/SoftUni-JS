@@ -25,13 +25,13 @@ export class CatalogComponent implements OnInit {
   onSortChange(option: string): void {
     this.sortOption = option;
     if (option === 'price') {
-      this.products.sort((a: any, b: any) => a.price - b.price);
+      this.products.sort((a: Product, b: Product) => a.price - b.price);
     } else if (option === 'date') {
-      this.products.sort((a: any, b: any) => b._createdOn - a._createdOn);
+      this.products.sort((a: Product, b: Product) => b._createdOn - a._createdOn);
     } else if (option === 'seller') {
-      this.products.sort((a: any, b: any) => a.seller.localeCompare(b.seller));
+      this.products.sort((a: Product, b: Product) => a.seller.localeCompare(b.seller));
     } else if (option === 'product') {
-      this.products.sort((a: any, b: any) => a.name.localeCompare(b.name));
+      this.products.sort((a: Product, b: Product) => a.name.localeCompare(b.name));
     }
   }
 }

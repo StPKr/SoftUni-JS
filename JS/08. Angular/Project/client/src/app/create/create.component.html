@@ -1,0 +1,28 @@
+<form class="createForm">
+    <fieldset>
+        <legend>Create a listing</legend>
+
+        <p class="field">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required appAutoFocus>
+        </p>
+
+        <p class="field">
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price" required>
+        </p>
+
+        <p class="field">
+            <label for="description">Description</label>
+            <textarea name="description" id="description" required></textarea>
+        </p>
+
+        <p class="field">
+            <input type="checkbox" name="checkbox" id="checkbox" required>
+            <label for="checkbox"><i>I agree that my name and phone number will be publicly visible on the offer I am
+                    creating.</i></label>
+        </p>
+
+        <input type="submit" value="Publish">
+    </fieldset>
+</form>

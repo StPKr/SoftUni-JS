@@ -5,11 +5,13 @@ import { PageNotFoundComponent } from './core/page-not-found/page-not-found.comp
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { CreateComponent } from './create/create.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'catalog', component: CatalogComponent },
+    { path: 'create', component: CreateComponent },
 
     //User
     { path: 'login', component: LoginComponent },
