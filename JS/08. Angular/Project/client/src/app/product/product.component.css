@@ -24,10 +24,24 @@
     color: #555;
 }
 
-.product-btns button {
+.product-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.public-btns button {
     background-color: #ff8500;
 }
 
-.product-btns button:hover {
+.public-btns button:hover {
     background-color: #ff6d00;
+}
+
+.private-btns button {
+    background-color: #a663cc;
+}
+
+.private-btns button:hover {
+    background-color: #3c096c;
 }

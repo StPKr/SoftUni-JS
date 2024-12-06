@@ -149,6 +149,15 @@ button:hover {
     min-height: calc(100vh - 125px);
 }
 
+.wrapper a {
+    color: #ff7900;
+    font-weight: bold;
+}
+
+.wrapper a:hover {
+    text-decoration: underline;
+}
+
 
 @media (min-width: 800px) {
     html {

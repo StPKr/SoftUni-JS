@@ -51,3 +51,12 @@
     flex-direction: column;
     gap: 16px;
 }
+
+.intext-link {
+    color: #ff7900;
+    font-weight: bold;
+}
+
+.intext-link:hover{
+    text-decoration: underline;
+}
