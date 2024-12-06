@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './loader.component.css'
 })
 export class LoaderComponent {
-
+//TODO add loader everywhere
 }

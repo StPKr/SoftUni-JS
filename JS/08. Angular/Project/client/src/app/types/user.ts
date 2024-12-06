@@ -1,11 +1,17 @@
 export interface User {
-    "products": string[],
-    "comments": string[],
-    "_id": string,
-    "tel": string,
     "email": string,
     "username": string,
     "password": string,
-    "created_at": string,
-    "updatedAt": string,
+    "tel": string,
+    "_createdOn": string,
+    "_id": string,
+    "accessToken": string,
+}
+
+export interface UserForAuth {
+    username: string;
+    email: string;
+    contact: string;
+    password: string;
+    id: string;
 }
