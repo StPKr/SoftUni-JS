@@ -1,16 +1,8 @@
-.wrapper {
-    background-image: url('../../../public/header-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.welcome{
+.welcome {
     padding: 0 16px;
 }
 
-.sections{
+.sections {
     display: flex;
     flex-wrap: wrap;
 }

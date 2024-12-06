@@ -141,6 +141,14 @@ button:hover {
     cursor: pointer;
 }
 
+.wrapper {
+    background-image: url('../public/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    min-height: calc(100vh - 125px);
+}
+
 
 @media (min-width: 800px) {
     html {
