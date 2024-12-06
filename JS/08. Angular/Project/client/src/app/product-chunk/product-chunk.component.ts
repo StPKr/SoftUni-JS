@@ -1,19 +1,21 @@
-import { DatePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { EpochToDatePipe } from '../shared/pipes/epoch-to-date.pipe';
 
 @Component({
   selector: 'app-product-chunk',
   standalone: true,
-  imports: [DatePipe],
+  imports: [EpochToDatePipe],
   templateUrl: './product-chunk.component.html',
   styleUrl: './product-chunk.component.css'
 })
 export class ProductChunkComponent {
   @Input() product!: {
+    _ownerId: string;
     name: string;
     description: string;
     price: number;
     seller: string;
-    date: Date;
+    _createdOn: number;
+    _id: string;
   };
 }
