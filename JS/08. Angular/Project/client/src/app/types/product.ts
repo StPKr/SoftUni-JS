@@ -11,3 +11,9 @@ export interface Product {
     "updatedAt": string,
     "comments": Comment[],
 }
+
+export interface TempProduct {
+    name: string;
+    price: number;
+    description: string;
+}

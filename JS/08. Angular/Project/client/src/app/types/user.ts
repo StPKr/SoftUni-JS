@@ -13,5 +13,6 @@ export interface UserForAuth {
     email: string;
     contact: string;
     password: string;
-    id: string;
+    _id: string;
+    accessToken: string;
 }
