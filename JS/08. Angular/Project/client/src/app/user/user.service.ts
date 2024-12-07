@@ -32,4 +32,13 @@ export class UserService {
       .post<UserForAuth>(`${apiUrl}/users/login`, { email, password })
       .pipe(tap((user) => this.user$$.next(user)));
   }
+
+
+
+  profileInfo() {
+    //TODO add X-Authorization headedr
+    return this.http
+      .get<UserForAuth>(`${apiUrl}/users/me`)
+      .pipe(tap((user) => this.user$$.next(user)));
+  }
 }

@@ -2,7 +2,7 @@ export interface User {
     "email": string,
     "username": string,
     "password": string,
-    "tel": string,
+    "tel": number,
     "_createdOn": string,
     "_id": string,
     "accessToken": string,

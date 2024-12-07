@@ -1,0 +1,22 @@
+.profile {
+    margin: 50px auto;
+    background-color: #e8d7f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(14, 203, 209, 0);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.username {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.email,
+.telephone {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
