@@ -1,16 +1,16 @@
 <div class="wrapper">
-    <form class="loginForm">
+    <form class="loginForm" #form="ngForm" (ngSubmit)="login(form)">
         <fieldset>
             <legend>Login</legend>
 
             <p class="field">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required appAutoFocus>
+                <input type="email" name="email" id="email" placeholder="example@email.com" appAutoFocus ngModel #inputEmail="ngModel">
             </p>
 
             <p class="field">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password" placeholder="*****" required ngModel #inputPassword="ngModel" minlength="5">
             </p>
 
             <p>Don't have an account yet? Click <span><a routerLink='/register'>here</a></span> to register!</p>
