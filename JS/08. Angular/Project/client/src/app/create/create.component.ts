@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ApiService } from '../apiService';
 import { Router } from '@angular/router';
+import { UserService } from '../user/user.service';
+import { UserForAuth } from '../types/user';
 
 @Component({
   selector: 'app-create',
@@ -10,17 +12,30 @@ import { Router } from '@angular/router';
   templateUrl: './create.component.html',
   styleUrl: './create.component.css'
 })
-export class CreateComponent {
+export class CreateComponent implements OnInit {
+  user: UserForAuth | null = null;
 
-  constructor(private apiServeice: ApiService, private router: Router) { }
+  constructor(private apiServeice: ApiService, private router: Router, private userService: UserService) { }
+
+  ngOnInit() {
+    this.userService.profileInfo().subscribe({
+      next: (data) => {
+        this.user = data;
+      },
+      error: (err) => {
+        console.error('Error fetching profile information:', err);
+      }
+    });
+  }
 
   addProduct(form: NgForm) {
     if (form.invalid) {
       return
     }
     const { name, price, desc } = form.value;
+    const seller = this.user?.username;
 
-    this.apiServeice.createProduct(name, price, desc).subscribe(() => {
+    this.apiServeice.createProduct(name, price, desc, seller).subscribe(() => {
       this.router.navigate(['/catalog']);
     })
   }

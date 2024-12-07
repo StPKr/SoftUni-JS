@@ -36,7 +36,6 @@ export class UserService {
             setJwtCookie(user.accessToken);
             this.user$$.next(user);
           }
-          console.log(user.accessToken)
         })
       );
   }
@@ -47,7 +46,6 @@ export class UserService {
     const jwt = getJwtFromCookie();
 
     if (jwt) {
-      console.log(jwt)
       this.http.get(`/api/users/logout`, {
         headers: {
           'X-Authorization': `${jwt}`,
@@ -65,9 +63,14 @@ export class UserService {
   }
 
   profileInfo() {
-    //TODO add X-Authorization headedr
+    const jwt = getJwtFromCookie();
+
     return this.http
-      .get<UserForAuth>(`/api/users/me`)
+      .get<UserForAuth>(`/api/users/me`, {
+        headers: {
+          'X-Authorization': `${jwt}`,
+        }
+      })
       .pipe(tap((user) => this.user$$.next(user)));
   }
 }

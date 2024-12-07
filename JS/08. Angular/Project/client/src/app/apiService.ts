@@ -14,9 +14,10 @@ export class ApiService {
         return this.http.get<Product[]>(`/api/data/products`);
     }
 
-    createProduct(name: string, price: number, description: string) {
+    createProduct(name: string, price: number, description: string, seller: any) {
+        //TODO fix the seller:any assignment
         const jwt = getJwtFromCookie();
-        const payload = { name, price, description };
+        const payload = { name, price, description, seller };
         console.log(payload)
         return this.http.post<Product>('/api/data/products', payload, {
             headers: {
