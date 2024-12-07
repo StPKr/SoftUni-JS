@@ -1322,17 +1322,20 @@
         users: {
             "35c62d76-8152-4626-8712-eeb96381bea8": {
                 email: "peter@abv.bg",
-                username: "Peter",
+                username: "MysticPeter",
+                tel: "+1 555-123-4567",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "f473d8b9-1a34-4e6c-9f75-c7cfe0d1b1c7": {
                 email: "dorcho@abv.bg",
-                username: "Dorian",
+                username: "DorianTheEnchanter",
+                tel: "+44 770-090-0123",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
                 email: "george@abv.bg",
-                username: "George",
+                username: "ArcaneGeorge",
+                tel: "+61 412-345-678",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
@@ -1550,7 +1553,7 @@
         },
         likes: {
         },
-        products:{
+        products: {
             "a7d3e6f4-2b52-4d3a-b241-1f5e4c6d7h32": {
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
                 "name": "Enchanted Wand",
