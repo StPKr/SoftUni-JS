@@ -13,4 +13,5 @@ export const appInterceptor: HttpInterceptorFn = (req, next) => {
   }
 
   return next(req);
+  //TODO add catchError operator
 };
