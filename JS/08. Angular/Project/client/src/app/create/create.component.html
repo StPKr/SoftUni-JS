@@ -1,21 +1,21 @@
 <div class="wrapper">
-    <form class="createForm">
+    <form class="createForm" #form="ngForm" (ngSubmit)="addProduct(form)">
         <fieldset>
             <legend>Create a listing</legend>
 
             <p class="field">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" required appAutoFocus>
+                <input type="text" name="name" id="name" required appAutoFocus ngModel #inputName="ngModel" minlength="5">
             </p>
 
             <p class="field">
                 <label for="price">Price</label>
-                <input type="number" name="price" id="price" required>
+                <input type="number" name="price" id="price" required ngModel #inputPrice="ngModel" min="0">
             </p>
 
             <p class="field">
                 <label for="description">Description</label>
-                <textarea name="description" id="description" required></textarea>
+                <textarea name="description" id="description" required ngModel #inputDesc="ngModel" minlength="15"></textarea>
             </p>
 
             <p class="field">
