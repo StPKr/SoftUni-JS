@@ -1,10 +1,7 @@
-
 export interface Comment {
-    "likes": string[],
-    "_id": string,
-    "text": string,
-    "author": string,
+    "_ownerId": string,
     "productId": string,
-    "created_at": string,
-    "updatedAt": string,
+    "text": string,
+    "_createdOn": number,
+    "_id": string;
 }
