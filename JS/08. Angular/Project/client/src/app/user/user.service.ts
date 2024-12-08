@@ -36,14 +36,18 @@ export class UserService {
             setJwtCookie(user.accessToken);
             this.user$$.next(user);
           }
-        })
-      );
+        }));
   }
 
   register(username: string, email: string, tel: string, password: string) {
     return this.http
-      .post<User>('/api/register', { username, email, tel, password })
-      .pipe(tap((user) => this.user$$.next(user)));
+      .post<User>('/api/users/register', { username, email, tel, password })
+      .pipe(tap((user) => {
+        if (user && user.accessToken) {
+          setJwtCookie(user.accessToken);
+          this.user$$.next(user);
+        }
+      }));
   }
 
   logout() {

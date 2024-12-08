@@ -1,31 +1,31 @@
 <div class="wrapper">
-    <form class="registerForm">
+    <form class="registerForm" #form="ngForm" (ngSubmit)="register(form)">
         <fieldset>
             <legend>Register</legend>
 
             <p class="field">
                 <label for="username">Username</label>
-                <input type="username" name="username" id="username" required appAutoFocus>
+                <input type="username" name="username" id="username" required appAutoFocus ngModel #inputUsername="ngModel">
             </p>
 
             <p class="field">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" required ngModel #inputEmail="ngModel">
             </p>
 
             <p class="field">
                 <label for="tel">Contact number</label>
-                <input type="text" name="tel" id="tel" required>
+                <input type="text" name="tel" id="tel" required ngModel #inputTel="ngModel">
             </p>
 
             <p class="field">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password" required ngModel #inputPassword="ngModel">
             </p>
 
             <p class="field">
                 <label for="rePass">Repeat Password</label>
-                <input type="rePass" name="rePass" id="rePass" required>
+                <input type="password" name="rePass" id="rePass" required ngModel #inputRePass="ngModel">
             </p>
 
             <p>Already a member? Click <span><a routerLink='/login'>here</a></span> to log in!</p>

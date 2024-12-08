@@ -3,7 +3,7 @@ export interface User {
     "email": string,
     "password": string,
     "tel": string,
-    "_createdOn": string,
+    "_createdOn": number,
     "_id": string,
     "accessToken": string,
 }

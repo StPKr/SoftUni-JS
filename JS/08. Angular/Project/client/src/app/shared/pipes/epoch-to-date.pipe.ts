@@ -8,11 +8,11 @@ export class EpochToDatePipe implements PipeTransform {
 
   transform(date: number, ...args: unknown[]): unknown {
 
-    return new Intl.DateTimeFormat('en-GB', {
+    return date ? new Intl.DateTimeFormat('en-GB', {
       day: '2-digit',
       month: 'short',
       year: 'numeric',
-    }).format(new Date(date));
+    }).format(new Date(date)) : null;
   }
 
 }
