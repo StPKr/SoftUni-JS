@@ -2,7 +2,7 @@
     <h2>{{ product.name }}</h2>
     <div class="product-details">
 
-        <p>{{ product.description }}</p>
+        <p>{{ product.description | textTrimmer}}</p>
         <p><strong>Price:</strong> ${{ product.price }}</p>
         <p><strong>Seller:</strong> {{ product.seller }}</p>
         <p><strong>Added on:</strong> {{ product._createdOn | epochToDate }}</p>
