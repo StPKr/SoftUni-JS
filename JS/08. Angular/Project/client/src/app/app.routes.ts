@@ -7,7 +7,8 @@ import { RegisterComponent } from './user/register/register.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { CreateComponent } from './create/create.component';
 import { ProfileComponent } from './user/profile/profile.component';
-import { AuthGuard } from './guard/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
+import { GuestGuard } from './guards/guest.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,8 +17,8 @@ export const routes: Routes = [
     { path: 'create', component: CreateComponent, canActivate: [AuthGuard] },
 
     //User
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
+    { path: 'login', component: LoginComponent, canActivate: [GuestGuard] },
+    { path: 'register', component: RegisterComponent, canActivate: [GuestGuard] },
     { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
 
     //User end
