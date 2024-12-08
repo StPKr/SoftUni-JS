@@ -1,18 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from '../../types/user';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { EpochToDatePipe } from '../../shared/pipes/epoch-to-date.pipe';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [EpochToDatePipe],
+  imports: [EpochToDatePipe, RouterLink],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent implements OnInit {
-  user!: User;
+  user: User = {
+    "username": '',
+    "email": '',
+    "password": '',
+    "tel": '',
+    "_createdOn": 0,
+    "_id": '',
+    "accessToken": '',
+  };
 
   constructor(private userService: UserService, private router: Router) { }
 

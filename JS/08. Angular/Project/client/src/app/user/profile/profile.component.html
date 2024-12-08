@@ -4,5 +4,6 @@
         <p class="email">{{user.email}}</p>
         <p class="telephone">{{user.tel}}</p>
         <p class="date">{{user._createdOn | epochToDate}}</p>
+        <a routerLink="myProducts" [queryParams]="{ id: user._id }">My products</a>
     </div>
 </div>

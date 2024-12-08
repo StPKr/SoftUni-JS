@@ -7,14 +7,7 @@
         <p><strong>Seller:</strong> {{ product.seller }}</p>
         <p><strong>Added on:</strong> {{ product._createdOn | epochToDate }}</p>
     </div>
-    <div class="product-btns">
-        <div class="public-btns">
-            <button routerLink="{{product._id}}">Details</button>
-        </div>
-        <div class="private-btns">
-            <button>Edit</button>
-            <button>Delete</button>
-        </div>
+    <div class="public-btns">
+        <button [routerLink]="['/catalog', product._id]">Details</button>
     </div>
-
 </div>

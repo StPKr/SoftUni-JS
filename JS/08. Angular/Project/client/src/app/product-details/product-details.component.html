@@ -1,10 +1,12 @@
 <div class="wrapper">
+    @if(!isEditMode){
+
     <div class="product-wrapper">
         <h2 class="product-name">
             {{product.name}}
         </h2>
         <div class="image">
-            <img src="{{product.image}}" alt="">
+            <img src="{{product.image}}" alt="IMG">
         </div>
         <div class="product-details">
 
@@ -15,9 +17,44 @@
             <p><strong>Added on:</strong> {{product._createdOn | epochToDate}}</p>
         </div>
 
+        @if(isOwner){
         <div class="private-btns">
-            <button>Edit</button>
-            <button>Delete</button>
+            <button (click)="toggleEditMode()">Edit</button>
+            <button (click)="deleteProduct()">Delete</button>
         </div>
+        }
     </div>
+    } @else {
+    <form class="createForm" #form="ngForm" (ngSubmit)="saveProduct(form)">
+        <fieldset>
+            <legend>Edit product</legend>
+
+            <p class="field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required appAutoFocus [(ngModel)]="product.name"
+                    #inputName="ngModel" minlength="5">
+            </p>
+
+            <p class="field">
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" required [(ngModel)]="product.price" #inputPrice="ngModel"
+                    min="0">
+            </p>
+
+            <p class="field">
+                <label for="image">Image URL</label>
+                <input type="text" name="image" id="image" required [(ngModel)]="product.image" #inputImage="ngModel">
+            </p>
+
+            <p class="field">
+                <label for="description">Description</label>
+                <textarea type="text" name="description" id="description" required [(ngModel)]="product.description"
+                    #inputDesc="ngModel" minlength="15"></textarea>
+            </p>
+
+            <input type="submit" value="Update">
+        </fieldset>
+    </form>
+    }
+
 </div>

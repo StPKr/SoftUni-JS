@@ -10,6 +10,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
 import { GuestGuard } from './guards/guest.guard';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { MyProductsComponent } from './user/my-products/my-products.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -25,6 +26,7 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent, canActivate: [GuestGuard] },
     { path: 'register', component: RegisterComponent, canActivate: [GuestGuard] },
     { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+    { path: 'profile/myProducts', component: MyProductsComponent, canActivate: [AuthGuard] },
 
     //*Test component
     { path: 'test', component: TestComponent },

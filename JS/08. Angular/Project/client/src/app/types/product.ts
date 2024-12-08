@@ -8,5 +8,4 @@ export interface Product {
     "image": string,
     "_createdOn": number,
     "_id": string,
-    "updatedAt": string,
 }

@@ -14,8 +14,13 @@
             </p>
 
             <p class="field">
+                <label for="image">Image URL</label>
+                <input type="text" name="image" id="image" required ngModel #inputImage="ngModel">
+            </p>
+
+            <p class="field">
                 <label for="description">Description</label>
-                <textarea name="description" id="description" required ngModel #inputDesc="ngModel" minlength="15"></textarea>
+                <textarea type="text" name="description" id="description" required ngModel #inputDesc="ngModel" minlength="15"></textarea>
             </p>
 
             <p class="field">

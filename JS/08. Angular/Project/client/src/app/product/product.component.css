@@ -24,10 +24,10 @@
     color: #555;
 }
 
-.product-btns{
+.public-btns{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .public-btns button {
@@ -36,12 +36,4 @@
 
 .public-btns button:hover {
     background-color: #ff6d00;
-}
-
-.private-btns button {
-    background-color: #a663cc;
-}
-
-.private-btns button:hover {
-    background-color: #3c096c;
 }

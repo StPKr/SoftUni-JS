@@ -45,3 +45,91 @@
 .private-btns button:hover {
     background-color: #3c096c;
 }
+
+
+.createForm {
+    background: #FFF;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    max-width: 40%;
+    margin: 30px auto;
+    padding: 30px 50px;
+    border-radius: 5px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+legend {
+    font-weight: bold;
+    border-bottom: 1px solid silver;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+}
+
+.createForm label::after {
+    content: '*';
+    color: #ff6d00;
+    padding-left: 5px;
+}
+
+.createForm input[type="text"],
+.createForm input[type="number"] {
+    border: 2px solid silver;
+    padding: 5px;
+    border-radius: 5px;
+    height: 45px;
+}
+
+.createForm textarea {
+    border: 2px solid silver;
+    padding: 5px;
+    border-radius: 5px;
+    height: 60px;
+}
+
+.createForm input[type="submit"] {
+    border: 0;
+    background: #a663cc;
+    color: #b2ffd6;
+    text-shadow: 1px 1px black;
+    height: 55px;
+    margin: 15px 0;
+}
+
+.createForm input[type="submit"]:hover {
+    cursor: pointer;
+    background: #3c096c;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.createForm input:focus,
+.createForm textarea:focus {
+    border-color: rebeccapurple;
+    outline: none;
+}
+
+.createForm input[type="checkbox"] {
+    cursor: pointer;
+    align-self: center;
+    height: 25px;
+    width: 25px;
+
+}
+
+.createForm input[type="checkbox"]:hover {
+    background-color: gray;
+}
