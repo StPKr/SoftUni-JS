@@ -20,11 +20,11 @@ export class ProfileComponent implements OnInit {
       next: (data) => {
         this.user = data;
       },
-      error: (err) => {
-        console.error('Error fetching profile information:', err);
-        this.userService.logout();
-        this.router.navigate(['/home']);
-      }
+      // error: (err) => {
+      //   console.error('Error fetching profile information:', err);
+      //   this.userService.logout();
+      //   this.router.navigate(['/home']);
+      // }
     });
   }
 }

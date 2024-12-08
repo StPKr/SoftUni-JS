@@ -46,11 +46,11 @@ export class UserService {
     const jwt = getJwtFromCookie();
 
     if (jwt) {
-      this.http.get(`/api/users/logout`, {
+      this.http.get<UserForAuth>(`/api/users/logout`, {
         headers: {
           'X-Authorization': `${jwt}`,
         }
-      }).subscribe(
+      }).pipe(tap((user) => this.user$$.next(user))).subscribe(
         () => {
           document.cookie = 'jwt=; path=/; secure; SameSite=Strict; expires=Thu, 01 Jan 1970 00:00:00 GMT';
           this.router.navigate(['/home']);
@@ -58,6 +58,7 @@ export class UserService {
       );
     } else {
       console.error('No JWT found for logout');
+      this.user$$.next(null);
       this.router.navigate(['/home']);
     }
   }
