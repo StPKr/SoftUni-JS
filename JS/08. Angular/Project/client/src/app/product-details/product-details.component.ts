@@ -7,6 +7,7 @@ import { EpochToDatePipe } from '../shared/pipes/epoch-to-date.pipe';
 import { FormsModule, NgForm } from '@angular/forms';
 import { User } from '../types/user';
 import { Location } from '@angular/common';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-product-details',
@@ -46,9 +47,16 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.params['productId'];
 
-    this.apiService.getSingleProduct(id).subscribe({
-      next: (product) => {
-        this.product = product;
+    this.apiService.getSingleProduct(id).pipe(
+      map(product => {
+        if (product.price < 300) {
+          product.name += " - SPECIAL OFFER!";
+        }
+        return product;
+      })
+    ).subscribe({
+      next: (updatedProduct) => {
+        this.product = updatedProduct;
         this.checkIfOwner();
       },
       error: (err) => {
