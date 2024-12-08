@@ -6,7 +6,7 @@ import { UserService } from '../user/user.service';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, WelcomeMsggComponent],
+  imports: [WelcomeMsggComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
