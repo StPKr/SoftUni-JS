@@ -12,23 +12,30 @@
                 <li>
                     <a routerLink="/catalog">Catalog</a>
                 </li>
+                @if(!isLoggedIn){
                 <li>
                     <a routerLink="/register">Register</a>
                 </li>
                 <li>
                     <a routerLink="/login">Login</a>
                 </li>
+                } @else {
                 <li>
                     <a routerLink="/create">List an item</a>
                 </li>
                 <li>
                     <a (click)="logout()" routerLink="#">Logout</a>
                 </li>
+                }
+
+
             </ul>
         </nav>
     </div>
     <div class="logo-wrapper">
-        <a routerLink="/profile"><span>Profile</span></a>
+        @if(isLoggedIn){
+        <a routerLink="/profile"><span>{{username}}</span></a>
+        }
         <img src="profile-logo.png" />
     </div>
 </header>

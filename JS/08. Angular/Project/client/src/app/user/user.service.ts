@@ -40,7 +40,11 @@ export class UserService {
       );
   }
 
-
+  register(username: string, email: string, tel: string, password: string) {
+    return this.http
+      .post<UserForAuth>('/api/register', { username, email, tel, password })
+      .pipe(tap((user) => this.user$$.next(user)));
+  }
 
   logout() {
     const jwt = getJwtFromCookie();
