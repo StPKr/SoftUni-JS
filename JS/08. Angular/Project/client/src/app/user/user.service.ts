@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subscription, tap } from 'rxjs';
-import { UserForAuth } from '../types/user';
+import { User } from '../types/user';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { getJwtFromCookie } from '../utils/jwt.getter';
@@ -10,11 +10,11 @@ import { setJwtCookie } from '../utils/jwt.setter';
   providedIn: 'root'
 })
 export class UserService {
-  private user$$ = new BehaviorSubject<UserForAuth | null>(null);
+  private user$$ = new BehaviorSubject<User | null>(null);
   private user$ = this.user$$.asObservable();
 
   USER_KEY = '[user]';
-  user: UserForAuth | null = null;
+  user: User | null = null;
   userSubscription: Subscription | null = null;
 
   get isLogged(): boolean {
@@ -29,7 +29,7 @@ export class UserService {
 
   login(email: string, password: string) {
     return this.http
-      .post<UserForAuth>(`/api/users/login`, { email, password })
+      .post<User>(`/api/users/login`, { email, password })
       .pipe(
         tap((user) => {
           if (user && user.accessToken) {
@@ -42,7 +42,7 @@ export class UserService {
 
   register(username: string, email: string, tel: string, password: string) {
     return this.http
-      .post<UserForAuth>('/api/register', { username, email, tel, password })
+      .post<User>('/api/register', { username, email, tel, password })
       .pipe(tap((user) => this.user$$.next(user)));
   }
 
@@ -50,7 +50,7 @@ export class UserService {
     const jwt = getJwtFromCookie();
 
     if (jwt) {
-      this.http.get<UserForAuth>(`/api/users/logout`, {
+      this.http.get<User>(`/api/users/logout`, {
         headers: {
           'X-Authorization': `${jwt}`,
         }
@@ -71,7 +71,7 @@ export class UserService {
     const jwt = getJwtFromCookie();
 
     return this.http
-      .get<UserForAuth>(`/api/users/me`, {
+      .get<User>(`/api/users/me`, {
         headers: {
           'X-Authorization': `${jwt}`,
         }

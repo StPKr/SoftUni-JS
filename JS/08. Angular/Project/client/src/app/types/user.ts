@@ -1,18 +1,9 @@
 export interface User {
-    "email": string,
     "username": string,
+    "email": string,
     "password": string,
-    "tel": number,
+    "tel": string,
     "_createdOn": string,
     "_id": string,
     "accessToken": string,
-}
-
-export interface UserForAuth {
-    username: string;
-    email: string;
-    tel: string;
-    password: string;
-    _id: string;
-    accessToken: string;
 }

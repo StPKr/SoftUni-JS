@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-import { UserForAuth } from '../../types/user';
+import { User } from '../../types/user';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent implements OnInit {
-  user: UserForAuth | null = null;
+  user: User | null = null;
 
   constructor(private userService: UserService, private router: Router) { }
 

@@ -3,7 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { ApiService } from '../apiService';
 import { Router } from '@angular/router';
 import { UserService } from '../user/user.service';
-import { UserForAuth } from '../types/user';
+import { User } from '../types/user';
 
 @Component({
   selector: 'app-create',
@@ -13,7 +13,7 @@ import { UserForAuth } from '../types/user';
   styleUrl: './create.component.css'
 })
 export class CreateComponent implements OnInit {
-  user: UserForAuth | null = null;
+  user: User | null = null;
 
   constructor(private apiServeice: ApiService, private router: Router, private userService: UserService) { }
 
