@@ -4,6 +4,8 @@ export interface Product {
     "description": string,
     "price": number,
     "seller": string,
+    "tel": string,
+    "image": string,
     "_createdOn": number,
     "_id": string,
     "updatedAt": string,

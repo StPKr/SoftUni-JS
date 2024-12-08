@@ -2,6 +2,6 @@
     <h2>{{ product.name }} - ${{product.price}}</h2>
     <div class="chunk-wrapper">
         <p><strong>Added on:</strong> {{ product._createdOn | epochToDate }}</p>
-        <button>Details</button>
+        <button routerLink="/catalog/{{product._id}}">Details</button>
     </div>
 </div>

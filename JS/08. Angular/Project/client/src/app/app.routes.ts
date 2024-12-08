@@ -9,19 +9,22 @@ import { CreateComponent } from './create/create.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
 import { GuestGuard } from './guards/guest.guard';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
-    { path: 'catalog', component: CatalogComponent },
+    {
+        path: 'catalog', children: [
+            { path: '', component: CatalogComponent },
+            { path: ':productId', component: ProductDetailsComponent },
+        ]
+    },
     { path: 'create', component: CreateComponent, canActivate: [AuthGuard] },
 
-    //User
     { path: 'login', component: LoginComponent, canActivate: [GuestGuard] },
     { path: 'register', component: RegisterComponent, canActivate: [GuestGuard] },
     { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
-
-    //User end
 
     //*Test component
     { path: 'test', component: TestComponent },

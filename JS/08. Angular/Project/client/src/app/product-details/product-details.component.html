@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <div class="product-wrapper">
+        <h2 class="product-name">
+            {{product.name}}
+        </h2>
+        <div class="image">
+            <img src="{{product.image}}" alt="">
+        </div>
+        <div class="product-details">
+
+            <p>{{product.description}}</p>
+            <p><strong>Price:</strong> ${{product.price}}</p>
+            <p><strong>Seller:</strong> {{product.seller}}</p>
+            <p><strong>Contact number:</strong> {{product.tel}}</p>
+            <p><strong>Added on:</strong> {{product._createdOn | epochToDate}}</p>
+        </div>
+
+        <div class="private-btns">
+            <button>Edit</button>
+            <button>Delete</button>
+        </div>
+    </div>
+</div>
