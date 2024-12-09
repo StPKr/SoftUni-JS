@@ -5,23 +5,81 @@
 
             <p class="field">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" required appAutoFocus ngModel #inputName="ngModel" minlength="5">
+                <input [class]="(
+                    (inputName?.touched && inputName?.errors?.['required']) 
+                    || (inputName?.touched && inputName?.errors?.['minlength']))
+                    ? 'input-error'
+                    : ''" type="text" name="name" id="name" required appAutoFocus ngModel #inputName="ngModel"
+                    minlength="5">
             </p>
+
+            @if(inputName?.touched){
+            @if(inputName?.errors?.['required']){
+            <p class="error">
+                Product name is required!
+            </p>
+            }
+            @if(inputName?.errors?.['minlength']){
+            <p class="error">
+                Product name must be at least 5 characters long!
+            </p>
+            }
+            }
 
             <p class="field">
                 <label for="price">Price</label>
-                <input type="number" name="price" id="price" required ngModel #inputPrice="ngModel" min="0">
+                <input [class]="(
+                    (inputPrice?.touched && inputPrice?.errors?.['required']))
+                    ? 'input-error'
+                    : ''" type="number" name="price" id="price" required ngModel #inputPrice="ngModel" min="0">
             </p>
+
+            @if(inputPrice?.touched){
+            @if(inputPrice?.errors?.['required']){
+            <p class="error">
+                Price is required!
+            </p>
+            }
+            }
 
             <p class="field">
                 <label for="image">Image URL</label>
-                <input type="text" name="image" id="image" required ngModel #inputImage="ngModel">
+                <input [class]="(
+                    (inputImage?.touched && inputImage?.errors?.['required']))
+                    ? 'input-error'
+                    : ''" type="text" name="image" id="image" required ngModel #inputImage="ngModel">
             </p>
+
+            @if(inputImage?.touched){
+            @if(inputImage?.errors?.['required']){
+            <p class="error">
+                Image URL is required!
+            </p>
+            }
+            }
 
             <p class="field">
                 <label for="description">Description</label>
-                <textarea type="text" name="description" id="description" required ngModel #inputDesc="ngModel" minlength="15"></textarea>
+                <textarea [class]="(
+                    (inputDesc?.touched && inputDesc?.errors?.['required']) 
+                    || (inputDesc?.touched && inputDesc?.errors?.['minlength']))
+                    ? 'input-error'
+                    : ''" type="text" name="description" id="description" required ngModel #inputDesc="ngModel"
+                    minlength="15"></textarea>
             </p>
+
+            @if(inputDesc?.touched){
+            @if(inputDesc?.errors?.['required']){
+            <p class="error">
+                Description is required!
+            </p>
+            }
+            @if(inputDesc?.errors?.['minlength']){
+            <p class="error">
+                Description must be at least 15 characters long!
+            </p>
+            }
+            }
 
             <p class="field">
                 <input type="checkbox" name="checkbox" id="checkbox" required>

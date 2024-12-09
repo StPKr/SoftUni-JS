@@ -63,3 +63,16 @@ legend {
     border-color: rebeccapurple;
     outline: none;
 }
+
+p.error {
+    text-align: left;
+    border-radius: 0.5em;
+    color: red !important;
+    padding-top: 0;
+    font-weight: bold;
+}
+
+.input-error {
+    border-left-color: red !important;
+    border-color: red !important;
+}

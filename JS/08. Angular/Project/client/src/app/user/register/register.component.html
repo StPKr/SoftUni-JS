@@ -5,28 +5,118 @@
 
             <p class="field">
                 <label for="username">Username</label>
-                <input type="username" name="username" id="username" required appAutoFocus ngModel #inputUsername="ngModel">
+                <input [class]="(
+                    (inputUsername?.touched && inputUsername?.errors?.['required']) 
+                    || (inputUsername?.touched && inputUsername?.errors?.['minlength']))
+                    ? 'input-error'
+                    : ''" type="username" name="username" id="username" required appAutoFocus ngModel
+                    #inputUsername="ngModel" minlength="3">
             </p>
+
+            @if(inputUsername?.touched){
+            @if(inputUsername?.errors?.['required']){
+            <p class="error">
+                Username is required!
+            </p>
+            }
+            @if(inputUsername?.errors?.['minlength']){
+            <p class="error">
+                Username must be at least 3 characters long!
+            </p>
+            }
+            }
 
             <p class="field">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required ngModel #inputEmail="ngModel">
+                <input [class]="(
+                    (inputEmail?.touched && inputEmail?.errors?.['required']) 
+                    || (inputEmail?.touched && inputEmail?.errors?.['invalidEmail']))
+                    ? 'input-error'
+                    : ''" type="email" name="email" id="email" placeholder="example@email.com" required appEmail
+                    ngModel #inputEmail="ngModel">
             </p>
+
+            @if(inputEmail?.touched){
+            @if(inputEmail?.errors?.['required']){
+            <p class="error">
+                Email is required!
+            </p>
+            }
+            @if(inputEmail?.errors?.['invalidEmail']){
+            <p class="error">
+                Email is not valid!
+            </p>
+            }
+            }
 
             <p class="field">
                 <label for="tel">Contact number</label>
-                <input type="text" name="tel" id="tel" required ngModel #inputTel="ngModel">
+                <input [class]="(
+                    (inputTel?.touched && inputTel?.errors?.['required']) 
+                    || (inputTel?.touched && inputTel?.errors?.['invalidTel']))
+                    ? 'input-error'
+                    : ''" type="text" name="tel" id="tel" placeholder="+1 123-123-1234" required appTel ngModel
+                    #inputTel="ngModel">
             </p>
+
+            @if(inputTel?.touched){
+            @if(inputTel?.errors?.['required']){
+            <p class="error">
+                Contact number is required!
+            </p>
+            }
+            @if(inputTel?.errors?.['invalidTel']){
+            <p class="error">
+                Contact number is not valid! Please follow this format: +1 123-123-1234
+            </p>
+            }
+            }
 
             <p class="field">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" required ngModel #inputPassword="ngModel">
+                <input [class]="(
+                    (inputPassword?.touched && inputPassword?.errors?.['required']) 
+                    || (inputPassword?.touched && inputPassword?.errors?.['minlength']))
+                    ? 'input-error'
+                    : ''" type="password" name="password" id="password" required ngModel #inputPassword="ngModel"
+                    minlength="5">
             </p>
+
+            @if(inputPassword?.touched){
+            @if(inputPassword?.errors?.['required']){
+            <p class="error">
+                Password is required!
+            </p>
+            }
+            @if(inputPassword?.errors?.['minlength']){
+            <p class="error">
+                Password must be at least 5 characters long!
+            </p>
+            }
+            }
 
             <p class="field">
                 <label for="rePass">Repeat Password</label>
-                <input type="password" name="rePass" id="rePass" required ngModel #inputRePass="ngModel">
+                <input [class]="(
+                    (inputRePass?.touched && inputRePass?.errors?.['required']) 
+                    || (inputRePass?.touched && inputRePass?.errors?.['passwordMismatch']))
+                    ? 'input-error'
+                    : ''" type="password" name="rePass" id="rePass" required appPasswordMatch ngModel
+                    #inputRePass="ngModel">
             </p>
+
+            @if(inputRePass?.touched){
+            @if(inputRePass?.errors?.['required']){
+            <p class="error">
+                Repeat password is required!
+            </p>
+            }
+            @if(inputRePass?.errors?.['passwordMismatch']){
+            <p class="error">
+                Repeat password does not match password!
+            </p>
+            }
+            }
 
             <p>Already a member? Click <span><a routerLink='/login'>here</a></span> to log in!</p>
 

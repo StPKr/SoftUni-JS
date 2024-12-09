@@ -5,13 +5,49 @@
 
             <p class="field">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="example@email.com" appAutoFocus ngModel #inputEmail="ngModel">
+                <input [class]="(
+                    (inputEmail?.touched && inputEmail?.errors?.['required']) 
+                    || (inputEmail?.touched && inputEmail?.errors?.['invalidEmail']))
+                    ? 'input-error'
+                    : ''" type="email" name="email" id="email" placeholder="example@email.com" appAutoFocus
+                     appEmail required ngModel #inputEmail="ngModel">
             </p>
+
+            @if(inputEmail?.touched){
+            @if(inputEmail?.errors?.['required']){
+            <p class="error">
+                Email is required!
+            </p>
+            }
+            @if(inputEmail?.errors?.['invalidEmail']){
+            <p class="error">
+                Email is not valid!
+            </p>
+            }
+            }
 
             <p class="field">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="*****" required ngModel #inputPassword="ngModel" minlength="5">
+                <input [class]="(
+                    (inputPassword?.touched && inputPassword?.errors?.['required']) 
+                    || (inputPassword?.touched && inputPassword?.errors?.['minlength']))
+                    ? 'input-error'
+                    : ''" type="password" name="password" id="password" placeholder="*****" required ngModel
+                    #inputPassword="ngModel" minlength="5">
             </p>
+
+            @if(inputPassword?.touched){
+            @if(inputPassword?.errors?.['required']){
+            <p class="error">
+                Password is required!
+            </p>
+            }
+            @if(inputPassword?.errors?.['minlength']){
+            <p class="error">
+                Password must be at least 5 characters long!
+            </p>
+            }
+            }
 
             <p>Don't have an account yet? Click <span><a routerLink='/register'>here</a></span> to register!</p>
 

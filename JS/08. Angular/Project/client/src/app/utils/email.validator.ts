@@ -1,11 +1,11 @@
-import { ValidatorFn } from "@angular/forms";
+import { AbstractControl, ValidationErrors, ValidatorFn } from "@angular/forms";
 
-export function emailValidator(): ValidatorFn {
-    const regExp = new RegExp(`^[^@]+@[^@]+\.[^@]+$`);
+export function emailValidator(control: AbstractControl): ValidationErrors | null {
+    const emailRegex: RegExp = /^[^@]+@[^@]+\.[^@]+$/;
 
-    return (control) => {
-        const isInvalid = control.value === '' || regExp.test(control.value);
-
-        return isInvalid ? null : { emailValidator: true };
+    if (control.value && !emailRegex.test(control.value)) {
+        return { invalidEmail: true };
     }
+
+    return null;
 }
