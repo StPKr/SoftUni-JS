@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { TestComponent } from './test/test.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
@@ -28,10 +27,6 @@ export const routes: Routes = [
     { path: 'register', component: RegisterComponent, canActivate: [GuestGuard] },
     { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
     { path: 'profile/myProducts', component: MyProductsComponent, canActivate: [AuthGuard] },
-
-    //*Test component
-    { path: 'test', component: TestComponent },
-    //*Test component end
 
     { path: 'error', component: ErrorMessageComponent },
     { path: '404', component: PageNotFoundComponent },

@@ -1405,47 +1405,13 @@
             }
         },
         comments: {
-            "0a272c58-b7ea-4e09-a000-7ec988248f66": {
-                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                content: "Great recipe!",
-                recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
-                _createdOn: 1614260681375,
-                _id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-            },
-            "7b9f6c57-6a9f-44d4-bf95-24ec63e1c5b4": {
-                "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                "bookId": "c6a5e8d2-9f1b-4c6f-b8f8-7f9a8b9c5d8e",
-                "text": "I think Frodo’s journey is symbolic of the burden of responsibility. The way he changes from the Shire to Mordor shows how deeply the ring affects him.",
-                "_createdOn": 1723359934510,
-                "_id": "1a6d3e6f-53a8-4c1d-9e4b-efb2fa43c108"
-            },
-            "19f58b6c-0d47-4e35-8fd1-8f9a5c47ae6f": {
+            "fa39c36e-c279-4397-8ff9-0e81e0dfs12z": {
                 "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                "bookId": "c6a5e8d2-9f1b-4c6f-b8f8-7f9a8b9c5d8e",
-                "text": "Gollum is such a tragic character. The way he’s torn between his desire for the ring and his old self is heartbreaking.",
-                "_createdOn": 1723360212567,
-                "_id": "efbd3a8d-9c1c-42b3-8d7d-09373e9d7897"
-            },
-            "db8f8e72-0335-4e4d-85e8-bec48c4c4e3d": {
-                "_ownerId": "f473d8b9-1a34-4e6c-9f75-c7cfe0d1b1c7",
-                "bookId": "c6a5e8d2-9f1b-4c6f-b8f8-7f9a8b9c5d8e",
-                "text": "I’ve always admired Sam’s loyalty to Frodo. He’s the true hero of the story in my opinion.",
-                "_createdOn": 1723360458312,
-                "_id": "4c2eaa23-6196-4f3c-a2fb-5b9f4f4b232f"
-            },
-            "b7e1b81c-0e9f-4b26-8b47-8a7c9c34849c": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "bookId": "c6a5e8d2-9f1b-4c6f-b8f8-7f9a8b9c5d8e",
-                "text": "The world-building in LOTR is unmatched. Middle-earth feels like a real place with its own history and cultures.",
-                "_createdOn": 1723360699843,
-                "_id": "72e6f91c-6753-4ecb-932d-5f0d1a4e196a"
-            },
-            "da3b74f9-317b-4b53-88bb-6f11c3a9e7f5": {
-                "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                "bookId": "c6a5e8d2-9f1b-4c6f-b8f8-7f9a8b9c5d8e",
-                "text": "What’s everyone’s favorite scene in the books? For me, it has to be the battle at Helm’s Deep. The tension and the stakes are so high!",
-                "_createdOn": 1723360935600,
-                "_id": "fa39c36e-c279-4397-8ff9-0e81e0dfe20d"
+                "productId": "a7d3e6f4-2b52-4d3a-b241-1f5e4c6d7h32",
+                "text": "Exceptionally good offer. Won't keep it for long as I have another buyer waiting.",
+                "author": "ArcaneGeorge",
+                "_createdOn": 1733859289921,
+                "_id": "fa39c36e-c279-4397-8ff9-0e81e0dfs12z"
             }
         },
         records: {
