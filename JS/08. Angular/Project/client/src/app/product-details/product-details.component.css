@@ -1,6 +1,6 @@
 .product-wrapper {
     box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
-    margin: 30px auto;
+    margin: 30px auto 10px;
     padding: 30px 50px;
     border-radius: 5px;
     width: 80%;
@@ -132,4 +132,71 @@ legend {
 
 .createForm input[type="checkbox"]:hover {
     background-color: gray;
+}
+
+.comments-wrapper {
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    margin: 0px auto 30px;
+    padding: 30px 50px;
+    border-radius: 5px;
+    width: 80%;
+    background-color: #e8d7f1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+h3 {
+    padding-top: 0px;
+}
+
+h5 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.comment {
+    padding: 5px;
+    background-color: #e9e0ee;
+    border-radius: 5px;
+}
+
+.create-comment {
+    margin-top: 10px;
+}
+
+.commentsForm input[type="text"] {
+    border: 2px solid silver;
+    padding: 5px;
+    border-radius: 5px;
+    height: 45px;
+}
+
+.commentsForm textarea {
+    border: 2px solid silver;
+    padding: 5px;
+    border-radius: 5px;
+    height: 60px;
+}
+
+.commentsForm textarea:focus {
+    border-color: rebeccapurple;
+    outline: none;
+}
+
+.commentsForm input[type="submit"] {
+    border: 0;
+    background: #a663cc;
+    color: #b2ffd6;
+    text-shadow: 1px 1px black;
+    height: 35px;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.commentsForm input[type="submit"]:hover {
+    cursor: pointer;
+    background: #3c096c;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

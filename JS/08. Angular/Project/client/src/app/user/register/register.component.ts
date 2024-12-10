@@ -23,8 +23,8 @@ export class RegisterComponent {
       return;
     }
 
-    const { username, email, tel, password, pesho } = form.value;
-    if (password !== pesho) {
+    const { username, email, tel, password, rePass } = form.value;
+    if (password !== rePass) {
       form.controls['rePass'].setErrors({ passwordMismatch: true });
       return
     }

@@ -24,6 +24,31 @@
         </div>
         }
     </div>
+
+    <div class="comments-wrapper">
+        <h3>Comments</h3>
+        @for(comment of comments; track $index){
+        <div class="comment">
+            <h5>On {{comment._createdOn | epochToDate}} <b><span
+                        style="color: rebeccapurple">{{comment.author}}</span></b> wrote:</h5>
+            <p><b>{{comment.text}}</b></p>
+        </div>
+        }
+
+        @if (isLogged) {
+        <div class="create-comment">
+            <form class="commentsForm" #loginForm="ngForm" (ngSubmit)="saveComment(loginForm)">
+                <p class="field">
+                    <label for="text">Create comment</label>
+                    <textarea type="text" name="text" id="text" required ngModel #inputComment="ngModel"
+                        minlength="1"></textarea>
+                </p>
+                <input type="submit" value="Publish">
+            </form>
+        </div>
+        }
+    </div>
+
     } @else {
     <form class="createForm" #form="ngForm" (ngSubmit)="saveProduct(form)">
         <fieldset>

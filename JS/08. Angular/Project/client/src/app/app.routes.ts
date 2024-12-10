@@ -11,6 +11,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { GuestGuard } from './guards/guest.guard';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { MyProductsComponent } from './user/my-products/my-products.component';
+import { ErrorMessageComponent } from './core/error-message/error-message.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -32,6 +33,7 @@ export const routes: Routes = [
     { path: 'test', component: TestComponent },
     //*Test component end
 
+    { path: 'error', component: ErrorMessageComponent },
     { path: '404', component: PageNotFoundComponent },
     { path: '**', redirectTo: '/404' },
 ];

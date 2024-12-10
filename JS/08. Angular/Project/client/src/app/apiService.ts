@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Product } from "./types/product";
 import { getJwtFromCookie } from "./utils/jwt.getter";
+import { UserComment } from "./types/comment";
 
 
 @Injectable({
@@ -12,6 +13,10 @@ export class ApiService {
 
     getProducts() {
         return this.http.get<Product[]>(`/api/data/products`);
+    }
+
+    getCommentsByProduct(productId: string) {
+        return this.http.get<UserComment[]>(`/api/data/comments`);
     }
 
     getSingleProduct(id: string) {
@@ -26,6 +31,16 @@ export class ApiService {
         const jwt = getJwtFromCookie();
         const payload = { name, price, image, description, seller, tel };
         return this.http.post<Product>('/api/data/products', payload, {
+            headers: {
+                'X-Authorization': `${jwt} `,
+            }
+        });
+    }
+
+    createComment(productId: string, text: string, author: string) {
+        const jwt = getJwtFromCookie();
+        const payload = { productId, text, author };
+        return this.http.post<UserComment>('/api/data/comments', payload, {
             headers: {
                 'X-Authorization': `${jwt} `,
             }
