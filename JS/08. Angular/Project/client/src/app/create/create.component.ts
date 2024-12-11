@@ -4,11 +4,12 @@ import { ApiService } from '../apiService';
 import { Router } from '@angular/router';
 import { UserService } from '../user/user.service';
 import { User } from '../types/user';
+import { AutoFocusDirective } from '../directives/auto-focus.directive';
 
 @Component({
   selector: 'app-create',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, AutoFocusDirective],
   templateUrl: './create.component.html',
   styleUrl: './create.component.css'
 })

@@ -66,7 +66,6 @@ export class ProductDetailsComponent implements OnInit {
     ).subscribe({
       next: (comments) => {
         this.comments = comments.filter(comment => comment.productId === this.product._id);
-        console.log(this.comments);
       },
       error: (err) => {
         console.error('Error fetching product or comment information:', err);
