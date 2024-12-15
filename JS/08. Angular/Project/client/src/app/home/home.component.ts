@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { exampleProducts } from '../constants/list-of-products';
 import { ProductChunkComponent } from "../product-chunk/product-chunk.component";
 import { RouterLink } from '@angular/router';
 import { Product } from '../types/product';
